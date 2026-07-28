@@ -285,7 +285,6 @@ export const CONDUCT_SECTIONS = [
       <p>Se você cometer um erro, esteja aberto a ouvir, refletir e corrigir sua atitude.</p>
       <p>Se você perceber um comportamento inadequado, não normalize.</p>
       <p>Nossa comunidade é construída por pessoas diferentes, com histórias, experiências e perspectivas diferentes.</p>
-      <p><strong>Comunidade acima do ego.</strong></p>
       <p><strong>Inclusão intencional.</strong></p>
       <p><strong>Respeito sempre.</strong></p>
     `,
