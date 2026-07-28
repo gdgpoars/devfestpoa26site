@@ -87,6 +87,235 @@ export const FAQS = [
   { q: "Como posso acompanhar as novidades?", a: "Pelos canais oficiais do GDG Porto Alegre e do GDG Caxias do Sul e pela hashtag #DevFestPoa26." },
 ];
 
+export const CONDUCT_UPDATED = "julho de 2026";
+
+export const CONDUCT_CONTACT = {
+  phone: "(51) 21850587",
+  email: "devfestpoa@gmail.com",
+};
+
+export const CONDUCT_INTRO = `
+  <p>O <strong>DevFestPoa26</strong> é um evento realizado pelo <strong>GDG Porto Alegre</strong> e pelo <strong>GDG Caxias do Sul</strong>, construído pela comunidade e para a comunidade.</p>
+  <p>Acreditamos que tecnologia, conhecimento e inovação só fazem sentido quando podem ser compartilhados em um ambiente seguro, acolhedor, diverso e respeitoso.</p>
+  <p>Por isso, esperamos que todas as pessoas que participam, colaboram, organizam, palestram, patrocinam ou representam o DevFestPoa26 contribuam para criar uma experiência positiva para todos.</p>
+  <p>Este Código de Conduta existe para deixar claro o que esperamos da nossa comunidade e quais atitudes não serão toleradas.</p>
+  <p>Ao participar do DevFestPoa26, você concorda em respeitar estas diretrizes.</p>
+`;
+
+export const CONDUCT_SECTIONS = [
+  {
+    title: "1. Nosso compromisso",
+    html: `
+      <p>Nós, da organização do DevFestPoa26, nos comprometemos a proporcionar um ambiente inclusivo, seguro e livre de assédio para todas as pessoas, independentemente de:</p>
+      <ul>
+        <li>raça, cor ou etnia;</li>
+        <li>nacionalidade ou origem;</li>
+        <li>gênero ou identidade de gênero;</li>
+        <li>expressão de gênero;</li>
+        <li>orientação sexual;</li>
+        <li>idade;</li>
+        <li>deficiência ou condição de acessibilidade;</li>
+        <li>aparência ou tipo corporal;</li>
+        <li>religião ou ausência de religião;</li>
+        <li>condição socioeconômica;</li>
+        <li>nível de experiência profissional ou técnica;</li>
+        <li>formação acadêmica;</li>
+        <li>área de atuação;</li>
+        <li>ou qualquer outra característica pessoal.</li>
+      </ul>
+      <p>O DevFestPoa26 é um espaço para aprender, compartilhar, fazer conexões e construir oportunidades.</p>
+      <p>Queremos que todas as pessoas se sintam respeitadas e tenham liberdade para participar, fazer perguntas, compartilhar experiências e ocupar seus espaços na comunidade.</p>
+    `,
+  },
+  {
+    title: "2. Comportamentos esperados",
+    html: `
+      <p>Esperamos que todas as pessoas participantes do DevFestPoa26:</p>
+      <ul>
+        <li>tratem as outras pessoas com respeito, empatia e cordialidade;</li>
+        <li>utilizem uma linguagem acolhedora e inclusiva;</li>
+        <li>respeitem diferentes opiniões, experiências e perspectivas;</li>
+        <li>estejam abertas ao diálogo e à troca de conhecimentos;</li>
+        <li>ofereçam e recebam críticas construtivas de maneira respeitosa;</li>
+        <li>respeitem os limites pessoais e o espaço de cada pessoa;</li>
+        <li>respeitem as regras e orientações da organização, equipe, local do evento e parceiros;</li>
+        <li>contribuam para um ambiente seguro e positivo;</li>
+        <li>respeitem as necessidades de acessibilidade das outras pessoas;</li>
+        <li>evitem comportamentos que possam constranger, intimidar ou excluir outras pessoas;</li>
+        <li>comuniquem à organização qualquer situação que possa comprometer a segurança ou o bem-estar da comunidade.</li>
+      </ul>
+      <p>Não é necessário concordar com todo mundo.</p>
+      <p><strong>É necessário respeitar todo mundo.</strong></p>
+    `,
+  },
+  {
+    title: "3. Comportamentos inaceitáveis",
+    html: `
+      <p>Não serão tolerados comportamentos que promovam assédio, discriminação, intimidação, violência ou qualquer forma de desrespeito.</p>
+      <p>Entre os comportamentos considerados inaceitáveis estão:</p>
+      <ul>
+        <li>assédio de qualquer natureza;</li>
+        <li>discriminação ou comentários preconceituosos;</li>
+        <li>racismo, misoginia, LGBTfobia, capacitismo, xenofobia ou qualquer outra forma de preconceito;</li>
+        <li>ameaças, violência física ou verbal;</li>
+        <li>intimidação, perseguição ou comportamento abusivo;</li>
+        <li>comentários, imagens ou interações de natureza sexual não solicitadas;</li>
+        <li>avanços ou abordagens sexuais indesejadas;</li>
+        <li>contato físico sem consentimento;</li>
+        <li>exposição ou compartilhamento de informações pessoais de outra pessoa sem autorização;</li>
+        <li>fotografar, filmar ou divulgar imagens de uma pessoa em situação que possa colocá-la em risco ou constrangimento, especialmente após solicitação para não fazê-lo;</li>
+        <li>interromper ou impedir deliberadamente a participação de outras pessoas;</li>
+        <li>ataques pessoais, insultos ou humilhações;</li>
+        <li>trolling ou comportamento deliberadamente provocativo com o objetivo de causar conflito;</li>
+        <li>publicação de conteúdo ofensivo ou discriminatório nos canais oficiais do evento;</li>
+        <li>uso de espaços do evento para promover discursos de ódio ou violência;</li>
+        <li>qualquer comportamento que possa ser considerado inadequado ou abusivo em um ambiente profissional e comunitário.</li>
+      </ul>
+      <p>A organização poderá considerar inadequados outros comportamentos que, mesmo não estando explicitamente listados neste documento, sejam incompatíveis com os princípios de respeito, segurança e inclusão do DevFestPoa26.</p>
+    `,
+  },
+  {
+    title: "4. Espaços e canais abrangidos",
+    html: `
+      <p>Este Código de Conduta se aplica a todas as atividades relacionadas ao DevFestPoa26, incluindo, mas não se limitando a:</p>
+      <ul>
+        <li>evento presencial;</li>
+        <li>palestras, workshops, labs e demais atividades;</li>
+        <li>filas, áreas de convivência e espaços de networking;</li>
+        <li>espaços de patrocinadores e parceiros;</li>
+        <li>atividades sociais oficiais relacionadas ao evento;</li>
+        <li>canais oficiais de comunicação;</li>
+        <li>grupos e comunidades utilizados oficialmente para organização ou participação no evento;</li>
+        <li>interações online relacionadas diretamente ao DevFestPoa26;</li>
+        <li>redes sociais quando a pessoa estiver representando oficialmente o evento ou a comunidade.</li>
+      </ul>
+      <p>Também esperamos que palestrantes, patrocinadores, parceiros, voluntários, fornecedores e integrantes da organização respeitem este Código de Conduta durante suas atividades relacionadas ao evento.</p>
+    `,
+  },
+  {
+    title: "5. Palestras, workshops e atividades",
+    html: `
+      <p>Palestrantes e facilitadores são responsáveis por garantir que seus conteúdos e atividades estejam alinhados aos princípios deste Código de Conduta.</p>
+      <p>Não serão aceitos conteúdos que:</p>
+      <ul>
+        <li>promovam discurso de ódio ou discriminação;</li>
+        <li>incentivem violência;</li>
+        <li>assediem ou humilhem indivíduos ou grupos;</li>
+        <li>utilizem estereótipos discriminatórios como forma de entretenimento;</li>
+        <li>promovam comportamentos ilegais ou perigosos;</li>
+        <li>sejam deliberadamente ofensivos ou incompatíveis com um ambiente profissional e comunitário.</li>
+      </ul>
+      <p>Discussões técnicas podem envolver opiniões divergentes e temas sensíveis. O debate é bem-vindo quando conduzido com respeito, responsabilidade e foco na troca de conhecimento.</p>
+      <p>A organização poderá interromper uma atividade ou solicitar ajustes em conteúdos que violem este Código de Conduta.</p>
+    `,
+  },
+  {
+    title: "6. Patrocinadores, parceiros e ativações",
+    html: `
+      <p>O DevFestPoa26 valoriza as empresas e organizações que apoiam a comunidade e tornam o evento possível.</p>
+      <p>Ao mesmo tempo, espaços de patrocinadores e ativações também devem respeitar este Código de Conduta.</p>
+      <p>Não serão permitidas abordagens abusivas, insistentes ou invasivas, incluindo:</p>
+      <ul>
+        <li>insistência após uma pessoa demonstrar desinteresse;</li>
+        <li>abordagens discriminatórias;</li>
+        <li>coleta inadequada de dados pessoais;</li>
+        <li>constrangimento para participação em ações promocionais;</li>
+        <li>qualquer forma de assédio ou intimidação.</li>
+      </ul>
+      <p>A participação em ativações, pesquisas, sorteios e ações promocionais deve ser voluntária e respeitar as regras de privacidade e proteção de dados aplicáveis.</p>
+    `,
+  },
+  {
+    title: "7. Como relatar uma situação",
+    html: `
+      <p>Se você presenciar ou vivenciar uma situação que viole este Código de Conduta, recomendamos que comunique a organização assim que se sentir confortável e seguro para fazê-lo.</p>
+      <p>Você pode procurar:</p>
+      <ul>
+        <li>qualquer pessoa identificada como parte da organização ou equipe do DevFestPoa26;</li>
+        <li>a equipe de credenciamento ou recepção;</li>
+        <li>integrantes identificados como voluntários;</li>
+        <li>os canais oficiais de contato do evento.</li>
+      </ul>
+      <p>Ao realizar uma denúncia, você pode compartilhar, se possível:</p>
+      <ul>
+        <li>o que aconteceu;</li>
+        <li>quando aconteceu;</li>
+        <li>onde aconteceu;</li>
+        <li>quem estava envolvido;</li>
+        <li>se existem testemunhas;</li>
+        <li>qualquer informação adicional que possa ajudar na compreensão da situação.</li>
+      </ul>
+      <p>Você não precisa ter todas essas informações para realizar uma denúncia.</p>
+      <p>Se você não souber exatamente quem procurar, procure qualquer integrante da equipe do evento e explique que precisa falar sobre uma situação relacionada ao Código de Conduta.</p>
+      <p>A organização fará o possível para acolher a situação com seriedade, respeito e confidencialidade, dentro dos limites necessários para realizar a apuração e tomar as medidas adequadas.</p>
+    `,
+  },
+  {
+    title: "8. Confidencialidade e proteção",
+    html: `
+      <p>A organização do DevFestPoa26 se compromete a tratar relatos de violações com responsabilidade e discrição.</p>
+      <p>Informações sobre uma denúncia serão compartilhadas apenas quando necessário para avaliar a situação, proteger as pessoas envolvidas e tomar as providências adequadas.</p>
+      <p>Não toleraremos retaliação contra pessoas que, de boa-fé, relatem uma situação ou contribuam para sua apuração.</p>
+      <p>Denúncias intencionalmente falsas ou feitas de má-fé também poderão ser consideradas uma violação deste Código de Conduta.</p>
+    `,
+  },
+  {
+    title: "9. Medidas em caso de violação",
+    html: `
+      <p>A organização do DevFestPoa26 poderá tomar as medidas que considerar adequadas de acordo com a gravidade e as circunstâncias de cada situação.</p>
+      <p>As medidas podem incluir:</p>
+      <ol>
+        <li><strong>Orientação ou conversa privada</strong> — Para situações de menor gravidade ou quando uma orientação for suficiente para corrigir o comportamento.</li>
+        <li><strong>Advertência</strong> — Quando houver uma violação mais significativa ou repetição de um comportamento inadequado.</li>
+        <li><strong>Solicitação de interrupção do comportamento</strong> — A pessoa poderá ser orientada a interromper imediatamente determinada conduta.</li>
+        <li><strong>Restrição de participação</strong> — A organização poderá restringir o acesso da pessoa a determinadas atividades ou espaços.</li>
+        <li><strong>Retirada do evento</strong> — Em situações graves, a pessoa poderá ser convidada ou obrigada a deixar o evento, sem direito a reembolso.</li>
+        <li><strong>Banimento de futuras atividades</strong> — Em casos graves ou reincidentes, a pessoa poderá ser impedida de participar de futuras atividades organizadas pelo DevFestPoa26 ou pelas comunidades organizadoras, conforme aplicável.</li>
+        <li><strong>Acionamento das autoridades competentes</strong> — Em situações que envolvam ameaça, violência, risco à integridade física ou possíveis crimes, a organização poderá acionar os responsáveis pelo local ou as autoridades competentes.</li>
+      </ol>
+      <p>A aplicação das medidas será realizada considerando a natureza, gravidade e contexto da situação.</p>
+    `,
+  },
+  {
+    title: "10. Responsabilidade coletiva",
+    html: `
+      <p>Um ambiente seguro não é responsabilidade apenas da organização.</p>
+      <p>Cada pessoa que participa do DevFestPoa26 tem um papel importante na construção da comunidade que queremos.</p>
+      <p>Se você perceber que alguém está desconfortável, sendo assediado ou enfrentando uma situação inadequada, considere oferecer apoio e, quando possível, procurar a equipe do evento.</p>
+      <p>Se você cometer um erro, esteja aberto a ouvir, refletir e corrigir sua atitude.</p>
+      <p>Se você perceber um comportamento inadequado, não normalize.</p>
+      <p>Nossa comunidade é construída por pessoas diferentes, com histórias, experiências e perspectivas diferentes.</p>
+      <p><strong>Comunidade acima do ego.</strong></p>
+      <p><strong>Inclusão intencional.</strong></p>
+      <p><strong>Respeito sempre.</strong></p>
+    `,
+  },
+  {
+    title: "11. Dúvidas, denúncias e contato oficial",
+    html: `
+      <p>Se você tiver dúvidas sobre este Código de Conduta, quiser relatar uma situação ou precisar de ajuda durante o evento, entre em contato com a organização do DevFestPoa26 por meio dos canais oficiais:</p>
+      <p>📞 <strong>Telefone/WhatsApp:</strong> ${CONDUCT_CONTACT.phone}<br />
+      📧 <strong>E-mail:</strong> <a href="mailto:${CONDUCT_CONTACT.email}">${CONDUCT_CONTACT.email}</a></p>
+      <p>Durante o evento, você também pode procurar qualquer integrante identificado da organização, equipe de credenciamento ou voluntariado.</p>
+      <p>Estamos aqui para ouvir, acolher e ajudar.</p>
+    `,
+  },
+  {
+    title: "12. Nosso compromisso final",
+    html: `
+      <p>O <strong>DevFestPoa26</strong> é feito pela comunidade, para a comunidade.</p>
+      <p>Organizado pelo <strong>GDG Porto Alegre</strong> e pelo <strong>GDG Caxias do Sul</strong>, nosso objetivo é construir um evento onde pessoas possam aprender, ensinar, criar conexões, encontrar oportunidades e, acima de tudo, sentir que pertencem.</p>
+      <p>Queremos que cada participante faça sua parte para tornar essa experiência melhor para todos.</p>
+      <p><strong>Seja gentil. Seja respeitoso. Inclua. Colabore.</strong></p>
+      <p><strong>Nos vemos no DevFestPoa26! 🚀🎃</strong></p>
+    `,
+  },
+];
+
+export const CONDUCT_CLOSING = `
+  <p>Este Código de Conduta foi elaborado para o DevFestPoa26, organizado pelo GDG Porto Alegre e GDG Caxias do Sul, e poderá ser atualizado pela organização sempre que necessário para refletir as necessidades da comunidade e do evento.</p>
+`;
+
 export const GALLERY_SLOTS = 8;
 
 export const SPONSOR_TIERS = { powered: 3, parceiros: 4, colab: 5 };
@@ -113,6 +342,7 @@ export const NAV_LINKS = [
   { href: "/experiencia", label: "Experiência" },
   { href: "/patrocinadores", label: "Patrocinadores" },
   { href: "/faq", label: "FAQ" },
+  { href: "/codigo-de-conduta", label: "Código de Conduta" },
 ];
 
 // Ordem pensada por intenção de quem visita: primeiro entender o evento,

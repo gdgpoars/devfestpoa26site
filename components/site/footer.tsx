@@ -54,6 +54,7 @@ export function SiteFooter() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/patrocinadores" className="hover:text-foreground">Patrocinadores</Link></li>
                 <li><Link href="/faq" className="hover:text-foreground">FAQ</Link></li>
+                <li><Link href="/codigo-de-conduta" className="hover:text-foreground">Código de Conduta</Link></li>
                 <li>
                   <a href={SYMPLA_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
                     Ingressos
