@@ -336,6 +336,7 @@ export const METRICS_2025 = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Início" },
+  { href: "/#explore", label: "Explore o evento" },
   { href: "/sobre", label: "Sobre" },
   { href: "/tema", label: "Tema" },
   { href: "/experiencia", label: "Experiência" },

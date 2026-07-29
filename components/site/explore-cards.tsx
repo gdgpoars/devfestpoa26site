@@ -4,7 +4,7 @@ import { EXPLORE_CARDS, SYMPLA_URL } from "@/lib/content";
 
 export function ExploreCards() {
   return (
-    <section className="py-16 sm:py-20">
+    <section id="explore" className="scroll-mt-24 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">
