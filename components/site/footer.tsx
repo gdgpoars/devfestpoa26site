@@ -1,9 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SYMPLA_URL } from "@/lib/content";
+import { Globe, Instagram, Linkedin } from "lucide-react";
+import { GDG_COMMUNITIES, SYMPLA_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
+
+const SOCIAL_ICONS = { instagram: Instagram, linkedin: Linkedin, globe: Globe };
 
 export function SiteFooter() {
   const [showSticky, setShowSticky] = useState(false);
@@ -21,19 +25,21 @@ export function SiteFooter() {
     <>
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-14">
-          <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
             <div>
               <div className="flex items-center gap-2 font-bold">
-                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="size-8">
-                  <circle cx="20" cy="20" r="18" fill="#14161f" stroke="#ff7a29" strokeWidth="1.4" />
-                  <circle cx="14" cy="17" r="4" fill="#ff7a29" />
-                  <circle cx="26" cy="17" r="4" fill="#9784ff" />
-                  <path d="M12 25c3 3 13 3 16 0" stroke="#ffb37a" strokeWidth="2" strokeLinecap="round" />
-                </svg>
+                <Image
+                  src="/ambrosia.png"
+                  alt="DevFestPoa26"
+                  width={1080}
+                  height={1080}
+                  className="size-8 shrink-0 rounded-full"
+                />
                 DevFestPoa26
               </div>
               <div className="mt-4 space-y-1 text-sm text-muted-foreground">
-                <p>GDG Porto Alegre &amp; GDG Caxias do Sul</p>
+                <p>Realização GDG Porto Alegre &amp; GDG Caxias do Sul</p>
+                <p>Powered by Kobe Apps &amp; Dentsu World Services</p>
                 <p>31 de outubro de 2026</p>
                 <p>Faculdade Dom Bosco — Porto Alegre/RS</p>
               </div>
@@ -63,19 +69,29 @@ export function SiteFooter() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="mb-3 text-sm font-semibold">Comunidade</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="https://www.gdgportoalegre.com.br/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
-                    Site GDG Porto Alegre
-                  </a>
-                </li>
-                <li className="text-muted-foreground/60">Instagram — link em breve</li>
-                <li className="text-muted-foreground/60">LinkedIn — link em breve</li>
-                <li className="text-muted-foreground/60">GDG Caxias do Sul — link em breve</li>
-              </ul>
-            </div>
+            {GDG_COMMUNITIES.map((community) => (
+              <div key={community.name}>
+                <h4 className="mb-3 text-sm font-semibold">{community.name}</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {community.links.map((l) => {
+                    const Icon = SOCIAL_ICONS[l.icon];
+                    return (
+                      <li key={l.label}>
+                        <a
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 hover:text-foreground"
+                        >
+                          <Icon className="size-4" />
+                          {l.label}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
           </div>
 
           <div className="my-8 h-px w-full bg-border" />

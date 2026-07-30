@@ -334,6 +334,24 @@ export const METRICS_2025 = [
   { num: "2026", label: "é a nossa próxima edição" },
 ];
 
+export const GDG_COMMUNITIES = [
+  {
+    name: "GDG Porto Alegre",
+    links: [
+      { label: "Instagram", href: "https://www.instagram.com/gdgpoa/", icon: "instagram" as const },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/gdg-porto-alegre/", icon: "linkedin" as const },
+      { label: "Site", href: "https://gdgportoalegre.com.br/", icon: "globe" as const },
+    ],
+  },
+  {
+    name: "GDG Caxias do Sul",
+    links: [
+      { label: "Instagram", href: "https://www.instagram.com/gdgcaxiasdosul", icon: "instagram" as const },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/gdg-caxias-do-sul/", icon: "linkedin" as const },
+    ],
+  },
+];
+
 export const NAV_LINKS = [
   { href: "/", label: "Início" },
   { href: "/#explore", label: "Explore o evento" },
