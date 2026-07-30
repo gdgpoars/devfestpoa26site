@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
 
-const GA_MEASUREMENT_ID = "G-0JLWLVJ8Z7";
 const GTM_ID = "GTM-52JL87HH";
 
 export const metadata: Metadata = {
@@ -33,22 +31,12 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
       </body>
+
       <GoogleTagManager gtmId={GTM_ID} />
     </html>
   );
