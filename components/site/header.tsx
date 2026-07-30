@@ -18,50 +18,52 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex shrink-0 items-center gap-2 font-bold" onClick={() => setOpen(false)}>
-          <Image
-            src="/ambrosia.png"
-            alt="DevFestPoa26"
-            width={1080}
-            height={1080}
-            className="size-8 shrink-0 rounded-full"
-          />
-          <span className="whitespace-nowrap leading-tight">DevFestPoa26</span>
-        </Link>
+    <>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+          <Link href="/" className="flex shrink-0 items-center gap-2 font-bold" onClick={() => setOpen(false)}>
+            <Image
+              src="/ambrosia.png"
+              alt="DevFestPoa26"
+              width={1080}
+              height={1080}
+              className="size-8 shrink-0 rounded-full"
+            />
+            <span className="whitespace-nowrap leading-tight">DevFestPoa26</span>
+          </Link>
 
-        <nav className="hidden flex-nowrap items-center gap-4 whitespace-nowrap text-sm font-medium xl:flex">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="whitespace-nowrap text-foreground/80 transition-colors hover:text-foreground"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+          <nav className="hidden flex-nowrap items-center gap-4 whitespace-nowrap text-sm font-medium xl:flex">
+            {NAV_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="whitespace-nowrap text-foreground/80 transition-colors hover:text-foreground"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        <a
-          href={SYMPLA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-pulse hidden h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] xl:inline-flex"
-        >
-          Quero meu ingresso
-        </a>
+          <a
+            href={SYMPLA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-pulse hidden h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] xl:inline-flex"
+          >
+            Quero meu ingresso
+          </a>
 
-        <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
-      </div>
+          <button
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-6" /> : <Menu className="size-6" />}
+          </button>
+        </div>
+      </header>
 
       <div
         aria-hidden="true"
@@ -100,6 +102,6 @@ export function SiteHeader() {
           Quero meu ingresso
         </a>
       </nav>
-    </header>
+    </>
   );
 }
