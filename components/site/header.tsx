@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -13,18 +14,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link href="/" className="flex shrink-0 items-center gap-2 font-bold" onClick={() => setOpen(false)}>
-          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true" className="size-8 shrink-0">
-            <circle cx="20" cy="20" r="18" fill="#14161f" stroke="#ff7a29" strokeWidth="1.4" />
-            <circle cx="14" cy="17" r="4" fill="#ff7a29" />
-            <circle cx="26" cy="17" r="4" fill="#9784ff" />
-            <path d="M12 25c3 3 13 3 16 0" stroke="#ffb37a" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-          <span className="flex flex-col whitespace-nowrap leading-tight">
-            DevFestPoa26
-            <small className="hidden text-xs font-normal text-muted-foreground xl:block">
-              GDG Porto Alegre × GDG Caxias do Sul
-            </small>
-          </span>
+          <Image
+            src="/ambrosia.png"
+            alt="DevFestPoa26"
+            width={1080}
+            height={1080}
+            className="size-8 shrink-0 rounded-full"
+          />
+          <span className="whitespace-nowrap leading-tight">DevFestPoa26</span>
         </Link>
 
         <nav className="hidden flex-nowrap items-center gap-4 whitespace-nowrap text-sm font-medium xl:flex">

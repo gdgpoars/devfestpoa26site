@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
@@ -99,7 +100,14 @@ export function Hero() {
           <p className="text-sm text-muted-foreground">
             🎃 <b className="text-foreground">GDG Porto Alegre</b> &amp; <b className="text-foreground">GDG Caxias do Sul</b> apresentam
           </p>
-          <h2 className="mt-3 text-5xl font-extrabold tracking-tight sm:text-6xl">DevFestPoa26</h2>
+          <Image
+            src="/logo evento.png"
+            alt="DevFestPoa26"
+            width={1080}
+            height={1080}
+            className="mt-3 h-20 w-20 sm:h-24 sm:w-24"
+            priority
+          />
           <p className="mt-4 text-lg font-semibold text-gradient">
             "Criar, proteger, escalonar: desenvolvedores e criadores na era agêntica."
           </p>
