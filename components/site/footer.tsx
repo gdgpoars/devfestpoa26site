@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Globe, Instagram, Linkedin } from "lucide-react";
+import { CalendarDays, Globe, Instagram, Linkedin, MapPin } from "lucide-react";
 import { GDG_COMMUNITIES, SYMPLA_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -37,11 +37,26 @@ export function SiteFooter() {
                 />
                 DevFestPoa26
               </div>
-              <div className="mt-4 space-y-1 text-sm text-muted-foreground">
-                <p>Realização GDG Porto Alegre &amp; GDG Caxias do Sul</p>
-                <p>Powered by Kobe Apps &amp; Dentsu World Services</p>
-                <p>31 de outubro de 2026</p>
-                <p>Faculdade Dom Bosco — Porto Alegre/RS</p>
+              <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <p className="flex items-center gap-2">
+                  <CalendarDays className="size-4 shrink-0 text-primary" />
+                  31 de outubro de 2026
+                </p>
+                <p className="flex items-center gap-2">
+                  <MapPin className="size-4 shrink-0 text-primary" />
+                  Faculdade Dom Bosco — Porto Alegre/RS
+                </p>
+              </div>
+
+              <div className="mt-5 space-y-1.5 border-t border-border pt-4 text-center text-sm text-muted-foreground">
+                <p>
+                  <span className="block text-muted-foreground/60">Realização</span>
+                  GDG Porto Alegre &amp; GDG Caxias do Sul
+                </p>
+                <p>
+                  <span className="block text-muted-foreground/60">Powered by</span>
+                  Kobe Apps &amp; Dentsu World Services
+                </p>
               </div>
             </div>
 
