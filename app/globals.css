@@ -75,6 +75,17 @@ body {
   .animate-pulse-glow {
     animation: pulse-glow 2.6s ease-in-out infinite;
   }
+  .cta-pulse {
+    animation: pulse-glow 2.6s ease-in-out infinite;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .cta-pulse:hover {
+    transform: translateY(-2px) scale(1.05);
+    filter: brightness(1.1);
+  }
+  .cta-pulse:active {
+    transform: scale(0.95);
+  }
 }
 
 @keyframes float {
@@ -99,7 +110,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
-  .animate-pulse-glow {
+  .animate-pulse-glow,
+  .cta-pulse {
     animation: none;
   }
 }

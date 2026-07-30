@@ -14,7 +14,7 @@ export function FinalCTA() {
           href={SYMPLA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex h-13 items-center justify-center rounded-full bg-primary px-9 text-base font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-all hover:brightness-110"
+          className="cta-pulse mt-6 inline-flex h-13 items-center justify-center rounded-full bg-primary px-9 text-base font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)]"
         >
           Garantir meu ingresso
         </a>

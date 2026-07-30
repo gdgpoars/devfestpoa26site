@@ -131,44 +131,44 @@ export function Hero() {
                 alt="DevFestPoa26"
                 width={1080}
                 height={1080}
-                className="h-60 w-60 sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[28rem] lg:w-[28rem]"
+                className="h-72 w-72 sm:h-[22rem] sm:w-[22rem] md:h-[27rem] md:w-[27rem] lg:h-[32rem] lg:w-[32rem]"
                 priority
               />
             </div>
           </div>
 
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <p className="text-xl font-semibold text-gradient sm:text-2xl">
+            <p className="text-2xl font-semibold text-gradient sm:text-3xl lg:text-4xl">
               "Criar, proteger, escalonar: desenvolvedores e criadores na era agêntica."
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground sm:text-base lg:justify-start">
-              <span className="inline-flex items-center gap-2">
-                <CalendarDays className="size-4 text-primary" />
+            <div className="mt-7 flex flex-wrap justify-center gap-2.5 lg:justify-start">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm text-muted-foreground sm:text-base">
+                <CalendarDays className="size-5 text-primary" />
                 <b className="text-foreground">31 de outubro de 2026</b>
               </span>
-              <span className="inline-flex items-center gap-2">
-                <Clock className="size-4 text-primary" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm text-muted-foreground sm:text-base">
+                <Clock className="size-5 text-primary" />
                 <b className="text-foreground">09h às 18h</b>
               </span>
-              <span className="inline-flex items-center gap-2">
-                <MapPin className="size-4 text-primary" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-2 text-sm text-muted-foreground sm:text-base">
+                <MapPin className="size-5 text-primary" />
                 <b className="text-foreground">Faculdade Dom Bosco</b>&nbsp;— Porto Alegre/RS
               </span>
             </div>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <div className="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
               <a
                 href={SYMPLA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animate-pulse-glow inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105 hover:brightness-110 active:scale-95"
+                className="cta-pulse inline-flex h-13 items-center justify-center rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)]"
               >
                 Quero meu ingresso
               </a>
               <Link
                 href="/sobre"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-sm font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/5 active:scale-95"
+                className="inline-flex h-13 items-center justify-center rounded-full border border-border px-8 text-base font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/5 active:scale-95"
               >
                 Conhecer o evento
               </Link>

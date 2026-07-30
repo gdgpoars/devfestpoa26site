@@ -2,13 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SYMPLA_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
@@ -40,7 +47,7 @@ export function SiteHeader() {
           href={SYMPLA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-all hover:brightness-110 xl:inline-flex"
+          className="cta-pulse hidden h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] xl:inline-flex"
         >
           Quero meu ingresso
         </a>
@@ -49,23 +56,36 @@ export function SiteHeader() {
           className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
 
-      <nav
+      <div
+        aria-hidden="true"
+        onClick={() => setOpen(false)}
         className={cn(
-          "flex flex-col gap-1 border-t border-border px-4 pb-4 xl:hidden",
-          open ? "block" : "hidden",
+          "fixed left-0 right-0 top-16 bottom-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-300 xl:hidden",
+          open ? "opacity-100" : "pointer-events-none opacity-0",
+        )}
+      />
+
+      <nav
+        id="mobile-menu"
+        aria-label="Menu principal"
+        aria-hidden={!open}
+        className={cn(
+          "fixed right-0 top-16 bottom-0 z-[60] flex w-full max-w-xs flex-col gap-1 overflow-y-auto border-l border-border bg-background p-4 shadow-2xl transition-transform duration-300 ease-out xl:hidden",
+          open ? "translate-x-0" : "translate-x-full",
         )}
       >
         {NAV_LINKS.map((l) => (
           <Link
             key={l.href}
             href={l.href}
-            className="rounded-md px-2 py-2 text-sm font-medium text-foreground/80 hover:bg-white/5"
+            className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-white/5"
             onClick={() => setOpen(false)}
           >
             {l.label}
@@ -75,7 +95,7 @@ export function SiteHeader() {
           href={SYMPLA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 rounded-full bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground"
+          className="cta-pulse mt-3 flex h-11 w-full items-center justify-center rounded-full bg-primary px-4 text-center text-sm font-semibold text-primary-foreground"
         >
           Quero meu ingresso
         </a>

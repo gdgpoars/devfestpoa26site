@@ -96,7 +96,7 @@ export function SiteFooter() {
           href={SYMPLA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-11 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground"
+          className="cta-pulse flex h-11 w-full items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground"
         >
           Quero meu ingresso
         </a>
