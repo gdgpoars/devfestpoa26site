@@ -95,74 +95,52 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-grid">
       <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
-        <div>
-          <p className="text-sm text-muted-foreground">
-            🎃 <b className="text-foreground">GDG Porto Alegre</b> &amp; <b className="text-foreground">GDG Caxias do Sul</b> apresentam
-          </p>
-          <Image
-            src="/logo evento.png"
-            alt="DevFestPoa26"
-            width={1080}
-            height={1080}
-            className="mt-3 h-20 w-20 sm:h-24 sm:w-24"
-            priority
-          />
-          <p className="mt-4 text-lg font-semibold text-gradient">
-            "Criar, proteger, escalonar: desenvolvedores e criadores na era agêntica."
-          </p>
+      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 py-16 text-center sm:py-24">
+        <p className="text-sm text-muted-foreground">
+          🎃 <b className="text-foreground">GDG Porto Alegre</b> &amp; <b className="text-foreground">GDG Caxias do Sul</b> apresentam
+        </p>
+        <Image
+          src="/logo evento.png"
+          alt="DevFestPoa26"
+          width={1080}
+          height={1080}
+          className="mt-6 h-48 w-48 sm:h-64 sm:w-64 md:h-72 md:w-72"
+          priority
+        />
+        <p className="mt-6 text-lg font-semibold text-gradient">
+          "Criar, proteger, escalonar: desenvolvedores e criadores na era agêntica."
+        </p>
 
-          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-2">
-              <CalendarDays className="size-4 text-primary" />
-              <b className="text-foreground">31 de outubro de 2026</b>
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <Clock className="size-4 text-primary" />
-              <b className="text-foreground">09h às 18h</b>
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <MapPin className="size-4 text-primary" />
-              <b className="text-foreground">Faculdade Dom Bosco</b>&nbsp;— Porto Alegre/RS
-            </span>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={SYMPLA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-all hover:brightness-110"
-            >
-              Quero meu ingresso
-            </a>
-            <Link
-              href="/sobre"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-sm font-semibold hover:bg-white/5"
-            >
-              Conhecer o evento
-            </Link>
-          </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+          <span className="inline-flex items-center gap-2">
+            <CalendarDays className="size-4 text-primary" />
+            <b className="text-foreground">31 de outubro de 2026</b>
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <Clock className="size-4 text-primary" />
+            <b className="text-foreground">09h às 18h</b>
+          </span>
+          <span className="inline-flex items-center gap-2">
+            <MapPin className="size-4 text-primary" />
+            <b className="text-foreground">Faculdade Dom Bosco</b>&nbsp;— Porto Alegre/RS
+          </span>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card/80 p-1 shadow-2xl backdrop-blur">
-          <div className="flex items-center justify-between rounded-t-xl bg-white/5 px-4 py-2 text-xs text-muted-foreground">
-            <span>devfestpoa26 — terminal</span>
-            <span className="flex gap-1.5">
-              <span className="size-2.5 rounded-full bg-white/20" />
-              <span className="size-2.5 rounded-full bg-white/20" />
-              <span className="size-2.5 rounded-full bg-white/20" />
-            </span>
-          </div>
-          <div className="space-y-2 p-5 font-mono text-sm">
-            <div><span className="text-primary">&gt;</span> whoami</div>
-            <div className="text-muted-foreground">pessoa de tech curiosa por IA agêntica</div>
-            <div><span className="text-primary">&gt;</span> connect --community gdg-poa gdg-caxias</div>
-            <div className="text-muted-foreground">300 pessoas · 1 palco · 3 trilhas</div>
-            <div><span className="text-primary">&gt;</span> git checkout devfestpoa26</div>
-            <div className="text-muted-foreground">Já estamos na branch certa 👻</div>
-            <div><span className="text-primary">&gt;</span> <span className="animate-pulse">▌</span></div>
-          </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href={SYMPLA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-all hover:brightness-110"
+          >
+            Quero meu ingresso
+          </a>
+          <Link
+            href="/sobre"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-sm font-semibold hover:bg-white/5"
+          >
+            Conhecer o evento
+          </Link>
         </div>
       </div>
     </section>
