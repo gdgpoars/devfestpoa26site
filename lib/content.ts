@@ -2,6 +2,36 @@ export const SYMPLA_URL =
   "https://www.sympla.com.br/preview/1c714f3de956080d7d3e758ac4788ab8";
 
 export const EVENT_TARGET_ISO = "2026-10-31T09:00:00-03:00";
+export const EVENT_END_ISO = "2026-10-31T18:00:00-03:00";
+
+export const SITE_URL = "https://devfestportoalegre.com.br";
+export const SITE_NAME = "DevFestPoa26";
+
+export const SITE_DESCRIPTION =
+  "O DevFest de Porto Alegre: um dia de conteúdo técnico, comunidade e networking, feito pelas comunidades GDG Porto Alegre e GDG Caxias do Sul. 31 de outubro de 2026, na Faculdade Dom Bosco.";
+
+export const SITE_KEYWORDS = [
+  "DevFest Porto Alegre",
+  "DevFestPoa26",
+  "evento tech",
+  "evento de tecnologia",
+  "conferência de tecnologia",
+  "comunidade tech",
+  "comunidade de desenvolvedores",
+  "desenvolvimento de software",
+  "GDG Porto Alegre",
+  "GDG Caxias do Sul",
+  "Google Developer Groups",
+  "inteligência artificial",
+  "agentes de IA",
+  "cloud",
+  "segurança da informação",
+  "carreira em tecnologia",
+  "networking tech",
+  "palestras de tecnologia",
+  "evento de tecnologia Porto Alegre",
+  "evento de tecnologia 2026",
+];
 
 export const HIGHLIGHTS = [
   { icon: "👥", title: "300 pessoas", text: "Comunidade tech reunida em um só lugar." },

@@ -12,9 +12,9 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Sobre o evento</p>
-            <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-extrabold sm:text-4xl">
               Onde tecnologia, comunidade e futuro se encontram
-            </h2>
+            </h1>
             <div className="mt-5 space-y-4 text-muted-foreground">
               <p>
                 O DevFestPoa26 não é só mais uma conferência de tecnologia. É o encontro anual das
