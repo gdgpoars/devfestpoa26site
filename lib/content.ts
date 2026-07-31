@@ -61,27 +61,54 @@ export const POWERED_BY_PARTNERS = [
   { name: "Dentsu World Services", logo: "/dws logo.png", href: "https://www.dentsu.com/br/pt" },
 ];
 
-export const EXPERIENCE = [
+type ExperienceItem = {
+  icon: string;
+  title: string;
+  pending: boolean;
+  text: string;
+  items: string[];
+  address?: string;
+  parking?: string;
+  mapQuery?: string;
+  mapDirectionsUrl?: string;
+  logo?: string;
+  logoAlt?: string;
+  extraHtml?: string;
+  whatsapp?: string;
+  whatsappUrl?: string;
+};
+
+export const EXPERIENCE: ExperienceItem[] = [
   {
     icon: "📍",
     title: "Como chegar",
-    pending: true,
-    text: "Informações sobre como chegar à Faculdade Dom Bosco.",
-    items: ["Endereço completo", "Google Maps", "Transporte público", "Estacionamento", "Acessibilidade de acesso"],
+    pending: false,
+    text: "A Faculdade Dom Bosco fica no bairro Passo d'Areia, em Porto Alegre.",
+    items: [],
+    address: "R. Mal. José Inácio da Silva, 355 - Passo d'Areia, Porto Alegre - RS, 90520-280",
+    parking: "particular, ao lado da Faculdade, no Colégio Dom Bosco.",
+    mapQuery: "Faculdade Dom Bosco, R. Mal. José Inácio da Silva, 355 - Passo d'Areia, Porto Alegre - RS, 90520-280",
+    mapDirectionsUrl:
+      "https://www.google.com/maps/dir//Faculdade+Dom+Bosco,+R.+Mal.+Jos%C3%A9+In%C3%A1cio+da+Silva,+355+-+Passo+d'Areia,+Porto+Alegre+-+RS,+90520-280/@-30.0994818,-51.085312,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x95197762900397a9:0xdf8886a358bebab4!2m2!1d-51.1791948!2d-30.0120424!3e3?entry=ttu&g_ep=EgoyMDI2MDcyOC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     icon: "🎒",
     title: "O que levar",
     pending: false,
     text: "O básico para aproveitar o dia inteiro:",
-    items: ["Ingresso (físico ou digital)", "Documento com foto", "Celular e carregador", "Notebook, se for usar", "Disposição para fazer networking"],
+    items: ["Ingresso (físico ou digital)", "Documento com foto", "Celular e carregador", "Notebook, se for usar", "Disposição para fazer networking", "Garrafinha de água"],
   },
   {
     icon: "☕",
     title: "Alimentação",
-    pending: true,
-    text: "Detalhes sobre coffee break e opções próximas ao local.",
-    items: ["Coffee break", "Opções de alimentação", "Restaurantes próximos", "Horários"],
+    pending: false,
+    text: "",
+    items: [
+      "<strong>Coffee Break manhã e tarde incluso</strong> em todos os tipos de ingressos.",
+      "Indicamos a Cantina Gabigu para almoço, que já está dentro da Faculdade. Opção de buffet e lanches.",
+    ],
+    logo: "/cantina gabigu logo.jpeg",
+    logoAlt: "Cantina Gabigu",
   },
   {
     icon: "📱",
@@ -93,9 +120,13 @@ export const EXPERIENCE = [
   {
     icon: "♿",
     title: "Acessibilidade",
-    pending: true,
-    text: "Informações de acessibilidade do local e do evento serão divulgadas em breve.",
+    pending: false,
+    text: "O DevFest Porto Alegre acredita que tecnologia é para todas as pessoas. Por isso, realizamos o evento em um espaço com infraestrutura acessível e incentivamos um ambiente diverso, inclusivo e respeitoso para toda a comunidade.",
     items: [],
+    extraHtml:
+      "Se você precisar de algum recurso de acessibilidade ou suporte específico para participar do evento, entre em contato conosco.",
+    whatsapp: "(51) 2185-0587",
+    whatsappUrl: "https://wa.me/555121850587",
   },
   {
     icon: "🤝",
@@ -355,7 +386,24 @@ export const CONDUCT_CLOSING = `
   <p>Este Código de Conduta foi elaborado para o DevFestPoa26, organizado pelo GDG Porto Alegre e GDG Caxias do Sul, e poderá ser atualizado pela organização sempre que necessário para refletir as necessidades da comunidade e do evento.</p>
 `;
 
-export const GALLERY_SLOTS = 8;
+export const GALLERY_PHOTOS = [
+  { src: "/DEVFEST-028.jpg", width: 2048, height: 1538 },
+  { src: "/DEVFEST-011.jpg", width: 1365, height: 2048 },
+  { src: "/DEVFEST-043.jpg", width: 2048, height: 1538 },
+  { src: "/DEVFEST-057.jpg", width: 1638, height: 2048 },
+  { src: "/DEVFEST-047.jpg", width: 2048, height: 1639 },
+  { src: "/DEVFEST-058.jpg", width: 1538, height: 2048 },
+  { src: "/DEVFEST-054.jpg", width: 2048, height: 1537 },
+  { src: "/DEVFEST-090.jpg", width: 2048, height: 1537 },
+  { src: "/DEVFEST-110.jpg", width: 1365, height: 2048 },
+  { src: "/DEVFEST-164.jpg", width: 2048, height: 1538 },
+  { src: "/DEVFEST-126 (1).jpg", width: 1538, height: 2048 },
+  { src: "/DEVFEST-227.jpg", width: 2048, height: 1538 },
+  { src: "/DEVFEST-207 (1).jpg", width: 2048, height: 1537 },
+  { src: "/DEVFEST-308.jpg", width: 2048, height: 1365 },
+  { src: "/DEVFEST-210.jpg", width: 1365, height: 2048 },
+  { src: "/DEVFEST-258.jpg", width: 1538, height: 2048 },
+].map((p, i) => ({ ...p, alt: `DevFestPoa25 — registro ${i + 1}` }));
 
 export const SPONSOR_TIERS = { powered: 3, parceiros: 4, colab: 5 };
 

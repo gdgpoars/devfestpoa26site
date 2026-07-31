@@ -72,6 +72,9 @@ body {
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+  .animate-float-soft {
+    animation: float-soft 5s ease-in-out infinite;
+  }
   .animate-pulse-glow {
     animation: pulse-glow 2.6s ease-in-out infinite;
   }
@@ -98,6 +101,16 @@ body {
   }
 }
 
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
 @keyframes pulse-glow {
   0%,
   100% {
@@ -110,6 +123,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
+  .animate-float-soft,
   .animate-pulse-glow,
   .cta-pulse {
     animation: none;

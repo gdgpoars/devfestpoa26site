@@ -1,4 +1,5 @@
-import { GALLERY_SLOTS } from "@/lib/content";
+import Image from "next/image";
+import { GALLERY_PHOTOS } from "@/lib/content";
 
 export function Gallery() {
   return (
@@ -7,19 +8,23 @@ export function Gallery() {
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">Galeria</p>
           <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Um pouco do que já vivemos</h2>
+          <p className="mt-2 text-sm text-muted-foreground">Registros da DevFestPoa25, feita pela e para a comunidade.</p>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {Array.from({ length: GALLERY_SLOTS }).map((_, i) => (
+        <div className="columns-2 gap-3 sm:columns-3 lg:columns-4">
+          {GALLERY_PHOTOS.map((p, i) => (
             <div
-              key={i}
-              className={`flex flex-col items-center justify-center gap-1 rounded-xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground ${
-                i === 0 ? "col-span-2 row-span-2" : ""
-              }`}
+              key={p.src}
+              className="group animate-float-soft mb-3 break-inside-avoid overflow-hidden rounded-xl border border-border bg-card"
+              style={{ animationDelay: `${(i % 5) * 0.5}s`, animationDuration: `${5 + (i % 3)}s` }}
             >
-              <span className="text-2xl">📸</span>
-              Foto DevFestPoa25
-              <br />
-              em breve
+              <Image
+                src={p.src}
+                alt={p.alt}
+                width={p.width}
+                height={p.height}
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
