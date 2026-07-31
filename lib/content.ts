@@ -51,6 +51,16 @@ export const PILLARS = [
   { icon: "🧠", title: "Pessoas & Comunidade", text: "Saúde mental, diversidade, inclusão e comunidade." },
 ];
 
+export const POWERED_BY_INTRO = [
+  "O DevFest Porto Alegre é um evento organizado por voluntários, sem fins lucrativos e movido pela comunidade. Por isso, contamos com o apoio de empresas que acreditam no fortalecimento do ecossistema de tecnologia e tornam esta experiência possível.",
+  "As marcas Powered by vão além do patrocínio: elas impulsionam conhecimento, conexões e oportunidades para centenas de pessoas, ajudando a transformar o evento em realidade e fortalecendo a comunidade local.",
+];
+
+export const POWERED_BY_PARTNERS = [
+  { name: "Kobe", logo: "/kobe logo.png", href: "https://www.kobe.io/" },
+  { name: "Dentsu World Services", logo: "/dws logo.png", href: "https://www.dentsu.com/br/pt" },
+];
+
 export const EXPERIENCE = [
   {
     icon: "📍",

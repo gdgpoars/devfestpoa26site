@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { About } from "@/components/site/about";
 import { Pillars } from "@/components/site/pillars";
+import { PoweredBy } from "@/components/site/powered-by";
 import { FinalCTA } from "@/components/site/final-cta";
 import { pageMetadata } from "@/lib/seo";
 
@@ -17,6 +18,7 @@ export default function SobrePage() {
     <>
       <About />
       <Pillars />
+      <PoweredBy />
       <FinalCTA />
     </>
   );
