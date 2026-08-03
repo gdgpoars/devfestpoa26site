@@ -1,5 +1,5 @@
 export const SYMPLA_URL =
-  "https://www.sympla.com.br/preview/1c714f3de956080d7d3e758ac4788ab8";
+  "https://www.sympla.com.br/evento/devfest-porto-alegre-2026/3511958";
 
 export const EVENT_TARGET_ISO = "2026-10-31T09:00:00-03:00";
 export const EVENT_END_ISO = "2026-10-31T18:00:00-03:00";
