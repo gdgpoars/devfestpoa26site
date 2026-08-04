@@ -67,6 +67,11 @@ export const FACULDADE_SEDE = {
   href: "https://faculdadedombosco.net/pt/",
 };
 
+export const PARTNER_LOGOS = [
+  { name: "WK", logo: "/wk logo.png", href: "https://wkrh.com.br/" },
+  { name: "Nort", logo: "/nort logo.png", href: "https://nortjobs.com/pt-BR" },
+];
+
 type ExperienceItem = {
   icon: string;
   title: string;

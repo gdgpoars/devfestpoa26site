@@ -1,17 +1,17 @@
 import Image from "next/image";
-import { FACULDADE_SEDE, POWERED_BY_PARTNERS, SPONSOR_TIERS } from "@/lib/content";
+import { Loader2 } from "lucide-react";
+import { FACULDADE_SEDE, PARTNER_LOGOS, POWERED_BY_PARTNERS, SPONSOR_TIERS } from "@/lib/content";
 
-function LogoSlots({ count, label }: { count: number; label: string }) {
+function LogoSlots({ count, className }: { count: number; className?: string }) {
   return (
     <>
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className="flex h-20 items-center justify-center rounded-xl border border-dashed border-border bg-card text-center text-xs text-muted-foreground"
+          className={`flex h-20 flex-col items-center justify-center gap-1.5 rounded-xl border border-dashed border-border bg-card text-center text-xs text-muted-foreground ${className ?? ""}`}
         >
-          Logo
-          <br />
-          {label} {i + 1}
+          <Loader2 className="size-4 animate-spin" />
+          Carregando...
         </div>
       ))}
     </>
@@ -23,26 +23,30 @@ function PartnerLogo({
   logo,
   href,
   imgClassName,
+  size = "default",
 }: {
   name: string;
   logo: string;
   href: string;
   imgClassName?: string;
+  size?: "default" | "sm";
 }) {
+  const sizeClasses = size === "sm" ? "h-20 w-40 p-3" : "h-28 w-64 p-4";
+  const imgMaxHeight = size === "sm" ? "max-h-12" : "max-h-20";
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={name}
-      className="logo-soft-glow animate-float-soft group flex h-28 w-64 items-center justify-center rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-primary/40"
+      className={`logo-soft-glow animate-float-soft group flex items-center justify-center rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/40 ${sizeClasses}`}
     >
       <Image
         src={logo}
         alt={name}
         width={240}
         height={100}
-        className={`h-auto max-h-20 w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100 ${imgClassName ?? ""}`}
+        className={`h-auto w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100 ${imgMaxHeight} ${imgClassName ?? ""}`}
       />
     </a>
   );
@@ -85,22 +89,21 @@ export function Sponsors() {
         </div>
 
         <div className="mb-8">
-          <h3 className="mb-3 text-lg font-bold">Parceiros</h3>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <LogoSlots count={SPONSOR_TIERS.parceiros} label="em breve" />
+          <h3 className="mb-3 text-center text-lg font-bold">Parceiros</h3>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {PARTNER_LOGOS.map((partner) => (
+              <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} size="sm" />
+            ))}
+            <LogoSlots count={SPONSOR_TIERS.parceiros - PARTNER_LOGOS.length} className="w-40" />
           </div>
         </div>
 
         <div className="mb-8">
           <h3 className="mb-3 text-lg font-bold">Colaboradores</h3>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-            <LogoSlots count={SPONSOR_TIERS.colab} label="em breve" />
+            <LogoSlots count={SPONSOR_TIERS.colab} />
           </div>
         </div>
-
-        <p className="text-center text-sm text-muted-foreground">
-          Quer patrocinar o DevFestPoa26? Fale com a organização pelos canais oficiais do GDG Porto Alegre.
-        </p>
       </div>
     </section>
   );
