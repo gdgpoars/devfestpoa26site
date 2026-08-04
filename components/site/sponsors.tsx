@@ -1,4 +1,5 @@
-import { SPONSOR_TIERS } from "@/lib/content";
+import Image from "next/image";
+import { FACULDADE_SEDE, POWERED_BY_PARTNERS, SPONSOR_TIERS } from "@/lib/content";
 
 function LogoSlots({ count, label }: { count: number; label: string }) {
   return (
@@ -17,6 +18,36 @@ function LogoSlots({ count, label }: { count: number; label: string }) {
   );
 }
 
+function PartnerLogo({
+  name,
+  logo,
+  href,
+  imgClassName,
+}: {
+  name: string;
+  logo: string;
+  href: string;
+  imgClassName?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={name}
+      className="logo-soft-glow animate-float-soft group flex h-28 w-64 items-center justify-center rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-primary/40"
+    >
+      <Image
+        src={logo}
+        alt={name}
+        width={240}
+        height={100}
+        className={`h-auto max-h-20 w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100 ${imgClassName ?? ""}`}
+      />
+    </a>
+  );
+}
+
 export function Sponsors() {
   return (
     <section className="py-16 sm:py-20">
@@ -28,12 +59,28 @@ export function Sponsors() {
         </div>
 
         <div className="mb-8">
-          <div className="mb-3 flex items-baseline gap-2">
-            <h3 className="text-lg font-bold">Powered by</h3>
-            <span className="text-xs text-muted-foreground">— cota máxima</span>
+          <div className="mb-3 flex items-baseline justify-center gap-2">
+            <h3 className="text-lg font-bold">Faculdade Sede</h3>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <LogoSlots count={SPONSOR_TIERS.powered} label="em breve" />
+          <div className="flex justify-center">
+            <PartnerLogo name={FACULDADE_SEDE.name} logo={FACULDADE_SEDE.logo} href={FACULDADE_SEDE.href} />
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <div className="mb-3 flex items-baseline justify-center gap-2">
+            <h3 className="text-lg font-bold">Powered by</h3>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {POWERED_BY_PARTNERS.map((partner) => (
+              <PartnerLogo
+                key={partner.name}
+                name={partner.name}
+                logo={partner.logo}
+                href={partner.href}
+                imgClassName={partner.name === "Dentsu World Services" ? "scale-125" : undefined}
+              />
+            ))}
           </div>
         </div>
 

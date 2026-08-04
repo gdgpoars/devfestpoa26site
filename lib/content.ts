@@ -61,6 +61,12 @@ export const POWERED_BY_PARTNERS = [
   { name: "Dentsu World Services", logo: "/dws logo.png", href: "https://www.dentsu.com/br/pt" },
 ];
 
+export const FACULDADE_SEDE = {
+  name: "Faculdade Dom Bosco",
+  logo: "/dom bosco logo.png",
+  href: "https://faculdadedombosco.net/pt/",
+};
+
 type ExperienceItem = {
   icon: string;
   title: string;
@@ -405,7 +411,7 @@ export const GALLERY_PHOTOS = [
   { src: "/DEVFEST-258.jpg", width: 1538, height: 2048 },
 ].map((p, i) => ({ ...p, alt: `DevFestPoa25 — registro ${i + 1}` }));
 
-export const SPONSOR_TIERS = { powered: 3, parceiros: 4, colab: 5 };
+export const SPONSOR_TIERS = { parceiros: 4, colab: 5 };
 
 export const METRICS_2025 = [
   { num: "325", label: "pessoas inscritas" },
