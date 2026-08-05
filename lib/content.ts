@@ -72,6 +72,10 @@ export const PARTNER_LOGOS = [
   { name: "Nort", logo: "/nort logo.png", href: "https://nortjobs.com/pt-BR" },
 ];
 
+export const IMPULSO_PARTNERS = [
+  { name: "Casa do Código", logo: "/casa do codigo logo.jpg", href: "https://www.casadocodigo.com.br/" },
+];
+
 type ExperienceItem = {
   icon: string;
   title: string;

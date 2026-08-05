@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
-import { FACULDADE_SEDE, PARTNER_LOGOS, POWERED_BY_PARTNERS, SPONSOR_TIERS } from "@/lib/content";
+import { FACULDADE_SEDE, IMPULSO_PARTNERS, PARTNER_LOGOS, POWERED_BY_PARTNERS, SPONSOR_TIERS } from "@/lib/content";
 
 function LogoSlots({ count, className }: { count: number; className?: string }) {
   return (
@@ -24,12 +24,14 @@ function PartnerLogo({
   href,
   imgClassName,
   size = "default",
+  bgClassName = "bg-card",
 }: {
   name: string;
   logo: string;
   href: string;
   imgClassName?: string;
   size?: "default" | "sm";
+  bgClassName?: string;
 }) {
   const sizeClasses = size === "sm" ? "h-20 w-40 p-3" : "h-28 w-64 p-4";
   const imgMaxHeight = size === "sm" ? "max-h-12" : "max-h-20";
@@ -39,14 +41,14 @@ function PartnerLogo({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={name}
-      className={`logo-soft-glow animate-float-soft group flex items-center justify-center rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/40 ${sizeClasses}`}
+      className={`logo-soft-glow animate-float-soft group flex items-center justify-center rounded-2xl border border-border transition-all hover:-translate-y-1 hover:border-primary/40 ${bgClassName} ${sizeClasses}`}
     >
       <Image
         src={logo}
         alt={name}
         width={240}
         height={100}
-        className={`h-auto w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100 ${imgMaxHeight} ${imgClassName ?? ""}`}
+        className={`h-auto w-auto rounded-xl object-contain opacity-90 transition-opacity group-hover:opacity-100 ${imgMaxHeight} ${imgClassName ?? ""}`}
       />
     </a>
   );
@@ -99,9 +101,25 @@ export function Sponsors() {
         </div>
 
         <div className="mb-8">
-          <h3 className="mb-3 text-lg font-bold">Colaboradores</h3>
+          <h3 className="mb-3 text-center text-lg font-bold">Colaboradores</h3>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
             <LogoSlots count={SPONSOR_TIERS.colab} />
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="mb-3 text-center text-lg font-bold">Impulso</h3>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {IMPULSO_PARTNERS.map((partner) => (
+              <PartnerLogo
+                key={partner.name}
+                name={partner.name}
+                logo={partner.logo}
+                href={partner.href}
+                size="sm"
+                bgClassName="bg-white"
+              />
+            ))}
           </div>
         </div>
       </div>
