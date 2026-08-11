@@ -422,6 +422,8 @@ export const GALLERY_PHOTOS = [
 
 export const SPONSOR_TIERS = { parceiros: 4, colab: 5 };
 
+export const COMMUNITY_PARTNERS_COUNT = 6;
+
 export const METRICS_2025 = [
   { num: "325", label: "pessoas inscritas" },
   { num: "283", label: "presentes no dia" },
@@ -457,11 +459,23 @@ export const GDG_COMMUNITIES = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Início" },
-  { href: "/#explore", label: "Explore o evento" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/tema", label: "Tema" },
-  { href: "/experiencia", label: "Experiência" },
-  { href: "/patrocinadores", label: "Patrocinadores" },
+  {
+    href: "/#explore",
+    label: "Explore o evento",
+    children: [
+      { href: "/sobre", label: "Sobre" },
+      { href: "/tema", label: "Tema" },
+      { href: "/experiencia", label: "Experiência" },
+    ],
+  },
+  {
+    href: "/patrocinadores",
+    label: "Conexões",
+    children: [
+      { href: "/patrocinadores#patrocinadores", label: "Patrocinadores" },
+      { href: "/patrocinadores#comunidades-parceiras", label: "Comunidades Parceiras" },
+    ],
+  },
   { href: "/faq", label: "FAQ" },
   { href: "/codigo-de-conduta", label: "Código de Conduta" },
 ];
