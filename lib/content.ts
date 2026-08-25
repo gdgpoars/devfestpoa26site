@@ -67,13 +67,25 @@ export const FACULDADE_SEDE = {
   href: "https://faculdadedombosco.net/pt/",
 };
 
+export const APOIO_INSTITUCIONAL = {
+  name: "Secretaria da Inovação, Ciência e Tecnologia do RS",
+  logo: "/brasão estado.png",
+  href: "https://sict.rs.gov.br/inicial",
+};
+
 export const PARTNER_LOGOS = [
   { name: "WK", logo: "/wk logo.png", href: "https://wkrh.com.br/" },
   { name: "Nort", logo: "/nort logo.png", href: "https://nortjobs.com/pt-BR" },
+  { name: "Eximia", logo: "/eximia logo.png", href: "https://eximia.co/" },
 ];
 
 export const IMPULSO_PARTNERS = [
   { name: "Casa do Código", logo: "/casa do codigo logo.jpg", href: "https://www.casadocodigo.com.br/" },
+  { name: "Growdev", logo: "/logo growdev.png", href: "https://growdev.com.br/" },
+];
+
+export const COMMUNITY_PARTNERS = [
+  { name: "Dev Girls", logo: "/devgirls logo.png", href: "https://www.linkedin.com/company/dev-girls/" },
 ];
 
 type ExperienceItem = {
@@ -420,9 +432,9 @@ export const GALLERY_PHOTOS = [
   { src: "/DEVFEST-258.jpg", width: 1538, height: 2048 },
 ].map((p, i) => ({ ...p, alt: `DevFestPoa25 — registro ${i + 1}` }));
 
-export const SPONSOR_TIERS = { parceiros: 4, colab: 5 };
+export const SPONSOR_TIERS = { parceiros: 6 };
 
-export const COMMUNITY_PARTNERS_COUNT = 6;
+export const COMMUNITY_PARTNERS_COUNT = 5;
 
 export const METRICS_2025 = [
   { num: "325", label: "pessoas inscritas" },
