@@ -183,7 +183,13 @@ export function Sponsors() {
 
           <div className="flex flex-wrap items-center justify-center gap-6">
             {COMMUNITY_PARTNERS.map((partner) => (
-              <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} />
+              <PartnerLogo
+                key={partner.name}
+                name={partner.name}
+                logo={partner.logo}
+                href={partner.href}
+                imgClassName={partner.name === "Stem Girls" ? "scale-[2.2]" : undefined}
+              />
             ))}
             <LogoSlots count={COMMUNITY_PARTNERS_COUNT - COMMUNITY_PARTNERS.length} className="h-28 w-64" />
           </div>
