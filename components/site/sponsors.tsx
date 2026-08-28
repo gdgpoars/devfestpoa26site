@@ -171,19 +171,21 @@ export function Sponsors() {
         </div>
       </section>
 
-      <section id="comunidades-parceiras" className="scroll-mt-24 py-16 sm:py-20">
+      <section id="comunidades-parceiras" className="scroll-mt-24 pt-0 pb-16 sm:pb-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-10 text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Comunidade</p>
             <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Hall de Comunidades Parceiras 🤝🏻</h2>
-            <p className="mt-2 text-sm text-muted-foreground">Comunidades que caminham junto com o DevFestPoa26.</p>
+            <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground sm:text-base">
+              Comunidades que caminham junto com o DevFestPoa26.
+            </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             {COMMUNITY_PARTNERS.map((partner) => (
-              <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} size="sm" />
+              <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} />
             ))}
-            <LogoSlots count={COMMUNITY_PARTNERS_COUNT - COMMUNITY_PARTNERS.length} className="w-40" />
+            <LogoSlots count={COMMUNITY_PARTNERS_COUNT - COMMUNITY_PARTNERS.length} className="h-28 w-64" />
           </div>
         </div>
       </section>
