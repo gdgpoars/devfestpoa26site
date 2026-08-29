@@ -87,6 +87,7 @@ export const IMPULSO_PARTNERS = [
 export const COMMUNITY_PARTNERS = [
   { name: "Dev Girls", logo: "/devgirls logo.png", href: "https://www.linkedin.com/company/dev-girls/" },
   { name: "Stem Girls", logo: "/stem girls logo.png", href: "https://linktr.ee/stemgirlsbr" },
+  { name: "Produteiros", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
 ];
 
 type ExperienceItem = {
