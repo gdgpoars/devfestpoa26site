@@ -16,7 +16,7 @@ export function Faq() {
                 <span className="ml-4 text-xl text-primary transition-transform group-open:rotate-45">+</span>
               </summary>
               <div
-                className="mt-3 text-sm text-muted-foreground [&_a]:text-primary [&_a]:underline"
+                className="mt-3 text-sm text-muted-foreground [&_a]:text-primary [&_a]:underline [&_p]:mb-3 [&_p:last-child]:mb-0 [&_ul]:my-3 [&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_strong]:font-semibold [&_strong]:text-foreground"
                 dangerouslySetInnerHTML={{ __html: f.a }}
               />
             </details>
