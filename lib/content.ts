@@ -165,25 +165,144 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
 ];
 
+const DOM_BOSCO_MAPS_URL = "https://maps.app.goo.gl/RMh3NpXR9jhzD24t8";
+const ORG_CONTACT_EMAIL = "gdgpoars@gmail.com";
+
 export const FAQS = [
-  { q: "O que é o DevFestPoa26?", a: "É o DevFest de Porto Alegre, o maior evento anual das comunidades GDG Porto Alegre e GDG Caxias do Sul: um dia de conteúdo técnico, comunidade, networking e experiências práticas em tecnologia." },
-  { q: "Quando acontece o evento?", a: "No sábado, 31 de outubro de 2026, das 9h às 18h." },
-  { q: "Onde será realizado?", a: "Na Faculdade Dom Bosco, em Porto Alegre/RS." },
-  { q: "Quem organiza o DevFestPoa26?", a: "O evento é organizado de forma voluntária e sem fins lucrativos pelas comunidades GDG Porto Alegre e GDG Caxias do Sul." },
-  { q: "O evento é presencial ou online?", a: "O DevFestPoa26 é 100% presencial." },
-  { q: "Quem pode participar?", a: "Pessoas desenvolvedoras, profissionais de tecnologia, estudantes, entusiastas e qualquer pessoa interessada em aprender e se conectar com a comunidade tech." },
-  { q: "Preciso ser desenvolvedor para participar?", a: "Não. O DevFestPoa26 é aberto a diferentes níveis de experiência e áreas — de quem está começando a quem já é referência no mercado." },
-  { q: "Como compro meu ingresso?", a: `Pelo Sympla, nosso canal oficial de vendas. <a href="${SYMPLA_URL}" target="_blank" rel="noopener">Clique aqui para garantir o seu</a>.` },
-  { q: "Onde compro o ingresso?", a: `Exclusivamente pelo Sympla, no link oficial: <a href="${SYMPLA_URL}" target="_blank" rel="noopener">sympla.com.br</a>. Valores e lotes disponíveis diretamente por lá.` },
-  { q: "Qual é o horário do evento?", a: "Das 9h às 18h, no sábado, 31 de outubro de 2026." },
-  { q: "Como chegar à Faculdade Dom Bosco?", a: "Endereço completo, opções de transporte público e estacionamento serão divulgados em breve nesta página." },
-  { q: "O que devo levar?", a: "Ingresso, documento com foto, celular, carregador e, se quiser, notebook — além de disposição para aprender e fazer networking." },
-  { q: "A programação já está disponível?", a: "Ainda não. A programação está sendo construída e será divulgada em breve, com palestras, palestrantes, trilhas e horários." },
-  { q: "Terá networking?", a: "Sim! O DevFestPoa26 contará com networking estruturado, com espaços pensados para gerar conexões reais entre participantes, palestrantes e empresas." },
-  { q: "O que é o DevFestPoaGame?", a: "É a experiência de gamificação do evento — uma forma extra de explorar o DevFestPoa26 e interagir com a comunidade. Regras, desafios e premiação serão detalhados em breve." },
-  { q: "Terá alimentação?", a: "Detalhes sobre coffee break e opções de alimentação serão atualizados em breve nesta página." },
-  { q: "O evento possui acessibilidade?", a: "Estamos organizando as informações de acessibilidade do local e do evento, que serão publicadas em breve." },
-  { q: "Como posso acompanhar as novidades?", a: "Pelos canais oficiais do GDG Porto Alegre e do GDG Caxias do Sul e pela hashtag #DevFestPoa26." },
+  {
+    q: "O que é o DevFest Porto Alegre 2026 (DevFestPoa26)?",
+    a: "O DevFest Porto Alegre 2026 (DevFestPoa26) é um evento de tecnologia realizado em Porto Alegre, no Rio Grande do Sul, pelas comunidades GDG Porto Alegre e GDG Caxias do Sul. É um dia inteiro dedicado a conteúdo técnico, aprendizado, networking, carreira, inovação e experiências práticas para toda a galera tech. 🚀",
+  },
+  {
+    q: "Quando e onde acontece o DevFest Porto Alegre 2026?",
+    a: `<p>O DevFestPoa26 acontece no sábado, 31 de outubro de 2026, das 9h às 18h, na Faculdade Dom Bosco, em Porto Alegre/RS. O credenciamento começa às 8h15, com coffee break esperando você. ☕🥐</p><p>Chegue cedo para fazer seu credenciamento com calma e já começar o dia no clima do DevFest!</p>`,
+  },
+  {
+    q: "Onde fica a Faculdade Dom Bosco?",
+    a: `<p>A Faculdade Dom Bosco está localizada na Rua Marechal José Inácio da Silva, 355, no bairro Passo D'Areia, em Porto Alegre/RS.</p><p>📍 Para visualizar a localização e traçar sua rota, acesse o <a href="${DOM_BOSCO_MAPS_URL}" target="_blank" rel="noopener">Google Maps</a>.</p>`,
+  },
+  {
+    q: "Quem organiza o DevFest Porto Alegre 2026?",
+    a: `<p>O DevFestPoa26 é organizado de forma voluntária e sem fins lucrativos pelas comunidades GDG Porto Alegre e GDG Caxias do Sul, que fazem parte do ecossistema Google Developer Groups.</p><p>Por trás do evento existe uma galera de voluntários colocando a mão na massa para fazer tudo acontecer. 💙</p>`,
+  },
+  {
+    q: "O DevFestPoa26 é presencial ou online?",
+    a: "O DevFestPoa26 é 100% presencial! 📍 Prepare-se para um dia inteiro de conteúdo, networking, experiências práticas e, claro, muita interação com a comunidade tech.",
+  },
+  {
+    q: "Quem pode participar do DevFest Porto Alegre 2026?",
+    a: `<p>O DevFestPoa26 é para toda a galera que já atua na área de tecnologia ou pretende ingressar no mercado! 💻</p><p>São muito bem-vindas pessoas desenvolvedoras, profissionais de tecnologia, Product Owners (POs), Product Managers (PMs), profissionais de Design, UX/UI, Dados, Inteligência Artificial e Machine Learning, Cloud, DevOps, Cibersegurança, Qualidade e Testes (QA), estudantes, pessoas em transição de carreira, entusiastas e qualquer pessoa interessada em aprender, trocar experiências e se conectar com a comunidade tech.</p><p>Se tem curiosidade, vontade de aprender e interesse por tecnologia, pode chegar! 🚀</p>`,
+  },
+  {
+    q: "Preciso ser desenvolvedor para participar do DevFestPoa26?",
+    a: `<p>Não! 🙌</p><p>O DevFestPoa26 é para toda a comunidade tech e está aberto a diferentes áreas, perfis e níveis de experiência. Vale para quem está começando a estudar, para quem está entrando no mercado e também para profissionais experientes e especialistas.</p><p>Você não precisa saber programar para fazer parte do DevFest. 💙</p>`,
+  },
+  {
+    q: "Como e onde compro meu ingresso para o DevFest Porto Alegre 2026?",
+    a: `<p>Os ingressos são vendidos exclusivamente pelo Sympla, nosso canal oficial de vendas.</p><p>🎟️ <a href="${SYMPLA_URL}" target="_blank" rel="noopener">Garanta seu ingresso aqui</a>.</p><p>Evento sem fins lucrativos. Todo o valor arrecadado com os ingressos é destinado à realização do DevFestPoa26, ajudando a viabilizar a estrutura, alimentação, experiências e demais custos necessários para proporcionar uma ótima experiência para as pessoas participantes.</p>`,
+  },
+  {
+    q: "Quanto custa o ingresso do DevFestPoa26?",
+    a: `<p>O valor do ingresso varia de acordo com o lote disponível. 🎟️</p><p>Os preços e a disponibilidade atualizados podem ser consultados diretamente na <a href="${SYMPLA_URL}" target="_blank" rel="noopener">página oficial do evento no Sympla</a>.</p><p>E fica a dica: não deixe para garantir seu ingresso na última hora. Os lotes são limitados e os valores podem mudar. 👀</p>`,
+  },
+  {
+    q: "O ingresso do DevFestPoa26 dá acesso a todo o evento?",
+    a: `<p>Sim! 🎟️</p><p>O ingresso garante acesso ao evento presencial e às atividades abertas da programação, incluindo palestras, trilhas de conteúdo, networking, experiências e coffee breaks.</p><p>Algumas atividades específicas, como determinados workshops ou experiências práticas, podem ter vagas limitadas ou exigir inscrição prévia. As informações serão divulgadas na programação e no web app do evento.</p>`,
+  },
+  {
+    q: "Qual é o horário do DevFest Porto Alegre 2026?",
+    a: `<p>O evento acontece das 9h às 18h, no sábado, 31 de outubro de 2026.</p><p>O credenciamento começa às 8h15, com coffee break antes da abertura oficial. ☕🥐</p><p>Nossa recomendação? Chegue cedo, faça seu credenciamento com tranquilidade, pegue um café e já comece a explorar o DevFest! 🚀</p>`,
+  },
+  {
+    q: "Como chegar à Faculdade Dom Bosco para o DevFestPoa26?",
+    a: `<p>A Faculdade Dom Bosco está localizada na Rua Marechal José Inácio da Silva, 355, no bairro Passo D'Areia, em Porto Alegre/RS.</p>
+      <p>📍 <a href="${DOM_BOSCO_MAPS_URL}" target="_blank" rel="noopener">Google Maps</a></p>
+      <p>🚌 <strong>Vindo de ônibus:</strong> a Faculdade fica próxima a importantes vias como Av. Assis Brasil, Av. Brasiliano Índio de Moraes, Av. Cristóvão Colombo e Av. Plínio Brasil Milano.</p>
+      <ul>
+        <li><strong>Do Centro de Porto Alegre:</strong> linhas T2A, T13 e 605, que atendem diferentes regiões e possuem paradas próximas à Faculdade.</li>
+        <li><strong>Da Zona Norte:</strong> linhas pela região da Av. Assis Brasil, incluindo B51, T2A e 605, além de linhas metropolitanas que passam pelas proximidades.</li>
+        <li><strong>Da Zona Sul:</strong> linhas que fazem conexão com a região central e seguem em direção à Zona Norte, como a T2A, chegando às proximidades da Faculdade.</li>
+      </ul>
+      <p>🚏 <strong>Ponto de referência:</strong> a Faculdade Dom Bosco fica no bairro Passo D'Areia, próxima ao IAPI e às avenidas Assis Brasil e Brasiliano Índio de Moraes.</p>
+      <p>🚗 <strong>De carro ou aplicativo:</strong> no Google Maps, Uber ou outro aplicativo de navegação, pesquise por "Faculdade Dom Bosco – Rua Marechal José Inácio da Silva, 355, Porto Alegre/RS".</p>
+      <p>💡 Dica: horários e itinerários do transporte público podem sofrer alterações. Consulte o Google Maps ou Moovit no dia do evento para encontrar a melhor rota a partir do seu endereço.</p>`,
+  },
+  {
+    q: "Existe estacionamento na Faculdade Dom Bosco?",
+    a: `<p>Sim! 🚗 Há um estacionamento particular ao lado da Faculdade Dom Bosco, junto ao Colégio Dom Bosco, que poderá ser utilizado pelas pessoas participantes do evento.</p><p>Como se trata de um estacionamento particular, a utilização é paga e está sujeita à disponibilidade de vagas no dia do evento. Recomendamos chegar com antecedência, especialmente nos horários de maior movimento.</p>`,
+  },
+  {
+    q: "O que devo levar para o DevFestPoa26?",
+    a: `<p>Para aproveitar o DevFestPoa26 ao máximo, recomendamos levar:</p>
+      <ul>
+        <li>🎟️ <strong>Ingresso do Sympla:</strong> deixe o ingresso facilmente acessível no celular. Não precisa imprimir!</li>
+        <li>🪪 <strong>Documento com foto:</strong> será utilizado no credenciamento.</li>
+        <li>📱 <strong>Celular:</strong> essencial para acompanhar as informações do evento, participar das interações e aproveitar as experiências do DevFest.</li>
+        <li>🔋 <strong>Carregador ou power bank:</strong> porque bateria acaba justamente quando a gente mais precisa. 😅</li>
+        <li>💻 <strong>Notebook:</strong> super recomendado para quem pretende participar dos workshops, labs e atividades práticas.</li>
+      </ul>
+      <p>🧠 E, principalmente: traga curiosidade, vontade de aprender, trocar experiências e fazer networking com toda a galera tech!</p>`,
+  },
+  {
+    q: "Qual será a programação do DevFest Porto Alegre 2026?",
+    a: `<p>A programação do DevFestPoa26 está sendo construída e será divulgada em breve. 👀</p><p>O evento contará com diferentes formatos de conteúdo, incluindo palestras, workshops e atividades práticas, distribuídos entre o palco principal e as trilhas de conteúdo.</p><p>A programação será pensada para contemplar diferentes áreas e níveis de experiência em tecnologia, permitindo que cada participante escolha os conteúdos que mais fazem sentido para seus interesses e objetivos.</p><p>Spoiler: estamos preparando uma grade robusta para você sair do evento com bastante coisa nova na cabeça. 🧠🚀</p>`,
+  },
+  {
+    q: "Quais tecnologias e temas serão abordados no DevFestPoa26?",
+    a: `<p>O DevFestPoa26 terá conteúdos voltados para diferentes áreas da tecnologia, contemplando temas técnicos e profissionais relevantes para a comunidade tech.</p><p>A programação poderá incluir assuntos relacionados a desenvolvimento de software, Inteligência Artificial, Machine Learning, Google Cloud, Cloud Computing, DevOps, Dados, Cibersegurança, desenvolvimento web e mobile, Firebase, carreira, produto, UX/UI e outras áreas do ecossistema de tecnologia.</p><p>A programação completa, com temas, palestrantes, horários e trilhas, será divulgada em breve. 💻</p>`,
+  },
+  {
+    q: "Como funciona a trilha personalizada do DevFestPoa26?",
+    a: `<p>Aqui entra uma das novidades do DevFestPoa26! 🚀</p><p>O evento contará com um web app desenvolvido para facilitar a experiência dos participantes. Por meio da plataforma, você poderá explorar a programação, conhecer os conteúdos e palestrantes e selecionar as palestras que deseja acompanhar, criando sua própria "Minha Trilha".</p><p>Assim, cada pessoa poderá montar uma programação personalizada de acordo com seus interesses, área de atuação e objetivos.</p><p>Ou seja: nada de ficar perdido tentando decidir "qual palestra eu vou agora?". O app ajuda você a montar sua própria experiência no DevFest. 😎</p>`,
+  },
+  {
+    q: "Posso escolher quais palestras quero assistir no DevFestPoa26?",
+    a: `<p>Sim! 🙌</p><p>O DevFestPoa26 terá diferentes trilhas e um palco principal, permitindo que cada participante escolha os conteúdos que mais fazem sentido para seus interesses.</p><p>Por meio do web app do evento, você poderá explorar a programação e adicionar os conteúdos que deseja acompanhar à sua "Minha Trilha", criando uma experiência personalizada durante o DevFest.</p>`,
+  },
+  {
+    q: "Terá workshops, labs e atividades práticas?",
+    a: `<p>Sim! 🧑‍💻</p><p>Além das palestras e conteúdos no palco principal e nas trilhas, o DevFestPoa26 contará com workshops, labs e outras atividades práticas para quem quiser colocar a mão na massa e aprofundar seus conhecimentos.</p><p>Algumas atividades poderão ter vagas limitadas ou exigir inscrição prévia. As informações serão divulgadas na programação oficial e no web app do evento.</p><p>💻 Dica: se você pretende participar das atividades práticas, leve seu notebook!</p>`,
+  },
+  {
+    q: "Terá networking no DevFestPoa26?",
+    a: `<p>Sim! 🤝</p><p>O DevFestPoa26 contará com uma sala de networking estruturado, pensada para facilitar conexões mais intencionais entre participantes, profissionais, empresas, palestrantes e toda a galera tech.</p><p>O espaço terá atividades e dinâmicas em grupos menores, criando um ambiente mais confortável para trocar experiências, conhecer novas pessoas, compartilhar oportunidades e fortalecer conexões profissionais.</p><p>A ideia é ir além do tradicional "oi, qual é o seu nome?" e criar oportunidades reais de conexão. 😉</p>`,
+  },
+  {
+    q: "Haverá empresas e patrocinadores no DevFest Porto Alegre 2026?",
+    a: `<p>Sim! 🤝</p><p>O DevFestPoa26 contará com empresas patrocinadoras e parceiras, criando oportunidades para participantes conhecerem organizações, produtos, serviços e iniciativas do mercado de tecnologia.</p><p>Além de interagir com as empresas durante o evento, você poderá aproveitar os espaços e experiências preparados pelos patrocinadores e ampliar seu networking profissional.</p><p>Quem sabe aquele contato não vira uma oportunidade depois do evento, né? 👀</p>`,
+  },
+  {
+    q: "O que é o DevFestPoaGame?",
+    a: `<p>O DevFestPoaGame é a experiência de gamificação do DevFestPoa26. 🎮</p><p>A proposta é tornar a participação no evento ainda mais interativa, incentivando as pessoas a explorarem os espaços, participarem das atividades e se conectarem com a comunidade.</p><p>Os desafios, regras e informações sobre possíveis premiações serão divulgados em breve.</p><p>Prepare-se para jogar — porque evento tech também pode ter competição saudável. 👀🏆</p>`,
+  },
+  {
+    q: "Terá alimentação e coffee break no DevFestPoa26?",
+    a: `<p>Sim! ☕🥐</p><p>Teremos um coffee break antes da abertura do evento, das 8h15 às 9h. Então, chegue cedo!</p><p>Também teremos outro coffee break durante a tarde, com comidinhas e interações para deixar o momento ainda mais gostoso.</p><p>E para manter a energia da galera tech lá em cima, teremos café quentinho disponível durante todo o evento nas dependências da Faculdade Dom Bosco. ☕🚀</p>`,
+  },
+  {
+    q: "O DevFestPoa26 é gratuito?",
+    a: `<p>Não. O DevFestPoa26 possui ingressos pagos, vendidos oficialmente pelo Sympla.</p><p>O evento é realizado sem fins lucrativos, e todo o valor arrecadado com os ingressos é destinado à realização do evento e aos custos necessários para sua estrutura, alimentação, experiências e operação.</p><p>🎟️ <a href="${SYMPLA_URL}" target="_blank" rel="noopener">Consulte os ingressos disponíveis</a>.</p>`,
+  },
+  {
+    q: "O DevFest Porto Alegre 2026 oferece certificado?",
+    a: `<p>As informações sobre certificação de participação serão divulgadas pela organização do DevFestPoa26.</p><p>Caso o certificado seja disponibilizado, serão informados posteriormente os critérios, formato e forma de acesso.</p><p>Assim que tivermos novidades, avisaremos nos canais oficiais. 📢</p>`,
+  },
+  {
+    q: "O evento possui acessibilidade?",
+    a: `<p>Sim! 💙</p><p>A Faculdade Dom Bosco conta com estrutura e espaços acessíveis para receber as pessoas participantes.</p><p>Também podemos disponibilizar intérprete de Libras conforme a necessidade. Caso você precise de algum recurso específico de acessibilidade, entre em contato com a organização pelo e-mail <a href="mailto:${ORG_CONTACT_EMAIL}">${ORG_CONTACT_EMAIL}</a> para que possamos buscar a melhor forma de atender você.</p>`,
+  },
+  {
+    q: "Como posso entrar em contato com a organização do DevFestPoa26?",
+    a: `<p>Tem alguma dúvida que não encontrou por aqui? Fala com a gente! 💙</p><p>Você pode entrar em contato com a organização do DevFest Porto Alegre 2026 pelo e-mail oficial <a href="mailto:${ORG_CONTACT_EMAIL}">${ORG_CONTACT_EMAIL}</a>.</p><p>Para dúvidas sobre ingressos, recomendamos também consultar as informações disponíveis na página oficial do evento no Sympla.</p>`,
+  },
+  {
+    q: "Como posso acompanhar as novidades do DevFest Porto Alegre 2026?",
+    a: `<p>Acompanhe as novidades, anúncios de palestrantes, programação, ingressos, experiências e outras informações pelos canais oficiais do GDG Porto Alegre e do GDG Caxias do Sul.</p><p>📱 Também acompanhe as publicações utilizando a hashtag #DevFestPoa26.</p><p>Não quer perder nenhuma novidade? Então já segue a gente e fica de olho! 👀🚀</p>`,
+  },
+  {
+    q: "Onde posso encontrar a programação, palestrantes e informações atualizadas do DevFestPoa26?",
+    a: `<p>As informações oficiais sobre programação, palestrantes, trilhas, horários, experiências e novidades do DevFest Porto Alegre 2026 serão divulgadas nos canais oficiais da organização e no web app do evento.</p><p>📢 Como a programação pode receber atualizações, recomendamos acompanhar os canais oficiais e o web app para sempre consultar as informações mais recentes.</p><p>Assim você não corre o risco de descobrir uma novidade do DevFest só depois que o evento acabar. 😅</p>`,
+  },
 ];
 
 export const CONDUCT_UPDATED = "julho de 2026";
