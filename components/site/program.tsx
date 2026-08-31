@@ -1,28 +1,52 @@
 import Link from "next/link";
+import { TALKS } from "@/lib/schedule";
 
-const WORD_CLOUD = [
-  { label: "Carreira", weight: "track" },
-  { label: "Mentorias", weight: "lg" },
-  { label: "Gestão", weight: "md" },
-  { label: "Produto", weight: "lg" },
-  { label: "Liderança", weight: "md" },
-  { label: "Dados", weight: "track" },
-  { label: "IA", weight: "lg" },
-  { label: "Backend", weight: "md" },
-  { label: "Frontend", weight: "track" },
-  { label: "Web", weight: "md" },
-  { label: "Mobile", weight: "lg" },
-  { label: "UX/UI", weight: "md" },
-  { label: "QA", weight: "sm" },
-  { label: "Testes", weight: "sm" },
-] as const;
+type Weight = "track" | "lg" | "md" | "sm";
 
-const WORD_WEIGHT_CLASSES: Record<(typeof WORD_CLOUD)[number]["weight"], string> = {
+const WORD_WEIGHT_CLASSES: Record<Weight, string> = {
   track: "bg-gradient-to-r from-primary to-secondary bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl",
   lg: "text-lg font-bold text-foreground sm:text-xl",
   md: "text-base font-semibold text-foreground/70 sm:text-lg",
   sm: "text-sm font-medium text-muted-foreground sm:text-base",
 };
+
+// Deriva a nuvem de palavras das tags reais da grade de conteúdo: quanto mais
+// conteúdos usam uma tag, maior e mais em destaque ela aparece.
+function buildWordCloud() {
+  const counts = new Map<string, number>();
+  for (const talk of TALKS) {
+    for (const tag of talk.tags) {
+      counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+  }
+  const ranked = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
+  const total = ranked.length;
+
+  const tiers: Record<Weight, string[]> = { track: [], lg: [], md: [], sm: [] };
+  ranked.forEach(([label], rank) => {
+    const pct = rank / total;
+    const weight: Weight = pct < 0.18 ? "track" : pct < 0.48 ? "lg" : pct < 0.78 ? "md" : "sm";
+    tiers[weight].push(label);
+  });
+
+  // Intercala os tamanhos (em vez de agrupar por tier) para a nuvem parecer orgânica.
+  const order: Weight[] = ["track", "lg", "md", "sm"];
+  const words: { label: string; weight: Weight }[] = [];
+  let remaining = total;
+  let i = 0;
+  while (remaining > 0) {
+    const weight = order[i % order.length];
+    const label = tiers[weight].shift();
+    if (label) {
+      words.push({ label, weight });
+      remaining--;
+    }
+    i++;
+  }
+  return words;
+}
+
+const WORD_CLOUD = buildWordCloud();
 
 export function Program() {
   return (
