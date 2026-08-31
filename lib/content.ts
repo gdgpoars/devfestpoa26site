@@ -461,6 +461,7 @@ export const NAV_LINKS = [
   { href: "/sobre", label: "Sobre" },
   { href: "/tema", label: "Tema" },
   { href: "/experiencia", label: "Experiência" },
+  { href: "/programacao", label: "Programação" },
   { href: "/patrocinadores", label: "Patrocinadores" },
   { href: "/faq", label: "FAQ" },
   { href: "/codigo-de-conduta", label: "Código de Conduta" },
@@ -484,10 +485,17 @@ export const EXPLORE_CARDS = [
     tag: "Conteúdo",
   },
   {
+    href: "/programacao",
+    icon: "🗓️",
+    title: "Programação",
+    text: "A grade completa de palestras, workshops e mentorias, por trilha e por horário.",
+    tag: "Grade oficial",
+  },
+  {
     href: "/experiencia",
     icon: "🧭",
     title: "Experiência",
-    text: "Programação, networking, DevFestPoaGame e a edição anterior.",
+    text: "Networking, DevFestPoaGame e a edição anterior.",
     tag: "No dia do evento",
   },
   {

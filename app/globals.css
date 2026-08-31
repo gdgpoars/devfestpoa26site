@@ -44,6 +44,25 @@
   --radius: 1rem;
 }
 
+/* Tema claro opcional, usado apenas na página de Programação (alternância local). */
+[data-schedule-theme="light"] {
+  color-scheme: light;
+  --background: #fbf9fc;
+  --foreground: #1a1723;
+  --card: #ffffff;
+  --card-foreground: #1a1723;
+  --border: rgba(26, 23, 35, 0.1);
+  --primary: #ef6a1a;
+  --primary-foreground: #ffffff;
+  --secondary: #7c5cff;
+  --secondary-foreground: #ffffff;
+  --muted: #f1eef6;
+  --muted-foreground: #5f5b70;
+  --accent: #e8590c;
+  --accent-foreground: #ffffff;
+  --ring: #ef6a1a;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -96,6 +115,13 @@ body {
   .cta-pulse:active {
     transform: scale(0.95);
   }
+  .stat-pop {
+    display: inline-block;
+    animation: stat-pop 3.2s ease-in-out infinite;
+  }
+  .animate-drift {
+    animation: drift 22s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -128,9 +154,34 @@ body {
   }
 }
 
+@keyframes stat-pop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.06);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, -5%) scale(1.08);
+  }
+  66% {
+    transform: translate(-3%, 4%) scale(0.96);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-float-soft,
+  .stat-pop,
+  .animate-drift,
   .animate-pulse-glow,
   .cta-pulse {
     animation: none;

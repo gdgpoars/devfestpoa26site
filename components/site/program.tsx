@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const WORD_CLOUD = [
   { label: "Carreira", weight: "track" },
   { label: "Mentorias", weight: "lg" },
@@ -29,14 +31,19 @@ export function Program() {
         <div className="rounded-2xl border border-border bg-card p-8 text-center sm:p-12">
           <span className="text-4xl">👻</span>
           <span className="mt-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-            EM BREVE
+            GRADE OFICIAL DISPONÍVEL
           </span>
-          <h3 className="mt-3 text-2xl font-extrabold">A programação está sendo construída</h3>
+          <h3 className="mt-3 text-2xl font-extrabold">Confira a programação do DevFestPoa26</h3>
           <p className="mt-2 text-muted-foreground">
-            Em breve você vai descobrir tudo o que preparamos para o DevFestPoa26 — palestras e
-            palestrantes que vão explorar criar, proteger e escalonar na era agêntica, organizados
-            em trilhas para você montar sua própria jornada.
+            Palestras, workshops, mentorias e rodas de conversa que vão explorar criar, proteger e
+            escalonar na era agêntica, organizados em trilhas para você montar sua própria jornada.
           </p>
+          <Link
+            href="/programacao"
+            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
+          >
+            Ver grade completa
+          </Link>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
             {WORD_CLOUD.map((word, i) => (
               <span
