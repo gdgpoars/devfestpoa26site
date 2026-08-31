@@ -457,10 +457,15 @@ export const GDG_COMMUNITIES = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Início" },
-  { href: "/#explore", label: "Explore o evento" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/tema", label: "Tema" },
-  { href: "/experiencia", label: "Experiência" },
+  {
+    href: "/#explore",
+    label: "Explore o evento",
+    children: [
+      { href: "/sobre", label: "Sobre" },
+      { href: "/tema", label: "Tema" },
+      { href: "/experiencia", label: "Experiência" },
+    ],
+  },
   { href: "/programacao", label: "Programação" },
   { href: "/patrocinadores", label: "Patrocinadores" },
   { href: "/faq", label: "FAQ" },

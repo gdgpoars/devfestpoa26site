@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { NAV_LINKS, SYMPLA_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -33,15 +33,40 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden flex-nowrap items-center gap-4 whitespace-nowrap text-sm font-medium xl:flex">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="whitespace-nowrap text-foreground/80 transition-colors hover:text-foreground"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((l) =>
+              "children" in l && l.children ? (
+                <div key={l.href} className="group relative">
+                  <Link
+                    href={l.href}
+                    className="inline-flex items-center gap-1 whitespace-nowrap text-foreground/80 transition-colors hover:text-foreground"
+                  >
+                    {l.label}
+                    <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
+                  </Link>
+                  <div className="invisible absolute left-0 top-full z-10 min-w-[200px] pt-2 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-background shadow-xl">
+                      {l.children.map((c) => (
+                        <Link
+                          key={c.href}
+                          href={c.href}
+                          className="whitespace-nowrap px-4 py-2.5 text-foreground/80 transition-colors hover:bg-white/5 hover:text-foreground"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="whitespace-nowrap text-foreground/80 transition-colors hover:text-foreground"
+                >
+                  {l.label}
+                </Link>
+              ),
+            )}
           </nav>
 
           <a
@@ -83,16 +108,40 @@ export function SiteHeader() {
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
-        {NAV_LINKS.map((l) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-white/5"
-            onClick={() => setOpen(false)}
-          >
-            {l.label}
-          </Link>
-        ))}
+        {NAV_LINKS.map((l) =>
+          "children" in l && l.children ? (
+            <div key={l.href} className="flex flex-col">
+              <Link
+                href={l.href}
+                className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-white/5"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+              <div className="ml-3 flex flex-col border-l border-border pl-3">
+                {l.children.map((c) => (
+                  <Link
+                    key={c.href}
+                    href={c.href}
+                    className="rounded-md px-3 py-2 text-sm text-foreground/70 hover:bg-white/5"
+                    onClick={() => setOpen(false)}
+                  >
+                    {c.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-white/5"
+              onClick={() => setOpen(false)}
+            >
+              {l.label}
+            </Link>
+          ),
+        )}
         <a
           href={SYMPLA_URL}
           target="_blank"
