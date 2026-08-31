@@ -518,17 +518,18 @@ export const TALKS: Talk[] = [
   },
   {
     id: "t068",
-    title: "Roda de conversa: Liderança, performance e produtividade",
+    title: "Roda de conversa: carreira em tech, de júnior a sênior+",
     format: "roda-de-conversa",
     level: "Todos os níveis",
-    tags: ["Liderança / Gestão", "Bem-estar"],
+    tags: ["Carreira", "Comunidade"],
     speakers: [
       { name: "Priscila Rachevsky", linkedin: "https://www.linkedin.com/in/priscila-rachevsky/" },
       { name: "Isadora Possebon", linkedin: "https://www.linkedin.com/in/isadorapossebon/" },
       { name: "Eduardo Pereira", linkedin: "https://www.linkedin.com/in/egpereira/" },
       { name: "Daniel Castro", linkedin: "https://www.linkedin.com/in/odanieldcs/" },
     ],
-    summary: "Descrição em breve.",
+    summary:
+      "Um bate-papo aberto sobre carreira em tech, do primeiro estágio ao cargo sênior+. Com participantes que já atuaram em empresas de produto e de consultoria, nacionais e multinacionais, vamos trocar experiências reais sobre como os papéis, desafios e expectativas mudam em cada contexto — e em cada fase da carreira.",
     track: "covil",
     start: 825,
     end: 875,
