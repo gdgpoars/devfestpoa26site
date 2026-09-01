@@ -613,6 +613,23 @@ export const TALKS: Talk[] = [
     hasDetails: true,
   },
   {
+    id: "speed-networking",
+    title: "Speed Networking",
+    format: "roda-de-conversa",
+    level: "Todos os níveis",
+    tags: ["Comunidade", "Carreira"],
+    speakers: [
+      { name: "Carol Paier", linkedin: "https://www.linkedin.com/in/carolpaier/" },
+      { name: "Daniel Castro", linkedin: "https://www.linkedin.com/in/odanieldcs/" },
+    ],
+    summary:
+      "Uma dinâmica para conhecer pessoas, trocar experiências e ampliar sua rede de conexões no DevFest. Em rodadas rápidas de conversa, você vai conhecer diferentes participantes da comunidade, sem divisão por área ou nível de experiência. A cada rodada, uma nova pessoa, uma nova conversa e uma nova possibilidade de conexão.",
+    track: "covil",
+    start: 975,
+    end: 1020,
+    hasDetails: true,
+  },
+  {
     id: "t059",
     title: "IA confiável não nasce no prompt: qualidade, testes e guardrails em produtos com LLM",
     format: "palestra",
