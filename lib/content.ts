@@ -91,6 +91,7 @@ export const PARTNER_LOGOS = [
   { name: "WK", logo: "/wk logo.png", href: "https://wkrh.com.br/" },
   { name: "Nort", logo: "/nort logo.png", href: "https://nortjobs.com/pt-BR" },
   { name: "Eximia", logo: "/eximia logo.png", href: "https://eximia.co/" },
+  { name: "HostGator", logo: "/logo hostgator.png", href: "https://www.hostgator.com.br/" },
 ];
 
 export const IMPULSO_PARTNERS = [
