@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/content";
+import { OG_IMAGE } from "@/lib/seo";
 
 const GTM_ID = "GTM-52JL87HH";
 
@@ -33,11 +34,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: TITLE,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
 };
 

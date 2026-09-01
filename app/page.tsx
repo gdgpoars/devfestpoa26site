@@ -11,6 +11,7 @@ import {
   GDG_COMMUNITIES,
   SITE_NAME,
   SITE_URL,
+  SYMPLA_URL,
 } from "@/lib/content";
 
 export const metadata: Metadata = pageMetadata({
@@ -31,6 +32,14 @@ const eventJsonLd = {
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
   url: SITE_URL,
+  image: [`${SITE_URL}/logo%20evento.png`],
+  offers: {
+    "@type": "Offer",
+    url: SYMPLA_URL,
+    priceCurrency: "BRL",
+    availability: "https://schema.org/InStock",
+    validFrom: "2026-01-01T00:00:00-03:00",
+  },
   location: {
     "@type": "Place",
     name: "Faculdade Dom Bosco",

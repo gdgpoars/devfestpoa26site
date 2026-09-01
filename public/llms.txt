@@ -1,0 +1,39 @@
+# DevFestPoa26
+
+> DevFest Porto Alegre 2026 (DevFestPoa26): evento de tecnologia com ingresso pago, organizado de
+> forma voluntária e sem fins lucrativos pelas comunidades GDG Porto Alegre e GDG Caxias do Sul
+> (Google Developer Groups). Um dia inteiro de conteúdo técnico, comunidade e networking.
+
+## Fatos principais
+
+- Data: sábado, 31 de outubro de 2026, das 9h às 18h (credenciamento a partir das 8h15)
+- Local: Faculdade Dom Bosco, Passo d'Areia, Porto Alegre/RS, Brasil
+- Tema 2026: "Criar, proteger, escalonar" — desenvolvedores e criadores na era agêntica
+  (inteligência artificial, agentes autônomos, segurança e escalabilidade)
+- Formato: 100% presencial
+- Ingressos: venda exclusiva pelo Sympla, em lotes promocionais e limitados
+- Organização: GDG Porto Alegre e GDG Caxias do Sul, sem fins lucrativos, feito por voluntários
+
+## Programação
+
+37 conteúdos entre palestras, workshops, mentorias, laboratórios e rodas de conversa, com mais de
+40 pessoas palestrantes, distribuídos em 6 espaços: Salão Comunal (palco principal), Trilha Magia
+(design e mobile), Trilha Lua Cheia (escalonar), Trilha Sentinela (proteger), Trilha Alquimia (criar)
+e Covil (mentorias e rodas de conversa). Assuntos incluem IA e agentes, arquitetura, qualidade e
+testes, mobile, dados, segurança, produto, carreira e liderança. A grade completa, com título,
+trilha, horário, tags, pessoa palestrante e resumo de cada conteúdo, está em /programacao.
+
+## Páginas principais
+
+- [Página inicial](https://devfestportoalegre.com.br/): visão geral do evento, contagem regressiva e destaques
+- [Sobre o evento](https://devfestportoalegre.com.br/sobre): proposta e pilares de conteúdo
+- [Tema 2026](https://devfestportoalegre.com.br/tema): criar, proteger, escalonar na era agêntica
+- [Programação](https://devfestportoalegre.com.br/programacao): grade completa de conteúdos, por trilha e por horário
+- [Experiência](https://devfestportoalegre.com.br/experiencia): o que esperar no dia, networking, DevFestPoaGame
+- [Patrocinadores e comunidades parceiras](https://devfestportoalegre.com.br/patrocinadores)
+- [Perguntas frequentes](https://devfestportoalegre.com.br/faq): dúvidas sobre ingressos, local, acessibilidade e programação
+- [Código de conduta](https://devfestportoalegre.com.br/codigo-de-conduta)
+
+## Ingressos
+
+Comprar ingresso: https://www.sympla.com.br/evento/devfest-porto-alegre-2026/3511958

@@ -147,6 +147,13 @@ export function formatTimeRange(start: number, end: number): string {
   return `${formatTime(start)}–${formatTime(end)}`;
 }
 
+/** Converte minutos desde 00:00 em um horário ISO completo no dia do evento (31/10/2026, -03:00). */
+export function toISODateTime(min: number): string {
+  const h = String(Math.floor(min / 60)).padStart(2, "0");
+  const m = String(min % 60).padStart(2, "0");
+  return `2026-10-31T${h}:${m}:00-03:00`;
+}
+
 export type Break = { id: string; label: string; start: number; end: number; sub?: string };
 
 export const BREAKS: Break[] = [
