@@ -497,7 +497,14 @@ export const NAV_LINKS = [
     ],
   },
   { href: "/programacao", label: "Programação" },
-  { href: "/patrocinadores", label: "Patrocinadores" },
+  {
+    href: "/patrocinadores",
+    label: "Conexões",
+    children: [
+      { href: "/patrocinadores#patrocinadores", label: "Patrocínios" },
+      { href: "/patrocinadores#comunidades-parceiras", label: "Comunidades parceiras" },
+    ],
+  },
   { href: "/faq", label: "FAQ" },
   { href: "/codigo-de-conduta", label: "Código de Conduta" },
 ];
