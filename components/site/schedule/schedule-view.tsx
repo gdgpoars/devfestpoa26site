@@ -7,6 +7,7 @@ import {
   TALKS_BY_TRACK,
   TIME_SLOTS,
   TRACKS,
+  TRACK_BY_ID,
   TRACK_TAGS,
   formatTime,
   talkMatchesQuery,
@@ -67,20 +68,18 @@ export function ScheduleView() {
               key={track.id}
               type="button"
               onClick={() => goToTrack(track.id)}
-              className="flex items-center gap-2 rounded-xl border border-border bg-card p-3 text-left transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="flex items-start gap-2 rounded-xl border border-border bg-card p-3 text-left transition-all hover:-translate-y-0.5 hover:shadow-md"
               style={{ borderTopColor: track.color.bg, borderTopWidth: 2 }}
             >
               <span className="text-lg leading-none">{track.emoji}</span>
               <div className="min-w-0">
-                <p className="truncate text-xs font-bold leading-tight" style={{ color: track.color.bg }}>
+                <p className="text-xs font-bold leading-tight" style={{ color: track.color.bg }}>
                   {track.name}
                 </p>
                 {track.room && (
-                  <p className="truncate text-[10px] font-semibold leading-tight text-muted-foreground">
-                    {track.room}
-                  </p>
+                  <p className="text-[10px] font-semibold leading-tight text-muted-foreground">{track.room}</p>
                 )}
-                <p className="truncate text-[11px] leading-tight text-muted-foreground">{track.description}</p>
+                <p className="mt-0.5 text-[11px] leading-tight text-muted-foreground">{track.description}</p>
               </div>
             </button>
           ))}
@@ -161,7 +160,37 @@ export function ScheduleView() {
               ))}
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {(() => {
+              const track = TRACK_BY_ID[selectedTrack];
+              const tags = TRACK_TAGS[selectedTrack];
+              return (
+                <div
+                  className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-border bg-card/60 px-4 py-3 text-sm"
+                  style={{ borderLeft: `3px solid ${track.color.bg}` }}
+                >
+                  {track.room && (
+                    <span className="font-bold" style={{ color: track.color.bg }}>
+                      {track.emoji} {track.room}
+                    </span>
+                  )}
+                  <span className="text-muted-foreground">{track.description}</span>
+                  {tags && tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-border px-2 py-0.5 text-xs font-medium text-muted-foreground"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
+
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {TALKS_BY_TRACK[selectedTrack].map((talk) => (
                 <TalkCard key={talk.id} talk={talk} onOpen={setActiveTalk} showTrack={false} />
               ))}
@@ -222,7 +251,7 @@ export function ScheduleView() {
               )}
             </div>
 
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+            <div className="mt-4 flex flex-col gap-3">
               {TRACKS.filter((t) => TRACK_TAGS[t.id]).map((track) => (
                 <div key={track.id} className="flex flex-wrap items-center gap-1.5">
                   <span className="mr-0.5 text-xs font-bold" style={{ color: track.color.bg }}>
