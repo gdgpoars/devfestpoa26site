@@ -188,7 +188,13 @@ export function Sponsors() {
                 name={partner.name}
                 logo={partner.logo}
                 href={partner.href}
-                imgClassName={partner.name === "Stem Girls" ? "scale-[2.2]" : undefined}
+                imgClassName={
+                  partner.name === "Stem Girls"
+                    ? "scale-[2.2]"
+                    : partner.name === "The AI Collective"
+                      ? "scale-150"
+                      : undefined
+                }
               />
             ))}
             <LogoSlots count={COMMUNITY_PARTNERS_COUNT - COMMUNITY_PARTNERS.length} className="h-28 w-64" />
