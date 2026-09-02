@@ -44,6 +44,7 @@ export type Track = {
   name: string;
   emoji: string;
   description: string;
+  room?: string;
   color: ColorPair;
 };
 
@@ -60,6 +61,7 @@ export const TRACKS: Track[] = [
     name: "Trilha Magia",
     emoji: "🪄",
     description: "A magia de um ótimo design e mobile eficiente.",
+    room: "Sala 408",
     color: { bg: "#b18cff", fg: "#1f0f42" },
   },
   {
@@ -67,6 +69,7 @@ export const TRACKS: Track[] = [
     name: "Trilha Lua Cheia",
     emoji: "🌕",
     description: "Transformação, ciclos e crescimento.",
+    room: "Sala 406",
     color: { bg: "#f6cf4d", fg: "#3a2900" },
   },
   {
@@ -74,6 +77,7 @@ export const TRACKS: Track[] = [
     name: "Trilha Sentinela",
     emoji: "🕯️",
     description: "Vigilância, proteção e confiabilidade.",
+    room: "Sala 409",
     color: { bg: "#45d6c9", fg: "#00312c" },
   },
   {
@@ -81,13 +85,15 @@ export const TRACKS: Track[] = [
     name: "Trilha Alquimia",
     emoji: "⚗️",
     description: "Testar e criar.",
+    room: "Sala 410",
     color: { bg: "#5be08a", fg: "#04331a" },
   },
   {
     id: "covil",
     name: "Covil",
     emoji: "🦇",
-    description: "Mentorias, rodas de conversa e formatos íntimos.",
+    description: "Conversa, networking, evolução.",
+    room: "Sala 401",
     color: { bg: "#ff6a88", fg: "#38000f" },
   },
 ];
@@ -744,3 +750,35 @@ export const TIME_SLOTS: number[] = Array.from(new Set(TALKS.map((t) => t.start)
 
 export const DAY_START = 495; // 8h15 (credenciamento)
 export const DAY_END = 1040; // 17h20 (após encerramento)
+
+/** Tags curadas por trilha, usadas na busca por tags. Não são exaustivas: servem como
+ * atalho de descoberta e são combinadas com correspondência textual nos conteúdos. */
+export const TRACK_TAGS: Partial<Record<TrackId, string[]>> = {
+  "trilha-magia": ["Mobile", "Design", "Frontend", "Flutter", "UX", "Arquitetura"],
+  "trilha-lua-cheia": ["Liderança", "Carreira", "Produto", "Gestão", "Pessoas", "Impacto"],
+  "trilha-sentinela": ["Segurança", "IA Confiável", "Testes", "Qualidade", "Governança", "Cyber"],
+  "trilha-alquimia": ["IA", "Agentes", "RAG", "Automação", "Python", "Arquitetura"],
+  covil: ["Mentoria", "Carreira", "Networking", "Produto", "Liderança", "Comunidade"],
+};
+
+/** Remove acentos e normaliza para minúsculas, para permitir buscas tolerantes. */
+export function normalizeSearch(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+/** Verifica se um conteúdo corresponde a uma tag/termo de busca: compara com as tags do
+ * conteúdo, título, resumo e nome da trilha, de forma tolerante a acentos e maiúsculas. */
+export function talkMatchesQuery(talk: Talk, query: string): boolean {
+  const q = normalizeSearch(query);
+  if (!q) return true;
+  if (talk.tags.some((tag) => normalizeSearch(tag).includes(q) || q.includes(normalizeSearch(tag)))) return true;
+  if (normalizeSearch(talk.title).includes(q)) return true;
+  if (talk.summary && normalizeSearch(talk.summary).includes(q)) return true;
+  const trackName = TRACK_BY_ID[talk.track]?.name ?? "";
+  if (normalizeSearch(trackName).includes(q)) return true;
+  return false;
+}

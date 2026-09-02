@@ -15,7 +15,7 @@ import {
 } from "@/lib/schedule";
 
 const PX_PER_MIN = 2.05;
-const HEADER_H = 52;
+const HEADER_H = 62;
 const GAP = 4;
 const MIN_LABEL_GAP = 15;
 
@@ -141,6 +141,9 @@ export function FullGrid({ onOpen }: { onOpen: (talk: Talk) => void }) {
                 <span className="text-[11px] font-bold leading-tight" style={{ color: track.color.bg }}>
                   {track.name}
                 </span>
+                {track.room && (
+                  <span className="text-[9px] font-medium leading-tight text-muted-foreground">{track.room}</span>
+                )}
               </div>
 
               <div

@@ -71,6 +71,7 @@ export function TalkModal({ talk, onClose }: { talk: Talk; onClose: () => void }
               {track.emoji}
             </span>
             {track.name}
+            {track.room && <span className="font-normal text-muted-foreground">· {track.room}</span>}
           </span>
           <span className="font-mono text-xs">{formatTimeRange(talk.start, talk.end)}</span>
         </div>

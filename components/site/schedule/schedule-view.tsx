@@ -1,13 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Lock, Sparkles } from "lucide-react";
+import { Lock, Search, Sparkles, X } from "lucide-react";
 import {
   TALKS,
   TALKS_BY_TRACK,
   TIME_SLOTS,
   TRACKS,
+  TRACK_TAGS,
   formatTime,
+  talkMatchesQuery,
   type Talk,
   type TrackId,
 } from "@/lib/schedule";
@@ -16,12 +18,13 @@ import { FullGrid } from "./full-grid";
 import { TalkCard } from "./talk-card";
 import { TalkModal } from "./talk-modal";
 
-type ViewMode = "dia" | "trilha" | "horario";
+type ViewMode = "dia" | "trilha" | "horario" | "tags";
 
 const VIEW_LABELS: { id: ViewMode; label: string }[] = [
   { id: "dia", label: "Dia completo" },
   { id: "trilha", label: "Por trilha" },
   { id: "horario", label: "Por horário" },
+  { id: "tags", label: "Buscar por tags" },
 ];
 
 export function ScheduleView() {
@@ -29,6 +32,12 @@ export function ScheduleView() {
   const [selectedTrack, setSelectedTrack] = useState<TrackId>(TRACKS[0].id);
   const [selectedTime, setSelectedTime] = useState<number>(TIME_SLOTS[0]);
   const [activeTalk, setActiveTalk] = useState<Talk | null>(null);
+  const [tagQuery, setTagQuery] = useState("");
+
+  const tagResults = useMemo(() => {
+    if (!tagQuery.trim()) return [];
+    return TALKS.filter((talk) => talkMatchesQuery(talk, tagQuery)).sort((a, b) => a.start - b.start);
+  }, [tagQuery]);
 
   const talksBySlot = useMemo(() => {
     const map = new Map<number, Talk[]>();
@@ -66,6 +75,11 @@ export function ScheduleView() {
                 <p className="truncate text-xs font-bold leading-tight" style={{ color: track.color.bg }}>
                   {track.name}
                 </p>
+                {track.room && (
+                  <p className="truncate text-[10px] font-semibold leading-tight text-muted-foreground">
+                    {track.room}
+                  </p>
+                )}
                 <p className="truncate text-[11px] leading-tight text-muted-foreground">{track.description}</p>
               </div>
             </button>
@@ -180,6 +194,86 @@ export function ScheduleView() {
               {(talksBySlot.get(selectedTime) ?? []).map((talk) => (
                 <TalkCard key={talk.id} talk={talk} onOpen={setActiveTalk} />
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Buscar por tags */}
+        {view === "tags" && (
+          <div className="mt-6">
+            <div className="relative">
+              <Search className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <input
+                type="text"
+                value={tagQuery}
+                onChange={(e) => setTagQuery(e.target.value)}
+                placeholder="Buscar por tag, assunto, trilha ou palavra-chave..."
+                className="h-12 w-full rounded-full border border-border bg-card pl-11 pr-11 text-sm font-medium outline-none transition-colors focus:border-primary"
+              />
+              {tagQuery && (
+                <button
+                  type="button"
+                  onClick={() => setTagQuery("")}
+                  aria-label="Limpar busca"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <X className="size-4" />
+                </button>
+              )}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+              {TRACKS.filter((t) => TRACK_TAGS[t.id]).map((track) => (
+                <div key={track.id} className="flex flex-wrap items-center gap-1.5">
+                  <span className="mr-0.5 text-xs font-bold" style={{ color: track.color.bg }}>
+                    {track.emoji} {track.name}
+                  </span>
+                  {TRACK_TAGS[track.id]!.map((tag) => (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => setTagQuery(tag)}
+                      className={cn(
+                        "rounded-full border px-2.5 py-1 text-xs font-semibold transition-all",
+                        tagQuery.trim().toLowerCase() === tag.toLowerCase()
+                          ? "border-transparent"
+                          : "border-border bg-card text-muted-foreground hover:text-foreground",
+                      )}
+                      style={
+                        tagQuery.trim().toLowerCase() === tag.toLowerCase()
+                          ? { background: track.color.bg, color: track.color.fg }
+                          : undefined
+                      }
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6">
+              {tagQuery.trim() === "" ? (
+                <p className="rounded-xl border border-dashed border-border bg-card/50 p-6 text-center text-sm text-muted-foreground">
+                  Digite um termo ou escolha uma tag acima para encontrar conteúdos.
+                </p>
+              ) : tagResults.length === 0 ? (
+                <p className="rounded-xl border border-dashed border-border bg-card/50 p-6 text-center text-sm text-muted-foreground">
+                  Nenhum conteúdo encontrado para &ldquo;{tagQuery}&rdquo;.
+                </p>
+              ) : (
+                <>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    {tagResults.length} conteúdo{tagResults.length > 1 ? "s" : ""} encontrado
+                    {tagResults.length > 1 ? "s" : ""}
+                  </p>
+                  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {tagResults.map((talk) => (
+                      <TalkCard key={talk.id} talk={talk} onOpen={setActiveTalk} />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}

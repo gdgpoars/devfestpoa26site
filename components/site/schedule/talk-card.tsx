@@ -62,6 +62,7 @@ export function TalkCard({
             {track.emoji}
           </span>
           <span style={{ color: track.color.bg }}>{track.name}</span>
+          {track.room && <span className="text-muted-foreground">· {track.room}</span>}
         </div>
       )}
     </button>
