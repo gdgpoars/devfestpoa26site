@@ -192,7 +192,7 @@ export function Sponsors() {
                   partner.name === "Stem Girls"
                     ? "scale-[2.2]"
                     : partner.name === "The AI Collective"
-                      ? "scale-150"
+                      ? "scale-110"
                       : undefined
                 }
               />
