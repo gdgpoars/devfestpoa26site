@@ -103,6 +103,7 @@ export const COMMUNITY_PARTNERS = [
   { name: "Dev Girls", logo: "/devgirls logo.png", href: "https://www.linkedin.com/company/dev-girls/" },
   { name: "Stem Girls", logo: "/stem girls logo.png", href: "https://linktr.ee/stemgirlsbr" },
   { name: "Produteiros", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
+  { name: "The AI Collective", logo: "/logo the ai collective.png", href: "https://linktr.ee/aicolletivefloripa" },
 ];
 
 type ExperienceItem = {
