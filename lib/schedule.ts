@@ -347,7 +347,7 @@ export const TALKS: Talk[] = [
     id: "t018",
     title: "Release Management: Muito Além do Deploy",
     format: "palestra",
-    level: "Intermediário",
+    level: "Todos os níveis",
     tags: ["Liderança / Gestão", "Segurança", "DevOps / SRE"],
     speakers: [{ name: "Nathalia Karnas", linkedin: "https://www.linkedin.com/in/nathalia-karnas/" }],
     summary:
