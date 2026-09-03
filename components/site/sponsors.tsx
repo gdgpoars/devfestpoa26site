@@ -181,28 +181,32 @@ export function Sponsors() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-start justify-center gap-6">
             {COMMUNITY_PARTNERS.map((partner) => (
-              <PartnerLogo
-                key={partner.name}
-                name={partner.name}
-                logo={partner.logo}
-                href={partner.href}
-                imgClassName={
-                  partner.name === "Stem Girls"
-                    ? "scale-[2.2]"
-                    : partner.name === "The AI Collective"
-                      ? "scale-110"
-                      : partner.name === "Ladies that UX Porto Alegre"
-                        ? "scale-125"
-                        : undefined
-                }
-                bgClassName={
-                  partner.name === "Friends of Figma, Porto Alegre" || partner.name === "Ladies that UX Porto Alegre"
-                    ? "bg-white"
-                    : "bg-card"
-                }
-              />
+              <div key={partner.name} className="flex flex-col items-center gap-2.5">
+                <PartnerLogo
+                  name={partner.name}
+                  logo={partner.logo}
+                  href={partner.href}
+                  imgClassName={
+                    partner.name === "Stem Girls"
+                      ? "scale-[2.2]"
+                      : partner.name === "The AI Collective"
+                        ? "scale-110"
+                        : partner.name === "Ladies that UX Porto Alegre"
+                          ? "scale-125"
+                          : undefined
+                  }
+                  bgClassName={
+                    partner.name === "Friends of Figma, Porto Alegre" || partner.name === "Ladies that UX Porto Alegre"
+                      ? "bg-white"
+                      : "bg-card"
+                  }
+                />
+                <span className="whitespace-nowrap text-xs font-semibold tracking-wide text-white sm:text-sm">
+                  {partner.label}
+                </span>
+              </div>
             ))}
             <LogoSlots count={COMMUNITY_PARTNERS_COUNT - COMMUNITY_PARTNERS.length} className="h-28 w-64" />
           </div>

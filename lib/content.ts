@@ -100,12 +100,27 @@ export const IMPULSO_PARTNERS = [
 ];
 
 export const COMMUNITY_PARTNERS = [
-  { name: "Dev Girls", logo: "/devgirls logo.png", href: "https://www.linkedin.com/company/dev-girls/" },
-  { name: "Stem Girls", logo: "/stem girls logo.png", href: "https://linktr.ee/stemgirlsbr" },
-  { name: "Produteiros", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
-  { name: "The AI Collective", logo: "/logo the ai collective.png", href: "https://linktr.ee/aicolletivefloripa" },
-  { name: "Friends of Figma, Porto Alegre", logo: "/fof logo.png", href: "https://friends.figma.com/porto-alegre/" },
-  { name: "Ladies that UX Porto Alegre", logo: "/ltux logo.png", href: "https://ladiesthatux.com/porto-alegre/" },
+  { name: "Dev Girls", label: "DevGirls", logo: "/devgirls logo.png", href: "https://www.linkedin.com/company/dev-girls/" },
+  { name: "Stem Girls", label: "stem girls", logo: "/stem girls logo.png", href: "https://linktr.ee/stemgirlsbr" },
+  { name: "Produteiros", label: "Produteiros RS", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
+  {
+    name: "The AI Collective",
+    label: "The AI Collective Porto Alegre",
+    logo: "/logo the ai collective.png",
+    href: "https://linktr.ee/aicolletivefloripa",
+  },
+  {
+    name: "Friends of Figma, Porto Alegre",
+    label: "Friends of Figma, Porto Alegre",
+    logo: "/fof logo.png",
+    href: "https://friends.figma.com/porto-alegre/",
+  },
+  {
+    name: "Ladies that UX Porto Alegre",
+    label: "Ladies that UX Porto Alegre",
+    logo: "/ltux logo.png",
+    href: "https://ladiesthatux.com/porto-alegre/",
+  },
 ];
 
 type ExperienceItem = {
