@@ -193,7 +193,14 @@ export function Sponsors() {
                     ? "scale-[2.2]"
                     : partner.name === "The AI Collective"
                       ? "scale-110"
-                      : undefined
+                      : partner.name === "Ladies that UX Porto Alegre"
+                        ? "scale-125"
+                        : undefined
+                }
+                bgClassName={
+                  partner.name === "Friends of Figma, Porto Alegre" || partner.name === "Ladies that UX Porto Alegre"
+                    ? "bg-white"
+                    : "bg-card"
                 }
               />
             ))}

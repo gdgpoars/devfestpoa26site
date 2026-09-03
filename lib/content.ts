@@ -104,6 +104,8 @@ export const COMMUNITY_PARTNERS = [
   { name: "Stem Girls", logo: "/stem girls logo.png", href: "https://linktr.ee/stemgirlsbr" },
   { name: "Produteiros", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
   { name: "The AI Collective", logo: "/logo the ai collective.png", href: "https://linktr.ee/aicolletivefloripa" },
+  { name: "Friends of Figma, Porto Alegre", logo: "/fof logo.png", href: "https://friends.figma.com/porto-alegre/" },
+  { name: "Ladies that UX Porto Alegre", logo: "/ltux logo.png", href: "https://ladiesthatux.com/porto-alegre/" },
 ];
 
 type ExperienceItem = {
@@ -452,7 +454,7 @@ export const GALLERY_PHOTOS = [
 
 export const SPONSOR_TIERS = { parceiros: 6 };
 
-export const COMMUNITY_PARTNERS_COUNT = 5;
+export const COMMUNITY_PARTNERS_COUNT = 6;
 
 export const METRICS_2025 = [
   { num: "325", label: "pessoas inscritas" },
