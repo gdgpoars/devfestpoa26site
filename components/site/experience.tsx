@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { EXPERIENCE } from "@/lib/content";
+import { Reveal } from "@/components/site/reveal";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -11,114 +12,126 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
+const GHOSTS = ["👻", "🕸️", "🦇", "🎃", "🕷️", "🌙"];
+
 export function Experience() {
   return (
     <section id="guia" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">Guia prático</p>
-          <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Tudo em um só lugar</h2>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary">🎃 Guia prático</p>
+          <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">
+            Seu kit de sobrevivência para o DevFestPoa26
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Tudo o que você precisa, sem sustos — a não ser os bons.
+          </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {EXPERIENCE.map((x, i) => (
-            <div
-              key={x.title}
-              className="card-glow group relative overflow-hidden rounded-2xl border border-border bg-card p-6"
-            >
-              <div
-                aria-hidden="true"
-                className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${
-                  i % 2 === 0 ? "from-primary to-accent" : "from-secondary to-primary"
-                } opacity-70 transition-opacity group-hover:opacity-100`}
-              />
-              <span
-                className={`flex size-12 items-center justify-center rounded-2xl text-2xl ${
-                  i % 2 === 0 ? "bg-primary/10" : "bg-secondary/10"
-                }`}
-              >
-                {x.icon}
-              </span>
-              <h3 className="mt-4 flex items-center gap-2 font-bold">
-                {x.title}
-                {x.pending && (
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">
-                    Em breve
-                  </span>
-                )}
-              </h3>
-              {x.text && <p className="mt-1.5 text-sm text-muted-foreground">{x.text}</p>}
-              {x.extraHtml && (
-                <p
-                  className="mt-3 text-sm text-muted-foreground"
-                  dangerouslySetInnerHTML={{ __html: x.extraHtml }}
+            <Reveal key={x.title} delay={i * 80}>
+              <div className="card-glow group relative h-full overflow-hidden rounded-2xl border border-border bg-card p-6">
+                <div
+                  aria-hidden="true"
+                  className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${
+                    i % 2 === 0 ? "from-primary to-accent" : "from-secondary to-primary"
+                  } opacity-70 transition-opacity group-hover:opacity-100`}
                 />
-              )}
-              {x.whatsappUrl && (
-                <a
-                  href={x.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-3.5 py-1.5 text-sm font-semibold text-primary transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                <span
+                  aria-hidden="true"
+                  className="absolute right-4 top-5 text-xl opacity-15 transition-transform duration-500 group-hover:rotate-12 group-hover:opacity-30"
                 >
-                  <WhatsAppIcon className="size-5 shrink-0" />
-                  Contato oficial
-                  {x.whatsapp && <span className="font-normal text-muted-foreground">{x.whatsapp}</span>}
-                </a>
-              )}
-              {x.address && (
-                <p className="mt-3 text-sm text-muted-foreground">
-                  <span className="font-semibold text-primary">Endereço:</span> {x.address}
-                </p>
-              )}
-              {x.mapQuery && (
-                <div className="mt-3 overflow-hidden rounded-xl border border-border">
-                  <iframe
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(x.mapQuery)}&output=embed`}
-                    className="h-40 w-full"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={`Mapa: ${x.title}`}
-                  />
-                </div>
-              )}
-              {x.mapDirectionsUrl && (
-                <a
-                  href={x.mapDirectionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 block text-center text-sm font-semibold text-primary hover:underline"
+                  {GHOSTS[i % GHOSTS.length]}
+                </span>
+                <span
+                  className={`flex size-12 items-center justify-center rounded-2xl text-2xl transition-transform duration-300 group-hover:scale-110 ${
+                    i % 2 === 0 ? "bg-primary/10" : "bg-secondary/10"
+                  }`}
                 >
-                  Ver rota no Google Maps →
-                </a>
-              )}
-              {x.parking && (
-                <p className="mt-3 text-sm text-muted-foreground">
-                  <span className="font-semibold text-primary">Estacionamento:</span> {x.parking}
-                </p>
-              )}
-              {x.items.length > 0 && (
-                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  {x.items.map((it) => (
-                    <li key={it} className="flex gap-2.5">
-                      <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
-                      <span dangerouslySetInnerHTML={{ __html: it }} />
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {x.logo && (
-                <div className="mt-4 w-24 overflow-hidden rounded-xl border border-border">
-                  <Image
-                    src={x.logo}
-                    alt={x.logoAlt ?? x.title}
-                    width={200}
-                    height={200}
-                    className="h-auto w-full object-contain"
+                  {x.icon}
+                </span>
+                <h3 className="mt-4 flex items-center gap-2 font-bold">
+                  {x.title}
+                  {x.pending && (
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">
+                      Em breve
+                    </span>
+                  )}
+                </h3>
+                {x.text && <p className="mt-1.5 text-sm text-muted-foreground">{x.text}</p>}
+                {x.extraHtml && (
+                  <p
+                    className="mt-3 text-sm text-muted-foreground"
+                    dangerouslySetInnerHTML={{ __html: x.extraHtml }}
                   />
-                </div>
-              )}
-            </div>
+                )}
+                {x.whatsappUrl && (
+                  <a
+                    href={x.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-3.5 py-1.5 text-sm font-semibold text-primary transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  >
+                    <WhatsAppIcon className="size-5 shrink-0" />
+                    Contato oficial
+                    {x.whatsapp && <span className="font-normal text-muted-foreground">{x.whatsapp}</span>}
+                  </a>
+                )}
+                {x.address && (
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary">Endereço:</span> {x.address}
+                  </p>
+                )}
+                {x.mapQuery && (
+                  <div className="mt-3 overflow-hidden rounded-xl border border-border">
+                    <iframe
+                      src={`https://www.google.com/maps?q=${encodeURIComponent(x.mapQuery)}&output=embed`}
+                      className="h-40 w-full"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`Mapa: ${x.title}`}
+                    />
+                  </div>
+                )}
+                {x.mapDirectionsUrl && (
+                  <a
+                    href={x.mapDirectionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 block text-center text-sm font-semibold text-primary hover:underline"
+                  >
+                    Ver rota no Google Maps →
+                  </a>
+                )}
+                {x.parking && (
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary">Estacionamento:</span> {x.parking}
+                  </p>
+                )}
+                {x.items.length > 0 && (
+                  <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                    {x.items.map((it) => (
+                      <li key={it} className="flex gap-2.5">
+                        <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
+                        <span dangerouslySetInnerHTML={{ __html: it }} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {x.logo && (
+                  <div className="mt-4 w-24 overflow-hidden rounded-xl border border-border">
+                    <Image
+                      src={x.logo}
+                      alt={x.logoAlt ?? x.title}
+                      width={200}
+                      height={200}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,52 +1,5 @@
 import Link from "next/link";
-import { TALKS } from "@/lib/schedule";
-
-type Weight = "track" | "lg" | "md" | "sm";
-
-const WORD_WEIGHT_CLASSES: Record<Weight, string> = {
-  track: "bg-gradient-to-r from-primary to-secondary bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl",
-  lg: "text-lg font-bold text-foreground sm:text-xl",
-  md: "text-base font-semibold text-foreground/70 sm:text-lg",
-  sm: "text-sm font-medium text-muted-foreground sm:text-base",
-};
-
-// Deriva a nuvem de palavras das tags reais da grade de conteúdo: quanto mais
-// conteúdos usam uma tag, maior e mais em destaque ela aparece.
-function buildWordCloud() {
-  const counts = new Map<string, number>();
-  for (const talk of TALKS) {
-    for (const tag of talk.tags) {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    }
-  }
-  const ranked = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
-  const total = ranked.length;
-
-  const tiers: Record<Weight, string[]> = { track: [], lg: [], md: [], sm: [] };
-  ranked.forEach(([label], rank) => {
-    const pct = rank / total;
-    const weight: Weight = pct < 0.18 ? "track" : pct < 0.48 ? "lg" : pct < 0.78 ? "md" : "sm";
-    tiers[weight].push(label);
-  });
-
-  // Intercala os tamanhos (em vez de agrupar por tier) para a nuvem parecer orgânica.
-  const order: Weight[] = ["track", "lg", "md", "sm"];
-  const words: { label: string; weight: Weight }[] = [];
-  let remaining = total;
-  let i = 0;
-  while (remaining > 0) {
-    const weight = order[i % order.length];
-    const label = tiers[weight].shift();
-    if (label) {
-      words.push({ label, weight });
-      remaining--;
-    }
-    i++;
-  }
-  return words;
-}
-
-const WORD_CLOUD = buildWordCloud();
+import { TRACKS } from "@/lib/schedule";
 
 export function Program() {
   return (
@@ -68,17 +21,19 @@ export function Program() {
           >
             Ver grade completa
           </Link>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
-            {WORD_CLOUD.map((word, i) => (
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
+            {TRACKS.map((t) => (
               <span
-                key={word.label}
+                key={t.id}
                 style={{
-                  animationDelay: `${(i % 7) * 0.35}s`,
-                  animationDuration: `${4.5 + (i % 4) * 0.5}s`,
+                  backgroundColor: `${t.color.bg}1a`,
+                  color: t.color.bg,
+                  border: `1px solid ${t.color.bg}33`,
                 }}
-                className={`animate-float-soft inline-block leading-none opacity-90 transition-opacity duration-300 hover:opacity-100 ${WORD_WEIGHT_CLASSES[word.weight]}`}
+                className="inline-flex cursor-default items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold transition-transform duration-300 hover:scale-110"
               >
-                {word.label}
+                <span aria-hidden="true">{t.emoji}</span>
+                {t.name}
               </span>
             ))}
           </div>

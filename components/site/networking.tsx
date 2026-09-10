@@ -1,49 +1,77 @@
-const TAGS = ["Participantes", "Palestrantes", "Empresas", "Comunidades", "Todos os níveis de carreira"];
+import Link from "next/link";
+import { FORMATS, TALKS_BY_TRACK, TRACK_BY_ID, formatTimeRange } from "@/lib/schedule";
+import { Reveal } from "@/components/site/reveal";
+
+const covil = TRACK_BY_ID.covil;
+const covilTalks = [...TALKS_BY_TRACK.covil].sort((a, b) => a.start - b.start);
 
 export function Networking() {
   return (
     <section id="networking" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2 lg:items-center">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">Networking estruturado</p>
-          <h2 className="mt-2 text-3xl font-extrabold">Conexões que vão além do crachá</h2>
-          <p className="mt-4 text-muted-foreground">
-            No DevFestPoa26, networking não é deixado por conta do acaso. Criamos momentos e
-            espaços pensados para aproximar participantes, palestrantes, empresas e comunidades —
-            porque as melhores oportunidades quase sempre começam numa boa conversa.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {TAGS.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <Reveal>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                {covil.emoji} Sala Covil · {covil.room}
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold">A sala que não para de conectar gente</h2>
+              <p className="mt-4 text-muted-foreground">
+                Enquanto as trilhas do DevFestPoa26 avançam entre criar, proteger e escalonar, a Covil
+                funciona em paralelo, o dia inteiro, como o point de conversa do evento. É pra lá que
+                você vai quando quiser trocar ideia de verdade — sem slide, sem palco, só gente e boas
+                perguntas.
+              </p>
+              <p className="mt-3 text-muted-foreground">
+                Mentorias sobre carreira e liderança, rodas de conversa sinceras sobre produto e sobre
+                virar sênior, e o Speed Networking fechando a tarde: as melhores oportunidades do
+                DevFestPoa26 quase sempre começam ali dentro.
+              </p>
+              <Link
+                href="/programacao"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-transform hover:translate-x-1 hover:underline"
               >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="relative flex justify-center" aria-hidden="true">
-          <div className="animate-drift pointer-events-none absolute size-56 rounded-full bg-secondary/15 blur-3xl" />
-          <svg viewBox="0 0 300 300" className="animate-float-soft relative w-56 sm:w-72">
-            <g stroke="#ff7a29" strokeOpacity=".5" strokeWidth="1">
-              <line x1="60" y1="60" x2="150" y2="120" />
-              <line x1="150" y1="120" x2="240" y2="70" />
-              <line x1="150" y1="120" x2="90" y2="200" />
-              <line x1="150" y1="120" x2="220" y2="210" />
-              <line x1="90" y1="200" x2="220" y2="210" />
-              <line x1="60" y1="60" x2="90" y2="200" />
-            </g>
-            <g fill="#ff7a29">
-              <circle cx="60" cy="60" r="6" />
-              <circle cx="240" cy="70" r="5" />
-            </g>
-            <g fill="#9784ff">
-              <circle cx="150" cy="120" r="8" />
-              <circle cx="90" cy="200" r="6" />
-              <circle cx="220" cy="210" r="6" />
-            </g>
-          </svg>
+                Ver a grade completa →
+              </Link>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="card-glow rounded-2xl border border-border bg-card p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                O dia todo na Covil
+              </p>
+              <ol className="mt-4 space-y-1">
+                {covilTalks.map((t) => {
+                  const format = FORMATS[t.format];
+                  return (
+                    <li
+                      key={t.id}
+                      className="group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-white/5"
+                    >
+                      <span className="mt-0.5 shrink-0 text-xs font-semibold tabular-nums text-muted-foreground">
+                        {formatTimeRange(t.start, t.end)}
+                      </span>
+                      <div className="min-w-0">
+                        <span
+                          style={{
+                            backgroundColor: `${format.color.bg}1a`,
+                            color: format.color.bg,
+                          }}
+                          className="inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide"
+                        >
+                          {format.label}
+                        </span>
+                        <p className="mt-1 text-sm font-medium text-foreground/90 transition-transform duration-300 group-hover:translate-x-1">
+                          {t.title}
+                        </p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

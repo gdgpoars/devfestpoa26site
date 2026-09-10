@@ -135,7 +135,7 @@ type ExperienceItem = {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    icon: "📍",
+    icon: "🗺️",
     title: "Como chegar",
     pending: false,
     text: "A Faculdade Dom Bosco fica no bairro Passo d'Areia, em Porto Alegre.",
@@ -148,7 +148,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     icon: "🎒",
-    title: "O que levar",
+    title: "Kit de sobrevivência",
     pending: false,
     text: "O básico para aproveitar o dia inteiro:",
     items: [
@@ -162,7 +162,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     icon: "☕",
-    title: "Alimentação",
+    title: "Combustível pro dia todo",
     pending: false,
     text: "",
     items: [
@@ -174,7 +174,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     icon: "📱",
-    title: "Informações úteis",
+    title: "Antes que você pergunte",
     pending: false,
     text: "Tudo para o dia do evento correr redondo.",
     items: [
@@ -197,7 +197,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     icon: "🤝",
-    title: "Networking",
+    title: "Seu próximo grande papo",
     pending: false,
     text: "O DevFestPoa26 terá networking estruturado, com espaços e momentos pensados para gerar conexões reais entre participantes, palestrantes, empresas e comunidades.",
     items: [
@@ -522,6 +522,7 @@ export const NAV_LINKS = [
       { href: "/sobre", label: "Sobre" },
       { href: "/tema", label: "Tema" },
       { href: "/experiencia", label: "Experiência" },
+      { href: "/experiencia/devfestpoagame", label: "DevFestPoaGAME" },
     ],
   },
   { href: "/programacao", label: "Programação" },

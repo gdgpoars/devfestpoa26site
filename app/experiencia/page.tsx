@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpookyBackground } from "@/components/site/spooky-background";
 import { ExperienceHero } from "@/components/site/experience-hero";
 import { Program } from "@/components/site/program";
 import { Experience } from "@/components/site/experience";
@@ -22,6 +23,7 @@ export const metadata: Metadata = pageMetadata({
 export default function ExperienciaPage() {
   return (
     <>
+      <SpookyBackground />
       <ExperienceHero />
       <Reveal>
         <Program />
