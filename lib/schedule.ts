@@ -610,7 +610,7 @@ export const TALKS: Talk[] = [
     format: "mentoria",
     level: "Todos os níveis",
     tags: ["Carreira"],
-    speakers: [{ name: "Orientadores a divulgar", linkedin: null }],
+    speakers: [{ name: "Vitória Santos", linkedin: "https://www.linkedin.com/in/vit%C3%B3ria-santos-23a6421bb/" }],
     summary:
       "Uma mentoria prática para quem quer usar o LinkedIn de forma estratégica para se posicionar melhor no mercado, aumentar sua visibilidade e se aproximar de novas oportunidades profissionais.",
     track: "covil",
