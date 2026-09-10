@@ -92,6 +92,8 @@ export const PARTNER_LOGOS = [
   { name: "Nort", logo: "/nort logo.png", href: "https://nortjobs.com/pt-BR" },
   { name: "Eximia", logo: "/eximia logo.png", href: "https://eximia.co/" },
   { name: "HostGator", logo: "/logo hostgator.png", href: "https://www.hostgator.com.br/" },
+  { name: "Appmax", logo: "/appmax logo.png", href: "https://appmax.com.br/" },
+  { name: "FIAP", logo: "/fiap logo.png", href: "https://postech.fiap.com.br/" },
 ];
 
 export const IMPULSO_PARTNERS = [
