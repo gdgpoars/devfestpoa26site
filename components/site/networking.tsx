@@ -2,7 +2,7 @@ const TAGS = ["Participantes", "Palestrantes", "Empresas", "Comunidades", "Todos
 
 export function Networking() {
   return (
-    <section className="border-t border-border py-16 sm:py-20">
+    <section id="networking" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">Networking estruturado</p>
@@ -14,14 +14,18 @@ export function Networking() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {TAGS.map((t) => (
-              <span key={t} className="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground">
+              <span
+                key={t}
+                className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              >
                 {t}
               </span>
             ))}
           </div>
         </div>
-        <div className="flex justify-center" aria-hidden="true">
-          <svg viewBox="0 0 300 300" className="w-56 sm:w-72">
+        <div className="relative flex justify-center" aria-hidden="true">
+          <div className="animate-drift pointer-events-none absolute size-56 rounded-full bg-secondary/15 blur-3xl" />
+          <svg viewBox="0 0 300 300" className="animate-float-soft relative w-56 sm:w-72">
             <g stroke="#ff7a29" strokeOpacity=".5" strokeWidth="1">
               <line x1="60" y1="60" x2="150" y2="120" />
               <line x1="150" y1="120" x2="240" y2="70" />

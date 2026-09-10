@@ -2,7 +2,7 @@ import { METRICS_2025 } from "@/lib/content";
 
 export function Edition2025() {
   return (
-    <section className="border-t border-border py-16 sm:py-20">
+    <section id="devfestpoa25" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">DevFestPoa25</p>
@@ -13,8 +13,13 @@ export function Edition2025() {
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {METRICS_2025.map((m) => (
-            <div key={m.label} className="rounded-2xl border border-border bg-card p-5 text-center">
-              <div className="text-2xl font-extrabold text-gradient sm:text-3xl">{m.num}</div>
+            <div
+              key={m.label}
+              className="card-glow group rounded-2xl border border-border bg-card p-5 text-center"
+            >
+              <div className="text-2xl font-extrabold text-gradient transition-transform duration-300 group-hover:scale-110 sm:text-3xl">
+                {m.num}
+              </div>
               <div className="mt-1 text-xs text-muted-foreground sm:text-sm">{m.label}</div>
             </div>
           ))}

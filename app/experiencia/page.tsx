@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ExperienceHero } from "@/components/site/experience-hero";
 import { Program } from "@/components/site/program";
 import { Experience } from "@/components/site/experience";
 import { Networking } from "@/components/site/networking";
@@ -7,6 +8,7 @@ import { Edition2025 } from "@/components/site/edition-2025";
 import { Gallery } from "@/components/site/gallery";
 import { Video } from "@/components/site/video";
 import { FinalCTA } from "@/components/site/final-cta";
+import { Reveal } from "@/components/site/reveal";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -20,13 +22,28 @@ export const metadata: Metadata = pageMetadata({
 export default function ExperienciaPage() {
   return (
     <>
-      <Program />
-      <Experience />
-      <Networking />
-      <Game />
-      <Edition2025 />
-      <Gallery />
-      <Video />
+      <ExperienceHero />
+      <Reveal>
+        <Program />
+      </Reveal>
+      <Reveal>
+        <Experience />
+      </Reveal>
+      <Reveal>
+        <Networking />
+      </Reveal>
+      <Reveal>
+        <Game />
+      </Reveal>
+      <Reveal>
+        <Edition2025 />
+      </Reveal>
+      <Reveal>
+        <Gallery />
+      </Reveal>
+      <Reveal>
+        <Video />
+      </Reveal>
       <FinalCTA />
     </>
   );

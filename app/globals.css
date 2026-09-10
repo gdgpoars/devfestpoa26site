@@ -122,6 +122,14 @@ body {
   .animate-drift {
     animation: drift 22s ease-in-out infinite;
   }
+  .card-glow {
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .card-glow:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+    box-shadow: 0 12px 32px -12px rgba(255, 122, 41, 0.25);
+  }
 }
 
 @keyframes float {
@@ -185,5 +193,8 @@ body {
   .animate-pulse-glow,
   .cta-pulse {
     animation: none;
+  }
+  .reveal {
+    transition: none;
   }
 }

@@ -50,9 +50,9 @@ const WORD_CLOUD = buildWordCloud();
 
 export function Program() {
   return (
-    <section className="py-16 sm:py-20">
+    <section id="programacao" className="scroll-mt-24 py-16 sm:py-20">
       <div className="mx-auto max-w-3xl px-4">
-        <div className="rounded-2xl border border-border bg-card p-8 text-center sm:p-12">
+        <div className="card-glow rounded-2xl border border-border bg-card p-8 text-center sm:p-12">
           <span className="text-4xl">👻</span>
           <span className="mt-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             GRADE OFICIAL DISPONÍVEL
@@ -64,7 +64,7 @@ export function Program() {
           </p>
           <Link
             href="/programacao"
-            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
+            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Ver grade completa
           </Link>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 import { EXPERIENCE } from "@/lib/content";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -12,20 +13,32 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function Experience() {
   return (
-    <section className="border-t border-border py-16 sm:py-20">
+    <section id="guia" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">Guia da pessoa participante</p>
-          <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Experiência da pessoa participante</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Tudo o que você precisa saber antes, durante e depois do evento.
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary">Guia prático</p>
+          <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Tudo em um só lugar</h2>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {EXPERIENCE.map((x) => (
-            <div key={x.title} className="rounded-2xl border border-border bg-card p-6">
-              <span className="text-2xl">{x.icon}</span>
-              <h3 className="mt-3 flex items-center gap-2 font-bold">
+          {EXPERIENCE.map((x, i) => (
+            <div
+              key={x.title}
+              className="card-glow group relative overflow-hidden rounded-2xl border border-border bg-card p-6"
+            >
+              <div
+                aria-hidden="true"
+                className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${
+                  i % 2 === 0 ? "from-primary to-accent" : "from-secondary to-primary"
+                } opacity-70 transition-opacity group-hover:opacity-100`}
+              />
+              <span
+                className={`flex size-12 items-center justify-center rounded-2xl text-2xl ${
+                  i % 2 === 0 ? "bg-primary/10" : "bg-secondary/10"
+                }`}
+              >
+                {x.icon}
+              </span>
+              <h3 className="mt-4 flex items-center gap-2 font-bold">
                 {x.title}
                 {x.pending && (
                   <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">
@@ -33,7 +46,7 @@ export function Experience() {
                   </span>
                 )}
               </h3>
-              {x.text && <p className="mt-1 text-sm text-muted-foreground">{x.text}</p>}
+              {x.text && <p className="mt-1.5 text-sm text-muted-foreground">{x.text}</p>}
               {x.extraHtml && (
                 <p
                   className="mt-3 text-sm text-muted-foreground"
@@ -45,7 +58,7 @@ export function Experience() {
                   href={x.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                  className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-white/5 px-3.5 py-1.5 text-sm font-semibold text-primary transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <WhatsAppIcon className="size-5 shrink-0" />
                   Contato oficial
@@ -85,10 +98,10 @@ export function Experience() {
                 </p>
               )}
               {x.items.length > 0 && (
-                <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
+                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                   {x.items.map((it) => (
-                    <li key={it} className="flex gap-2">
-                      <span className="text-primary">·</span>
+                    <li key={it} className="flex gap-2.5">
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true" />
                       <span dangerouslySetInnerHTML={{ __html: it }} />
                     </li>
                   ))}

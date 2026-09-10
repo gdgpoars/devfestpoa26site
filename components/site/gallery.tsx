@@ -3,7 +3,7 @@ import { GALLERY_PHOTOS } from "@/lib/content";
 
 export function Gallery() {
   return (
-    <section className="border-t border-border py-16 sm:py-20">
+    <section id="galeria" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">Galeria</p>
@@ -14,7 +14,7 @@ export function Gallery() {
           {GALLERY_PHOTOS.map((p, i) => (
             <div
               key={p.src}
-              className="group animate-float-soft mb-3 break-inside-avoid overflow-hidden rounded-xl border border-border bg-card"
+              className="group animate-float-soft mb-3 break-inside-avoid overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/40"
               style={{ animationDelay: `${(i % 5) * 0.5}s`, animationDuration: `${5 + (i % 3)}s` }}
             >
               <Image

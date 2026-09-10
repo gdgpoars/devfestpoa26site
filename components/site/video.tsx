@@ -14,7 +14,7 @@ export function Video() {
   }
 
   return (
-    <section className="border-t border-border py-16 sm:py-20">
+    <section id="video" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-4">
         <div className="mb-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">Assista</p>
@@ -22,7 +22,7 @@ export function Video() {
             Não acredita? Dá uma olhada no que aconteceu na última edição.
           </h2>
         </div>
-        <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="card-glow aspect-video overflow-hidden rounded-2xl border border-border bg-card">
           {loaded ? (
             <iframe
               className="h-full w-full"
@@ -34,14 +34,14 @@ export function Video() {
             />
           ) : (
             <div
-              className="flex h-full w-full cursor-pointer items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10"
+              className="group flex h-full w-full cursor-pointer items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 focus-visible:outline-none"
               role="button"
               tabIndex={0}
               aria-label="Reproduzir vídeo do DevFestPoa25"
               onClick={() => setLoaded(true)}
               onKeyDown={handleKeyDown}
             >
-              <span className="flex size-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <span className="animate-pulse-glow flex size-16 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110 group-focus-visible:ring-2 group-focus-visible:ring-ring/60 group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background">
                 <Play className="size-6 fill-current" />
               </span>
             </div>
