@@ -50,19 +50,10 @@ export const SITE_KEYWORDS = [
 export const HIGHLIGHTS = [
   { icon: "👥", title: "300 pessoas", text: "Comunidade tech reunida em um só lugar." },
   { icon: "🎤", title: "1 palco + 3 trilhas", text: "Estrutura pensada para todos os perfis." },
-  { icon: "🤝", title: "Networking estruturado", text: "Conexões que vão além do crachá." },
+  { icon: "🤝", title: "Networking estruturado", text: "Sala Covil (401), com atividades o dia todo." },
   { icon: "🎮", title: "DevFestPoaGame", text: "Uma experiência dentro da experiência." },
   { icon: "📍", title: "Faculdade Dom Bosco", text: "Porto Alegre/RS." },
   { icon: "📅", title: "31 de outubro de 2026", text: "Sábado, das 9h às 18h." },
-];
-
-export const PILLARS = [
-  { icon: "🤖", title: "AI & Agents", text: "Inteligência artificial, IA generativa e agentes autônomos." },
-  { icon: "☁️", title: "Cloud & Arquitetura", text: "Infraestrutura, arquitetura e escalabilidade." },
-  { icon: "💻", title: "Dev & Tech", text: "Desenvolvimento, mobile, front-end e tecnologias modernas." },
-  { icon: "🛡️", title: "Segurança", text: "Segurança, privacidade e desenvolvimento responsável." },
-  { icon: "🚀", title: "Carreira & Futuro", text: "Carreira, liderança, mercado e futuro profissional." },
-  { icon: "🧠", title: "Pessoas & Comunidade", text: "Saúde mental, diversidade, inclusão e comunidade." },
 ];
 
 export const POWERED_BY_INTRO = [
@@ -160,7 +151,14 @@ export const EXPERIENCE: ExperienceItem[] = [
     title: "O que levar",
     pending: false,
     text: "O básico para aproveitar o dia inteiro:",
-    items: ["Ingresso (físico ou digital)", "Documento com foto", "Celular e carregador", "Notebook, se for usar", "Disposição para fazer networking", "Garrafinha de água"],
+    items: [
+      "Ingresso (físico ou digital)",
+      "Documento com foto",
+      "Celular e carregador",
+      "<strong>Notebook</strong> — essencial para acompanhar as atividades práticas (workshops e laboratórios)",
+      "Disposição para fazer networking",
+      "Garrafinha de água",
+    ],
   },
   {
     icon: "☕",
@@ -177,9 +175,14 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     icon: "📱",
     title: "Informações úteis",
-    pending: true,
+    pending: false,
     text: "Tudo para o dia do evento correr redondo.",
-    items: ["Credenciamento", "Horários detalhados", "Wi-Fi", "Canais oficiais e contatos"],
+    items: [
+      "<strong>Credenciamento:</strong> início às 08h15, com welcome coffee disponível para todos os tipos de ingresso.",
+      '<strong>Horários detalhados:</strong> confira a grade completa na <a href="/programacao" class="text-primary hover:underline">página de Programação</a>.',
+      "<strong>Wi-Fi:</strong> a Faculdade Dom Bosco disponibiliza rede para os participantes, mas o ideal é levar seu 5G calibrado.",
+      '<strong>Canais oficiais:</strong> e-mail <a href="mailto:gdgpoars@gmail.com" class="text-primary hover:underline">gdgpoars@gmail.com</a> e WhatsApp <a href="https://wa.me/555121850587" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">(51) 2185-0587</a>.',
+    ],
   },
   {
     icon: "♿",
@@ -197,7 +200,11 @@ export const EXPERIENCE: ExperienceItem[] = [
     title: "Networking",
     pending: false,
     text: "O DevFestPoa26 terá networking estruturado, com espaços e momentos pensados para gerar conexões reais entre participantes, palestrantes, empresas e comunidades.",
-    items: [],
+    items: [
+      "<strong>Sala Covil (Sala 401)</strong> é o point de conexão do evento: atividades o dia todo, voltadas para networking de qualidade.",
+      "Mentorias sobre carreira e liderança, rodas de conversa sobre produto e carreira em tech, e o Speed Networking, no fim da tarde.",
+      'Confira todos os horários na <a href="/programacao" class="text-primary hover:underline">página de Programação</a>.',
+    ],
   },
 ];
 

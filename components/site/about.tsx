@@ -27,6 +27,15 @@ export function About() {
                 só acontecem quando a comunidade toda está no mesmo lugar. Sem enrolação, sem
                 discurso corporativo — é sobre código, carreira e conexão de verdade.
               </p>
+              <p>
+                São 6 espaços simultâneos — o Salão Comunal (palco principal) e as trilhas Magia,
+                Lua Cheia, Sentinela, Alquimia e Covil —, reunindo palestras, workshops, mentorias,
+                laboratórios e rodas de conversa para todos os níveis e interesses. Confira tudo na{" "}
+                <a href="/programacao" className="font-semibold text-primary hover:underline">
+                  página de Programação
+                </a>
+                .
+              </p>
             </div>
           </div>
           <ul className="space-y-5">
