@@ -125,6 +125,7 @@ export const PARTNER_LOGOS = [
   { name: "HostGator", logo: "/logo hostgator.png", href: "https://www.hostgator.com.br/" },
   { name: "Appmax", logo: "/appmax logo.png", href: "https://appmax.com.br/" },
   { name: "FIAP", logo: "/fiap logo.png", href: "https://postech.fiap.com.br/" },
+  { name: "Magalu Cloud", logo: "/magalu cloud logo.png", href: "https://magalu.cloud/" },
 ];
 
 export const IMPULSO_PARTNERS = [
@@ -516,7 +517,7 @@ export const GALLERY_PHOTOS = [
   { src: "/DEVFEST-258.jpg", width: 1538, height: 2048 },
 ].map((p, i) => ({ ...p, alt: `DevFestPoa25 — registro ${i + 1}` }));
 
-export const SPONSOR_TIERS = { parceiros: 6 };
+export const SPONSOR_TIERS = { parceiros: 7 };
 
 export const COMMUNITY_PARTNERS_COUNT = 6;
 

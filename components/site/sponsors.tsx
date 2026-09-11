@@ -144,7 +144,7 @@ export function Sponsors() {
 
           <div className="mb-8">
             <h3 className="mb-3 text-center text-lg font-bold">Parceiros</h3>
-            <div className="grid grid-cols-[repeat(2,auto)] justify-center gap-3 sm:grid-cols-[repeat(3,auto)]">
+            <div className="grid grid-cols-[repeat(2,auto)] justify-center gap-3 sm:grid-cols-[repeat(4,auto)]">
               {PARTNER_LOGOS.map((partner) => (
                 <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} size="md" />
               ))}
