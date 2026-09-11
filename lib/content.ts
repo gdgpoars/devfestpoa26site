@@ -48,7 +48,7 @@ export const SITE_KEYWORDS = [
 ];
 
 export const HIGHLIGHTS = [
-  { icon: "👥", title: "300 pessoas", text: "Comunidade tech reunida em um só lugar." },
+  { icon: "👥", title: "500 pessoas", text: "Comunidade tech reunida em um só lugar." },
   { icon: "🎤", title: "1 palco + 3 trilhas", text: "Estrutura pensada para todos os perfis." },
   { icon: "🤝", title: "Networking estruturado", text: "Sala Covil (401), com atividades o dia todo." },
   { icon: "🎮", title: "DevFestPoaGame", text: "Uma experiência dentro da experiência." },

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GameManual } from "@/components/site/game-manual";
-import { SpookyBackground } from "@/components/site/spooky-background";
 import { FinalCTA } from "@/components/site/final-cta";
 import { pageMetadata } from "@/lib/seo";
 
@@ -15,7 +14,6 @@ export const metadata: Metadata = pageMetadata({
 export default function DevFestPoaGamePage() {
   return (
     <>
-      <SpookyBackground />
       <GameManual />
       <FinalCTA />
     </>

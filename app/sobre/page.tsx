@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SpookyBackground } from "@/components/site/spooky-background";
 import { About } from "@/components/site/about";
 import { Pillars } from "@/components/site/pillars";
 import { PoweredBy } from "@/components/site/powered-by";
@@ -17,7 +16,6 @@ export const metadata: Metadata = pageMetadata({
 export default function SobrePage() {
   return (
     <>
-      <SpookyBackground />
       <About />
       <Pillars />
       <PoweredBy />

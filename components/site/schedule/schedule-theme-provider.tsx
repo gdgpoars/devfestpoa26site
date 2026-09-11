@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { Moon, Sun } from "lucide-react";
-import { HalloweenBackground } from "./halloween-background";
+import { HalloweenBackground } from "@/components/site/halloween-background";
 
 export function ScheduleThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
