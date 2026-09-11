@@ -10,6 +10,10 @@ export const SITE_NAME = "DevFestPoa26";
 export const SITE_DESCRIPTION =
   "O DevFest de Porto Alegre: um dia de conteúdo técnico, comunidade e networking, feito pelas comunidades GDG Porto Alegre e GDG Caxias do Sul. 31 de outubro de 2026, na Faculdade Dom Bosco.";
 
+export const FACULDADE_ENDERECO =
+  "R. Mal. José Inácio da Silva, 355 - Passo d'Areia, Porto Alegre - RS, 90520-280";
+export const FACULDADE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(FACULDADE_ENDERECO)}`;
+
 export const SITE_KEYWORDS = [
   "DevFest Porto Alegre",
   "DevFestPoa26",
@@ -48,12 +52,48 @@ export const SITE_KEYWORDS = [
 ];
 
 export const HIGHLIGHTS = [
-  { icon: "👥", title: "500 pessoas", text: "Comunidade tech reunida em um só lugar." },
-  { icon: "🎤", title: "1 palco + 3 trilhas", text: "Estrutura pensada para todos os perfis." },
-  { icon: "🤝", title: "Networking estruturado", text: "Sala Covil (401), com atividades o dia todo." },
-  { icon: "🎮", title: "DevFestPoaGame", text: "Uma experiência dentro da experiência." },
-  { icon: "📍", title: "Faculdade Dom Bosco", text: "Porto Alegre/RS." },
-  { icon: "📅", title: "31 de outubro de 2026", text: "Sábado, das 9h às 18h." },
+  {
+    icon: "👥",
+    title: "500 pessoas",
+    text: "Comunidade tech reunida em um só lugar.",
+    color: "#ff7a29",
+    cta: { label: "Confira a edição anterior", href: "/experiencia#devfestpoa25" },
+  },
+  {
+    icon: "🎤",
+    title: "1 palco + 4 trilhas",
+    text: "Estrutura pensada para todos os perfis.",
+    color: "#9784ff",
+    cta: { label: "Confira a programação", href: "/programacao" },
+  },
+  {
+    icon: "🤝",
+    title: "Networking estruturado",
+    text: "Sala Covil (401), com atividades o dia todo.",
+    color: "#ff6a88",
+    cta: { label: "Confira a programação", href: "/programacao#covil" },
+  },
+  {
+    icon: "🎮",
+    title: "DevFestPoaGame",
+    text: "Uma experiência dentro da experiência.",
+    color: "#45d6c9",
+    cta: { label: "Saiba mais", href: "/experiencia/devfestpoagame" },
+  },
+  {
+    icon: "📍",
+    title: "Faculdade Dom Bosco",
+    text: "Porto Alegre/RS.",
+    color: "#5be08a",
+    cta: { label: "Como chegar", href: FACULDADE_MAPS_URL, external: true },
+  },
+  {
+    icon: "📅",
+    title: "31 de outubro de 2026",
+    text: "Sábado, das 9h às 18h.",
+    color: "#f6cf4d",
+    cta: { label: "Garantir meu ingresso", href: SYMPLA_URL, external: true },
+  },
 ];
 
 export const POWERED_BY_INTRO = [
@@ -140,7 +180,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     pending: false,
     text: "A Faculdade Dom Bosco fica no bairro Passo d'Areia, em Porto Alegre.",
     items: [],
-    address: "R. Mal. José Inácio da Silva, 355 - Passo d'Areia, Porto Alegre - RS, 90520-280",
+    address: FACULDADE_ENDERECO,
     parking: "particular, ao lado da Faculdade, no Colégio Dom Bosco.",
     mapQuery: "Faculdade Dom Bosco, R. Mal. José Inácio da Silva, 355 - Passo d'Areia, Porto Alegre - RS, 90520-280",
     mapDirectionsUrl:

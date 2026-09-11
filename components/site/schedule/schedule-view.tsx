@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Lock, Search, Sparkles, X } from "lucide-react";
 import {
   TALKS,
@@ -57,6 +57,15 @@ export function ScheduleView() {
     setSelectedTrack(track);
     setView("trilha");
   }
+
+  // Permite chegar direto numa trilha via link (ex.: /programacao#covil).
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "") as TrackId;
+    if (TRACKS.some((t) => t.id === hash)) {
+      goToTrack(hash);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="relative pb-16 sm:pb-20">
