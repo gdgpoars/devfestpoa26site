@@ -255,6 +255,20 @@ export const TALKS: Talk[] = [
     hasDetails: true,
   },
   {
+    id: "t070",
+    title: "Da Teoria à Prática: Construindo sua Primeira Solução na Magalu Cloud",
+    format: "workshop",
+    level: "Todos os níveis",
+    tags: ["Cloud", "Arquitetura", "DevOps / SRE", "Segurança"],
+    speakers: [{ name: "Valéria Baptista", linkedin: "https://www.linkedin.com/in/valeriabaptista/" }],
+    summary:
+      "A computação em nuvem deixou de ser uma tendência para se tornar um requisito para empresas e profissionais de tecnologia. Mas como começar a utilizar uma cloud nacional de forma prática? Neste workshop 100% hands-on, você aprenderá os principais conceitos da Magalu Cloud enquanto cria sua própria infraestrutura do zero. Durante a sessão, serão apresentados os serviços essenciais da plataforma, incluindo criação de projetos, gerenciamento de identidades e permissões, provisionamento de máquinas virtuais, redes e armazenamento. Ao final do workshop, você terá uma visão completa da plataforma, entenderá boas práticas para organização dos recursos e estará apto a iniciar seus próprios projetos utilizando a Magalu Cloud. O que você vai aprender: introdução à Magalu Cloud e seus diferenciais; criação e organização de projetos; gerenciamento de usuários e permissões (IAM); provisionamento de infraestrutura na prática; configuração de rede e armazenamento; boas práticas para ambientes em nuvem.",
+    track: "trilha-alquimia",
+    start: 600,
+    end: 660,
+    hasDetails: true,
+  },
+  {
     id: "t031",
     title:
       "Mentoria para Tech Leads: o que realmente sustenta um time de engenharia de alta performance",
