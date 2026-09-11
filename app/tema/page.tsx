@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpookyBackground } from "@/components/site/spooky-background";
 import { ThemeSection } from "@/components/site/theme-section";
 import { FinalCTA } from "@/components/site/final-cta";
 import { pageMetadata } from "@/lib/seo";
@@ -14,6 +15,7 @@ export const metadata: Metadata = pageMetadata({
 export default function TemaPage() {
   return (
     <>
+      <SpookyBackground />
       <ThemeSection />
       <FinalCTA />
     </>
