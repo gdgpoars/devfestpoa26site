@@ -181,7 +181,7 @@ export function Sponsors() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-start justify-center gap-6">
+          <div className="mx-auto flex max-w-[880px] flex-wrap items-start justify-center gap-6">
             {COMMUNITY_PARTNERS.map((partner) => (
               <div key={partner.name} className="flex flex-col items-center gap-2.5">
                 <PartnerLogo
