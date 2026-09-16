@@ -517,7 +517,7 @@ export const TALKS: Talk[] = [
   },
   {
     id: "t066",
-    title: "A Autópsia da IA: Como a máquina realmente enxerga, pensa e toma decisões",
+    title: "O Laboratório da IA: Como a máquina realmente enxerga, pensa e toma decisões",
     format: "workshop",
     level: "Todos os níveis",
     tags: ["IA / Agentes"],
