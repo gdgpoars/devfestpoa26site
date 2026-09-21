@@ -139,7 +139,7 @@ export const COMMUNITY_PARTNERS = [
   { name: "Produteiros", label: "Produteiros RS", logo: "/produteiros logo.png", href: "https://linktr.ee/produteirosRS" },
   {
     name: "The AI Collective",
-    label: "The AI Collective Porto Alegre",
+    label: "The AI Collective Florianópolis",
     logo: "/logo the ai collective.png",
     href: "https://linktr.ee/aicolletivefloripa",
   },
