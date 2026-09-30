@@ -144,12 +144,6 @@ export const COMMUNITY_PARTNERS = [
     href: "https://linktr.ee/aicolletivefloripa",
   },
   {
-    name: "Friends of Figma, Porto Alegre",
-    label: "Friends of Figma, Porto Alegre",
-    logo: "/fof logo.png",
-    href: "https://friends.figma.com/porto-alegre/",
-  },
-  {
     name: "Ladies that UX Porto Alegre",
     label: "Ladies that UX Porto Alegre",
     logo: "/ltux logo.png",
