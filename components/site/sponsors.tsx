@@ -197,11 +197,7 @@ export function Sponsors() {
                           ? "scale-125"
                           : undefined
                   }
-                  bgClassName={
-                    partner.name === "Friends of Figma, Porto Alegre" || partner.name === "Ladies that UX Porto Alegre"
-                      ? "bg-white"
-                      : "bg-card"
-                  }
+                  bgClassName={partner.name === "Ladies that UX Porto Alegre" ? "bg-white" : "bg-card"}
                 />
                 <span className="whitespace-nowrap text-xs font-semibold tracking-wide text-white sm:text-sm">
                   {partner.label}

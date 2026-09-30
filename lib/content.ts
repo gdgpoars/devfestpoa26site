@@ -513,7 +513,7 @@ export const GALLERY_PHOTOS = [
 
 export const SPONSOR_TIERS = { parceiros: 7 };
 
-export const COMMUNITY_PARTNERS_COUNT = 6;
+export const COMMUNITY_PARTNERS_COUNT = 5;
 
 export const METRICS_2025 = [
   { num: "325", label: "pessoas inscritas" },
