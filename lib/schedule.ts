@@ -279,8 +279,8 @@ export const TALKS: Talk[] = [
     summary:
       "Se um time não performa, quase sempre alguém sugere mais rito, mais controle ou mais pressão — quase nunca esse é o melhor caminho. Nesta mentoria, a proposta é discutir com Tech Leads o que realmente sustenta um time de engenharia de alta performance: não heroísmo, não modismo de gestão, mas consciência situacional suficiente para reduzir incerteza e melhorar a qualidade da decisão, reduzindo atrito, custo e risco da mudança ao longo da evolução do software.",
     track: "covil",
-    start: 570,
-    end: 630,
+    start: 555,
+    end: 615,
     hasDetails: true,
   },
   {
@@ -383,8 +383,26 @@ export const TALKS: Talk[] = [
     ],
     summary: "Descrição em breve.",
     track: "covil",
-    start: 645,
-    end: 695,
+    start: 620,
+    end: 670,
+    hasDetails: true,
+  },
+  {
+    id: "painel-coode-your-career",
+    title: "Painel - Coode Your Career: como se posicionar em entrevistas",
+    format: "roda-de-conversa",
+    level: "Todos os níveis",
+    tags: ["Carreira", "Comunidade"],
+    speakers: [
+      { name: "Nielen Baptista", linkedin: "https://www.linkedin.com/in/nielen-hinrichsen-70a76730a/" },
+      { name: "Giulia Minuzzo", linkedin: "https://www.linkedin.com/in/giulia-minuzzo-709a40282/" },
+      { name: "Natália Lagni", linkedin: "https://www.linkedin.com/in/natalia-lagni/" },
+    ],
+    summary:
+      "Neste painel, Nielen Baptista, Giulia Minuzzo e Natália Lagni compartilham estratégias práticas para transformar experiências, conhecimentos e trajetórias em narrativas que demonstram valor e geram conexão em processos seletivos. A conversa percorre cinco etapas fundamentais: preparação para entrevistas, storytelling profissional, estruturação de respostas com o método STAR, posicionamento estratégico no LinkedIn e técnicas de networking e relacionamento com recrutadores após o processo seletivo. O objetivo é ajudar profissionais a comunicar melhor suas competências, destacar suas experiências com autenticidade e construir relacionamentos que fortaleçam suas oportunidades de carreira.",
+    track: "covil",
+    start: 670,
+    end: 720,
     hasDetails: true,
   },
   {
