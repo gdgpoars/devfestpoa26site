@@ -128,16 +128,21 @@ export function FullGrid({ onOpen }: { onOpen: (talk: Talk) => void }) {
           {BREAKS.map((b) => (
             <div
               key={b.id}
-              className="absolute left-0 right-0 flex flex-col items-center justify-center gap-0.5 rounded-md border border-dashed border-border/70 bg-muted/70 px-2 text-center backdrop-blur-sm"
+              className="absolute left-0 right-0 flex flex-col items-center justify-center gap-0.5 overflow-hidden rounded-md border border-border bg-card/90 px-2 text-center shadow-sm backdrop-blur-sm"
               style={{
                 top: toY(b.start),
                 height: Math.max(toY(b.end) - toY(b.start), 20),
               }}
             >
-              <span className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-[3px] opacity-70"
+                style={{ background: "linear-gradient(90deg, transparent, var(--accent), transparent)" }}
+              />
+              <span className="text-[11px] font-bold uppercase tracking-wide text-foreground/90">
                 {b.label}
               </span>
-              {b.sub && <span className="text-[9px] font-normal normal-case text-muted-foreground/60">{b.sub}</span>}
+              {b.sub && <span className="text-[9px] font-medium normal-case text-muted-foreground">{b.sub}</span>}
             </div>
           ))}
         </div>
