@@ -172,6 +172,7 @@ export const BREAKS: Break[] = [
   },
   { id: "abertura", label: "Abertura", start: 540, end: 555 },
   { id: "almoco", label: "Almoço", start: 735, end: 810 },
+  { id: "retomada", label: "Retomada e Quick Game", start: 810, end: 825 },
   {
     id: "coffee",
     label: "Coffee break",
