@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Loader2 } from "lucide-react";
 import {
   APOIO_INSTITUCIONAL,
+  COLABORADOR_PARTNERS,
   COMMUNITY_PARTNERS,
   COMMUNITY_PARTNERS_COUNT,
   FACULDADE_SEDE,
@@ -149,6 +150,21 @@ export function Sponsors() {
                 <PartnerLogo key={partner.name} name={partner.name} logo={partner.logo} href={partner.href} size="md" />
               ))}
               <LogoSlots count={SPONSOR_TIERS.parceiros - PARTNER_LOGOS.length} className="w-[13rem]" />
+            </div>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="mb-3 text-center text-lg font-bold">Colaborador</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {COLABORADOR_PARTNERS.map((partner) => (
+                <PartnerLogo
+                  key={partner.name}
+                  name={partner.name}
+                  logo={partner.logo}
+                  href={partner.href}
+                  size="smMd"
+                />
+              ))}
             </div>
           </div>
 
