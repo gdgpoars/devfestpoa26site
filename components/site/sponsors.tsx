@@ -163,6 +163,7 @@ export function Sponsors() {
                   logo={partner.logo}
                   href={partner.href}
                   size="smMd"
+                  imgClassName="scale-110"
                 />
               ))}
             </div>
