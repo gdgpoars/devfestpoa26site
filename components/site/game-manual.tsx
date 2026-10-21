@@ -5,6 +5,7 @@ const QUICK_LINKS = [
   { href: "#pato-pila", icon: "🦆", label: "O Pato Pila" },
   { href: "#como-participar", icon: "🎮", label: "Como participar" },
   { href: "#pontos", icon: "🏆", label: "Como pontuar" },
+  { href: "#big-pato", icon: "🪿", label: "Big Pato" },
   { href: "#ranking", icon: "📊", label: "Ranking" },
   { href: "#premiacao", icon: "🥇", label: "Premiação" },
   { href: "#regras", icon: "📜", label: "Regras" },
@@ -45,9 +46,15 @@ const STEPS = [
 const MISSIONS = [
   {
     icon: "❓",
-    title: "Responda perguntas durante as sessões",
+    title: "Faça perguntas após as palestras",
     points: "+1",
-    text: "Algumas sessões terão perguntas selecionadas que podem render pontos para sua equipe.",
+    text: "Depois de alguns conteúdos, quem fizer uma pergunta para a pessoa palestrante ganha 1 Pato Pila.",
+  },
+  {
+    icon: "🔄",
+    title: "Participe do Passa ou Repassa",
+    points: "+1",
+    text: "Logo após o almoço, acontece a dinâmica Passa ou Repassa. Quem responder certo a pergunta ganha 1 Pato Pila.",
   },
   {
     icon: "📸",
@@ -64,9 +71,15 @@ const MISSIONS = [
   },
   {
     icon: "🎪",
-    title: "Visite os stands",
-    points: "🎯",
-    text: "Explore a área de patrocinadores, conheça as empresas, converse com as pessoas e participe das ativações. Algumas dessas interações podem render Patos Pila.",
+    title: "Visite os stands dos patrocinadores",
+    points: "+1",
+    text: "A cada estande de patrocinador que você visitar, ganhe 1 Pato Pila.",
+  },
+  {
+    icon: "🤲",
+    title: "Visite o espaço das comunidades",
+    points: "+1",
+    text: "Passe pelo espaço/estande das comunidades parceiras e ganhe 1 Pato Pila.",
   },
   {
     icon: "🦆",
@@ -223,6 +236,26 @@ export function GameManual() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="big-pato" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <Reveal>
+            <div className="card-glow rounded-2xl border border-secondary/40 bg-gradient-to-br from-secondary/10 via-card to-card p-8 text-center">
+              <span className="text-4xl">🪿</span>
+              <h2 className="mt-3 text-2xl font-extrabold">Seu patinho pode virar um Big Pato</h2>
+              <p className="mt-2 text-muted-foreground">
+                Além dos Patos Pila do web app, durante o evento você também pode ganhar mini
+                patinhos de resina em algumas dinâmicas.
+              </p>
+              <p className="mt-3 font-semibold">
+                A cada 3 mini patinhos de resina da mesma cor ou 3 mini patinhos de cores
+                diferentes que você colecionar, vá até o espaço/estande das comunidades e troque
+                por um Big Pato. 🦆
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
