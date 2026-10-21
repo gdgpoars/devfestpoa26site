@@ -17,8 +17,8 @@ const STEPS = [
     text: "Acesse o web app do DevFest e faça login com sua conta Google.",
   },
   {
-    title: "Informe o código do seu Welcome Kit",
-    text: "Digite o código encontrado no seu adesivo, crachá ou material de credenciamento. Esse código define automaticamente sua equipe.",
+    title: "Entre com o e-mail da sua compra",
+    text: "Faça login no web app com o mesmo e-mail usado na compra do seu ingresso. Esse e-mail define automaticamente sua equipe.",
     warning: "A equipe é fixa. Depois de confirmada, não será possível trocar.",
   },
   {
@@ -74,12 +74,14 @@ const MISSIONS = [
     title: "Visite os stands dos patrocinadores",
     points: "+1",
     text: "A cada estande de patrocinador que você visitar, ganhe 1 Pato Pila.",
+    note: "Patos Pila limitados por estande — vale enquanto durar o estoque.",
   },
   {
     icon: "🤲",
     title: "Visite o espaço das comunidades",
     points: "+1",
     text: "Passe pelo espaço/estande das comunidades parceiras e ganhe 1 Pato Pila.",
+    note: "Patos Pila limitados por estande — vale enquanto durar o estoque.",
   },
   {
     icon: "🦆",
