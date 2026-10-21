@@ -368,15 +368,27 @@ export function GameManual() {
               </p>
               <p className="mt-4 text-sm font-semibold">Não serão aceitos nomes que contenham:</p>
               <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
-                <li>• Referências a partidos políticos, candidaturas ou campanhas eleitorais;</li>
-                <li>• Slogans, propaganda, manifestações ou provocações de cunho político-partidário;</li>
                 <li>
-                  • Indiretas, trocadilhos ou duplos sentidos que possam ser interpretados como
-                  promoção, posicionamento ou provocação político-partidária;
+                  • Conteúdos ofensivos, discriminatórios, preconceituosos ou que desrespeitem
+                  outras pessoas ou comunidades;
                 </li>
                 <li>
-                  • Conteúdos ofensivos, discriminatórios ou incompatíveis com o Código de Conduta
-                  do evento.
+                  • Expressões, termos ou referências que promovam assédio, intimidação ou
+                  qualquer forma de desrespeito;
+                </li>
+                <li>
+                  • Palavras ou expressões que possam ser interpretadas como ameaças ou incentivo
+                  à violência;
+                </li>
+                <li>• Conteúdos que promovam propaganda comercial, spam ou divulgação não autorizada;</li>
+                <li>
+                  • Referências, slogans, provocações, indiretas ou duplos sentidos de cunho
+                  político-partidário, incluindo menções a partidos, candidaturas ou campanhas
+                  eleitorais;
+                </li>
+                <li>
+                  • Conteúdos que violem os direitos de terceiros ou contrariem as diretrizes do
+                  Código de Conduta do evento.
                 </li>
               </ul>
               <p className="mt-3 text-sm text-muted-foreground">
