@@ -354,6 +354,55 @@ export function GameManual() {
             Após a validação, a pontuação é registrada automaticamente e não poderá ser desfeita. A
             contagem final será pública e não sofrerá alterações após o encerramento do jogo.
           </p>
+
+          <Reveal delay={160}>
+            <div className="card-glow mt-8 rounded-2xl border border-border bg-card p-6 sm:p-8">
+              <h3 className="font-bold">🦆 Nomes das equipes e convivência</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                O DevFestPoaGAME é uma experiência criada para incentivar a participação, a
+                colaboração, o networking e a diversão durante o DevFest Porto Alegre 2026.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Para manter o jogo alinhado ao propósito do evento, os nomes das equipes devem ser
+                respeitosos, criativos e adequados ao ambiente comunitário.
+              </p>
+              <p className="mt-4 text-sm font-semibold">Não serão aceitos nomes que contenham:</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
+                <li>• Referências a partidos políticos, candidaturas ou campanhas eleitorais;</li>
+                <li>• Slogans, propaganda, manifestações ou provocações de cunho político-partidário;</li>
+                <li>
+                  • Indiretas, trocadilhos ou duplos sentidos que possam ser interpretados como
+                  promoção, posicionamento ou provocação político-partidária;
+                </li>
+                <li>
+                  • Conteúdos ofensivos, discriminatórios ou incompatíveis com o Código de Conduta
+                  do evento.
+                </li>
+              </ul>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A regra também se aplica a variações de grafia, abreviações, símbolos e outras
+                formas de comunicação que tenham a finalidade de contornar estas orientações.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Caso um nome não esteja de acordo com essas regras, a organização poderá solicitar
+                sua alteração. Se a orientação não for atendida, poderão ser adotadas outras
+                medidas previstas no Código de Conduta, considerando o contexto e a gravidade da
+                situação.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                A participação no DevFestPoaGAME está sujeita ao{" "}
+                <Link href="/codigo-de-conduta" className="text-primary underline hover:no-underline">
+                  Código de Conduta do DevFest Porto Alegre 2026
+                </Link>
+                , que se aplica a todas as pessoas participantes e às atividades oficiais do
+                evento.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-primary">
+                Agradecemos a compreensão e a colaboração de todas as equipes para manter o
+                DevFestPoaGAME um espaço leve, inclusivo e divertido para todo mundo! 🦆
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 

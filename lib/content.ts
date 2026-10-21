@@ -367,7 +367,10 @@ export const CONDUCT_SECTIONS = [
         <li>canais oficiais de comunicação;</li>
         <li>grupos e comunidades utilizados oficialmente para organização ou participação no evento;</li>
         <li>interações online relacionadas diretamente ao DevFestPoa26;</li>
-        <li>redes sociais quando a pessoa estiver representando oficialmente o evento ou a comunidade.</li>
+        <li>redes sociais quando a pessoa estiver representando oficialmente o evento ou a comunidade;</li>
+        <li>DevFestPoaGAME, incluindo suas missões, dinâmicas, equipes, nomes de equipes, ranking e demais funcionalidades do web app oficial;</li>
+        <li>web app oficial do evento e interações realizadas por meio dele;</li>
+        <li>conteúdos, identificações e materiais publicados ou utilizados nas atividades oficiais do evento.</li>
       </ul>
       <p>Também esperamos que palestrantes, patrocinadores, parceiros, voluntários, fornecedores e integrantes da organização respeitem este Código de Conduta durante suas atividades relacionadas ao evento.</p>
     `,
@@ -386,7 +389,14 @@ export const CONDUCT_SECTIONS = [
         <li>sejam deliberadamente ofensivos ou incompatíveis com um ambiente profissional e comunitário.</li>
       </ul>
       <p>Discussões técnicas podem envolver opiniões divergentes e temas sensíveis. O debate é bem-vindo quando conduzido com respeito, responsabilidade e foco na troca de conhecimento.</p>
+      <p><strong>Neutralidade político-partidária e propósito do evento</strong></p>
+      <p>O DevFest Porto Alegre 2026 é um evento comunitário dedicado à tecnologia, ao aprendizado, à inovação, à troca de experiências e à conexão entre pessoas. Não tem como objetivo promover partidos políticos, candidaturas, campanhas eleitorais ou disputas político-partidárias.</p>
+      <p>Por isso, pedimos gentilmente que participantes, palestrantes, patrocinadores, parceiros e demais pessoas envolvidas não utilizem os espaços, as atividades, os materiais ou os canais oficiais do evento para propaganda, promoção ou manifestações de cunho político-partidário que desviem do propósito da iniciativa.</p>
+      <p>Essa orientação também se aplica ao DevFestPoaGAME, incluindo nomes de equipes, identificações, conteúdos e demais elementos da dinâmica. Os nomes das equipes devem ser respeitosos e compatíveis com o ambiente comunitário do evento, sem referências, indiretas, slogans, provocações ou duplos sentidos que possam ser interpretados como promoção, crítica ou provocação político-partidária.</p>
+      <p>Nosso objetivo não é limitar opiniões pessoais, impedir conversas respeitosas ou restringir debates legítimos sobre tecnologia, sociedade e temas relacionados. Queremos preservar o propósito do evento e garantir uma experiência acolhedora, respeitosa e focada na comunidade.</p>
+      <p>A organização poderá solicitar a alteração de nomes, conteúdos ou materiais que não estejam alinhados a estas diretrizes. A aplicação de medidas será realizada de acordo com o contexto, a gravidade e as disposições deste Código de Conduta.</p>
       <p>A organização poderá interromper uma atividade ou solicitar ajustes em conteúdos que violem este Código de Conduta.</p>
+      <p><strong>Regras específicas do DevFestPoaGAME:</strong> além deste Código de Conduta, a participação no jogo está sujeita às regras próprias da dinâmica, disponíveis no <a href="/experiencia/devfestpoagame">Manual do DevFestPoaGAME</a>.</p>
     `,
   },
   {
@@ -446,6 +456,7 @@ export const CONDUCT_SECTIONS = [
       <p>As medidas podem incluir:</p>
       <ol>
         <li><strong>Orientação ou conversa privada</strong> — Para situações de menor gravidade ou quando uma orientação for suficiente para corrigir o comportamento.</li>
+        <li><strong>Solicitação de alteração de nome, conteúdo ou material</strong> — Inclui, por exemplo, nomes de equipes do DevFestPoaGAME incompatíveis com este Código de Conduta. A organização poderá solicitar a alteração antes ou durante o evento; se a orientação não for atendida, poderá adotar outras medidas previstas aqui, conforme a gravidade e o contexto. Sempre que a situação puder ser resolvida com uma orientação ou alteração do nome, não será aplicada penalidade automática ao restante da equipe.</li>
         <li><strong>Advertência</strong> — Quando houver uma violação mais significativa ou repetição de um comportamento inadequado.</li>
         <li><strong>Solicitação de interrupção do comportamento</strong> — A pessoa poderá ser orientada a interromper imediatamente determinada conduta.</li>
         <li><strong>Restrição de participação</strong> — A organização poderá restringir o acesso da pessoa a determinadas atividades ou espaços.</li>
