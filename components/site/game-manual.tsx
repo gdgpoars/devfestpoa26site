@@ -8,6 +8,7 @@ const QUICK_LINKS = [
   { href: "#big-pato", icon: "🪿", label: "Big Pato" },
   { href: "#ranking", icon: "📊", label: "Ranking" },
   { href: "#premiacao", icon: "🥇", label: "Premiação" },
+  { href: "#fantasias", icon: "🎃", label: "Concurso de Fantasias" },
   { href: "#regras", icon: "📜", label: "Regras" },
 ];
 
@@ -308,6 +309,40 @@ export function GameManual() {
               <p className="mt-3 text-sm font-semibold text-primary">
                 Guarde energia para o final. A disputa pode mudar até o último Pato Pila. 👀🦆
               </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="fantasias" className="scroll-mt-24 border-t border-border py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <Reveal>
+            <div className="card-glow rounded-2xl border border-primary/40 bg-gradient-to-br from-primary/10 via-card to-card p-8 text-center">
+              <span className="text-4xl">🎃</span>
+              <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-primary">Edição especial</p>
+              <h2 className="mt-2 text-2xl font-extrabold">Concurso de Fantasias</h2>
+              <p className="mt-2 text-muted-foreground">
+                Capriche na fantasia e entre na brincadeira! Envie a foto da sua fantasia pelo web app
+                oficial do DevFest Porto Alegre 2026 e concorra a prêmios em dinheiro — a votação é por
+                curtidas de toda a comunidade.
+              </p>
+              <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+                <span className="rounded-full border border-border bg-card px-4 py-2 transition-transform duration-300 hover:scale-110">
+                  🥇 R$ 150,00
+                </span>
+                <span className="rounded-full border border-border bg-card px-4 py-2 transition-transform duration-300 hover:scale-110">
+                  🥈 R$ 100,00
+                </span>
+                <span className="rounded-full border border-border bg-card px-4 py-2 transition-transform duration-300 hover:scale-110">
+                  🥉 R$ 50,00
+                </span>
+              </div>
+              <Link
+                href="/codigo-de-conduta#6-regulamento-do-concurso-de-fantasias"
+                className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                Ver regulamento completo →
+              </Link>
             </div>
           </Reveal>
         </div>

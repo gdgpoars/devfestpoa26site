@@ -31,7 +31,7 @@ export function ScheduleHero() {
         </p>
 
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Em breve, no nosso webapp, você poderá montar a sua trilha personalizada.
+          No nosso web app, você já pode montar a sua trilha personalizada.
         </p>
       </div>
     </section>

@@ -1,6 +1,8 @@
 export const SYMPLA_URL =
   "https://www.sympla.com.br/evento/devfest-porto-alegre-2026/3511958";
 
+export const WEBAPP_URL = "https://gdgpoa.web.app";
+
 export const EVENT_TARGET_ISO = "2026-10-31T09:00:00-03:00";
 export const EVENT_END_ISO = "2026-10-31T18:00:00-03:00";
 
@@ -267,7 +269,7 @@ export const FAQS = [
   { q: "Como posso acompanhar as novidades?", a: "Pelos canais oficiais do GDG Porto Alegre e do GDG Caxias do Sul e pela hashtag #DevFestPoa26." },
 ];
 
-export const CONDUCT_UPDATED = "julho de 2026";
+export const CONDUCT_UPDATED = "outubro de 2026";
 
 export const CONDUCT_CONTACT = {
   phone: "(51) 21850587",
@@ -400,7 +402,72 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "6. Patrocinadores, parceiros e ativações",
+    title: "6. Regulamento do Concurso de Fantasias",
+    html: `
+      <p>Prepare sua criatividade, capriche na fantasia e entre na brincadeira! O Concurso de Fantasias do DevFest Porto Alegre 2026 foi criado para celebrar a criatividade, a diversão e o espírito de comunidade que fazem nosso evento acontecer.</p>
+      <p>Confira as regras e participe!</p>
+      <p><strong>6.1 Como participar</strong></p>
+      <ul>
+        <li>O concurso será realizado por meio do web app oficial do DevFest Porto Alegre 2026.</li>
+        <li>Para participar, cada pessoa deverá acessar o web app e enviar uma foto da sua fantasia, seguindo as instruções disponíveis na plataforma.</li>
+        <li>Cada pessoa poderá participar com apenas uma foto e uma inscrição no concurso.</li>
+        <li>A fantasia deverá ser adequada ao ambiente do evento e respeitar este regulamento e o Código de Conduta do DevFest Porto Alegre 2026.</li>
+      </ul>
+      <p><strong>6.2 Como funciona a votação</strong></p>
+      <ul>
+        <li>A votação será realizada por meio de curtidas nas fotos publicadas no web app oficial.</li>
+        <li>Cada participante terá direito a uma curtida no total, que poderá ser utilizada para votar em sua fantasia favorita.</li>
+        <li>A votação será contabilizada conforme as curtidas registradas na plataforma durante o período do concurso.</li>
+        <li>Ao final do evento, as três fantasias com o maior número de curtidas serão as vencedoras, respeitando os critérios de desempate deste regulamento.</li>
+      </ul>
+      <p>Pedimos que todas as pessoas votem de forma consciente e respeitem a proposta da atividade. A ideia é celebrar a criatividade e compartilhar a diversão com toda a comunidade!</p>
+      <p><strong>6.3 Premiação</strong></p>
+      <p>Serão premiadas as três fantasias mais bem votadas, conforme a seguinte classificação:</p>
+      <ul>
+        <li>🥇 1º lugar: R$ 150,00</li>
+        <li>🥈 2º lugar: R$ 100,00</li>
+        <li>🥉 3º lugar: R$ 50,00</li>
+      </ul>
+      <p>Os prêmios serão pagos em dinheiro, em espécie, durante o evento. Para receber a premiação, as pessoas vencedoras deverão estar presentes no local e procurar a organização quando forem anunciadas.</p>
+      <p>Caso uma pessoa vencedora não esteja presente para receber o prêmio, a organização poderá avaliar a situação e definir os encaminhamentos cabíveis.</p>
+      <p><strong>6.4 Critério de desempate</strong></p>
+      <p>Em caso de empate no número de curtidas entre duas ou mais fantasias, o desempate será realizado por meio de uma medição de aplausos do público presente, conduzida pela organização do evento.</p>
+      <p>A decisão da organização quanto à condução e ao resultado desse desempate será definitiva.</p>
+      <p><strong>6.5 Fantasias em grupo</strong></p>
+      <p>Fantasias compostas por duas ou mais pessoas também são bem-vindas! Afinal, a criatividade compartilhada merece espaço.</p>
+      <p>Nesses casos:</p>
+      <ul>
+        <li>A inscrição deverá ser realizada por uma única pessoa, responsável pelo envio da foto no web app.</li>
+        <li>Caso a fantasia seja premiada, o valor será entregue integralmente à pessoa responsável pela inscrição.</li>
+        <li>A divisão do prêmio entre os integrantes do grupo será de responsabilidade exclusiva da pessoa que recebeu o valor. A organização não será responsável por administrar, intermediar ou resolver eventuais divergências relacionadas à divisão do prêmio.</li>
+      </ul>
+      <p>Recomendamos que os grupos combinem previamente como será feita a divisão, caso sejam premiados.</p>
+      <p><strong>6.6 Respeito, criatividade e Código de Conduta</strong></p>
+      <p>O DevFest Porto Alegre 2026 é um evento comunitário dedicado à tecnologia, ao aprendizado, à inovação, à troca de experiências e à conexão entre pessoas. Queremos que o concurso seja mais uma oportunidade de celebrar a criatividade, a diversidade e a diversão em um ambiente acolhedor.</p>
+      <p>Por isso, as fantasias e suas respectivas fotos devem respeitar o Código de Conduta do evento.</p>
+      <p>Não serão aceitas fantasias, imagens ou caracterizações que:</p>
+      <ul>
+        <li>Contenham elementos racistas, homofóbicos, discriminatórios, preconceituosos, ofensivos ou que desrespeitem pessoas ou grupos;</li>
+        <li>Promovam assédio, intimidação, violência ou discursos de ódio;</li>
+        <li>Utilizem estereótipos ofensivos ou representações que desrespeitem identidades, culturas ou características pessoais;</li>
+        <li>Tenham como objetivo promover propaganda político-partidária, campanhas eleitorais ou provocações dessa natureza;</li>
+        <li>Sejam incompatíveis com as demais diretrizes do Código de Conduta do evento.</li>
+      </ul>
+      <p>O objetivo não é limitar a criatividade, o humor ou as expressões pessoais, mas garantir que a brincadeira seja divertida sem constranger, excluir ou desrespeitar outras pessoas. O concurso não tem como finalidade promover disputas político-partidárias ou manifestações discriminatórias.</p>
+      <p>A organização avaliará eventuais situações considerando o contexto e os princípios do evento. Caso uma fantasia ou imagem não esteja alinhada às regras, poderá solicitar ajustes, impedir sua publicação ou removê-la do concurso. Em situações mais graves, poderão ser aplicadas as medidas previstas no Código de Conduta, inclusive restrições à participação no evento, quando cabíveis.</p>
+      <p><strong>6.7 Disposições gerais</strong></p>
+      <ul>
+        <li>Ao participar, a pessoa declara estar de acordo com este regulamento e com o Código de Conduta do evento.</li>
+        <li>A organização poderá verificar as inscrições e as curtidas registradas para garantir a integridade da votação e prevenir irregularidades.</li>
+        <li>Em caso de fraude, manipulação de votos ou descumprimento das regras, a organização poderá desclassificar a inscrição, mediante avaliação da situação.</li>
+        <li>A organização poderá resolver situações não previstas neste regulamento, respeitando os princípios de transparência, proporcionalidade e isonomia entre os participantes.</li>
+        <li>A participação no concurso é voluntária e está sujeita às condições de funcionamento do web app oficial.</li>
+      </ul>
+      <p>Agora é com você! Solte a imaginação, vista sua fantasia e venha celebrar o Halloween com a gente. Que vença a criatividade — e que todo mundo se divirta! 🎃🦆</p>
+    `,
+  },
+  {
+    title: "7. Patrocinadores, parceiros e ativações",
     html: `
       <p>O DevFestPoa26 valoriza as empresas e organizações que apoiam a comunidade e tornam o evento possível.</p>
       <p>Ao mesmo tempo, espaços de patrocinadores e ativações também devem respeitar este Código de Conduta.</p>
@@ -416,7 +483,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "7. Como relatar uma situação",
+    title: "8. Como relatar uma situação",
     html: `
       <p>Se você presenciar ou vivenciar uma situação que viole este Código de Conduta, recomendamos que comunique a organização assim que se sentir confortável e seguro para fazê-lo.</p>
       <p>Você pode procurar:</p>
@@ -441,7 +508,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "8. Confidencialidade e proteção",
+    title: "9. Confidencialidade e proteção",
     html: `
       <p>A organização do DevFestPoa26 se compromete a tratar relatos de violações com responsabilidade e discrição.</p>
       <p>Informações sobre uma denúncia serão compartilhadas apenas quando necessário para avaliar a situação, proteger as pessoas envolvidas e tomar as providências adequadas.</p>
@@ -450,7 +517,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "9. Medidas em caso de violação",
+    title: "10. Medidas em caso de violação",
     html: `
       <p>A organização do DevFestPoa26 poderá tomar as medidas que considerar adequadas de acordo com a gravidade e as circunstâncias de cada situação.</p>
       <p>As medidas podem incluir:</p>
@@ -468,7 +535,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "10. Responsabilidade coletiva",
+    title: "11. Responsabilidade coletiva",
     html: `
       <p>Um ambiente seguro não é responsabilidade apenas da organização.</p>
       <p>Cada pessoa que participa do DevFestPoa26 tem um papel importante na construção da comunidade que queremos.</p>
@@ -481,7 +548,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "11. Dúvidas, denúncias e contato oficial",
+    title: "12. Dúvidas, denúncias e contato oficial",
     html: `
       <p>Se você tiver dúvidas sobre este Código de Conduta, quiser relatar uma situação ou precisar de ajuda durante o evento, entre em contato com a organização do DevFestPoa26 por meio dos canais oficiais:</p>
       <p>📞 <strong>Telefone/WhatsApp:</strong> ${CONDUCT_CONTACT.phone}<br />
@@ -491,7 +558,7 @@ export const CONDUCT_SECTIONS = [
     `,
   },
   {
-    title: "12. Nosso compromisso final",
+    title: "13. Nosso compromisso final",
     html: `
       <p>O <strong>DevFestPoa26</strong> é feito pela comunidade, para a comunidade.</p>
       <p>Organizado pelo <strong>GDG Porto Alegre</strong> e pelo <strong>GDG Caxias do Sul</strong>, nosso objetivo é construir um evento onde pessoas possam aprender, ensinar, criar conexões, encontrar oportunidades e, acima de tudo, sentir que pertencem.</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Lock, Search, Sparkles, X } from "lucide-react";
+import { Search, Sparkles, X } from "lucide-react";
 import {
   TALKS,
   TALKS_BY_TRACK,
@@ -14,6 +14,7 @@ import {
   type Talk,
   type TrackId,
 } from "@/lib/schedule";
+import { WEBAPP_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { FullGrid } from "./full-grid";
 import { TalkCard } from "./talk-card";
@@ -97,21 +98,17 @@ export function ScheduleView() {
         {/* Ações: Monte sua trilha */}
         <div className="mt-6 flex justify-end">
           <div className="group relative w-fit">
-            <button
-              type="button"
-              disabled
-              className="inline-flex h-11 cursor-not-allowed items-center gap-2 rounded-full border border-border bg-muted px-5 text-sm font-semibold text-muted-foreground"
+            <a
+              href={WEBAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Sparkles className="size-4" />
               Monte sua trilha
-              <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide">
-                <Lock className="size-2.5" />
-                Em breve
-              </span>
-            </button>
+            </a>
             <div className="pointer-events-none absolute right-0 top-full z-10 mt-2 w-64 rounded-xl border border-border bg-background p-3 text-xs text-muted-foreground opacity-0 shadow-xl transition-opacity group-hover:opacity-100">
-              Em breve você vai poder fazer login no web app do evento e montar sua trilha personalizada de
-              conteúdos.
+              Entre para montar sua trilha. Faça login com seu e-mail usado para adquirir seu ingresso.
             </div>
           </div>
         </div>
