@@ -396,10 +396,9 @@ export const TALKS: Talk[] = [
     speakers: [
       { name: "Nielen Baptista", linkedin: "https://www.linkedin.com/in/nielen-hinrichsen-70a76730a/" },
       { name: "Giulia Minuzzo", linkedin: "https://www.linkedin.com/in/giulia-minuzzo-709a40282/" },
-      { name: "Natália Lagni", linkedin: "https://www.linkedin.com/in/natalia-lagni/" },
     ],
     summary:
-      "Neste painel, Nielen Baptista, Giulia Minuzzo e Natália Lagni compartilham estratégias práticas para transformar experiências, conhecimentos e trajetórias em narrativas que demonstram valor e geram conexão em processos seletivos. A conversa percorre cinco etapas fundamentais: preparação para entrevistas, storytelling profissional, estruturação de respostas com o método STAR, posicionamento estratégico no LinkedIn e técnicas de networking e relacionamento com recrutadores após o processo seletivo. O objetivo é ajudar profissionais a comunicar melhor suas competências, destacar suas experiências com autenticidade e construir relacionamentos que fortaleçam suas oportunidades de carreira.",
+      "Neste painel, Nielen Baptista e Giulia Minuzzo compartilham estratégias práticas para transformar experiências, conhecimentos e trajetórias em narrativas que demonstram valor e geram conexão em processos seletivos. A conversa percorre cinco etapas fundamentais: preparação para entrevistas, storytelling profissional, estruturação de respostas com o método STAR, posicionamento estratégico no LinkedIn e técnicas de networking e relacionamento com recrutadores após o processo seletivo. O objetivo é ajudar profissionais a comunicar melhor suas competências, destacar suas experiências com autenticidade e construir relacionamentos que fortaleçam suas oportunidades de carreira.",
     track: "covil",
     start: 670,
     end: 720,
@@ -515,8 +514,8 @@ export const TALKS: Talk[] = [
     summary:
       "Muitas equipes tratam o Design System como uma coleção de componentes. O problema começa quando Figma e código representam o mesmo produto com nomes, estados e regras diferentes, e cada implementação precisa interpretar o que ficou pelo caminho. A proposta é enxergar o Design System como um acordo compartilhado entre design e engenharia, apresentando os Component Contracts como a materialização técnica desse acordo: artefatos estruturados que centralizam a intenção de um componente para que ela possa ser implementada, versionada e verificada em diferentes plataformas. A partir da anatomia de um botão, serão explorados elementos como propriedades, tokens, estados, comportamento e acessibilidade, conectando essa estrutura ao conceito de Self-Aware Design System.",
     track: "salao-comunal",
-    start: 820,
-    end: 860,
+    start: 825,
+    end: 865,
     hasDetails: true,
   },
   {
@@ -591,8 +590,8 @@ export const TALKS: Talk[] = [
     summary:
       "A maior parte das decisões de design ainda é conduzida mais por interpretação do que por evidência. Como sinais extraídos do próprio sistema — código, fluxo, commits, bloqueios, bugs e outros rastros operacionais — ajudam a melhorar a qualidade da decisão técnica, do design e da arquitetura de software, transformando observabilidade em ação.",
     track: "salao-comunal",
-    start: 860,
-    end: 910,
+    start: 870,
+    end: 920,
     hasDetails: true,
   },
   {

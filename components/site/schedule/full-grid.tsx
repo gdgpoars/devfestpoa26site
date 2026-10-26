@@ -13,6 +13,7 @@ import {
   glassCardBackground,
   type Talk,
 } from "@/lib/schedule";
+import { cn } from "@/lib/utils";
 
 const PX_PER_MIN = 2.05;
 const HEADER_H = 62;
@@ -112,7 +113,12 @@ export function FullGrid({ onOpen }: { onOpen: (talk: Talk) => void }) {
                       {talk.title}
                     </span>
                     {talk.speakers.length > 0 && (
-                      <span className="mt-auto line-clamp-1 pt-1 text-[11px] font-semibold leading-tight text-muted-foreground">
+                      <span
+                        className={cn(
+                          "mt-auto pt-1 text-[11px] font-semibold leading-tight text-muted-foreground",
+                          track.id === "covil" ? "line-clamp-none" : "line-clamp-1",
+                        )}
+                      >
                         {talk.speakers.map((s) => s.name).join(" & ")}
                       </span>
                     )}
