@@ -389,7 +389,7 @@ export const TALKS: Talk[] = [
   },
   {
     id: "painel-coode-your-career",
-    title: "Painel - Coode Your Career: como se posicionar em entrevistas",
+    title: "Painel - Code Your Career: como se posicionar em entrevistas",
     format: "roda-de-conversa",
     level: "Todos os níveis",
     tags: ["Carreira", "Comunidade"],
