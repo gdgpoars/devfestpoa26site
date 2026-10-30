@@ -340,6 +340,23 @@ export const TALKS: Talk[] = [
     hasDetails: true,
   },
   {
+    id: "gincanada-roxo-jose-carlos",
+    title: "GINCANADA",
+    format: "roda-de-conversa",
+    level: "Todos os níveis",
+    tags: ["Comunidade"],
+    speakers: [
+      { name: "Giovane Roxo", linkedin: null },
+      { name: "José Carlos", linkedin: null },
+    ],
+    summary:
+      "Uma competição por Patos Pila com o público do DevFestPoa26, comandada pelas lideranças dos GDGs de Porto Alegre (Giovane Roxo) e Caxias do Sul (José Carlos).",
+    track: "salao-comunal",
+    start: 660,
+    end: 690,
+    hasDetails: true,
+  },
+  {
     id: "t056",
     title:
       "O caminho curto que a gente descobriu do jeito longo - IA no desenvolvimento mobile: por onde começar e o que evitar",
