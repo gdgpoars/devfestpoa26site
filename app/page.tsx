@@ -13,19 +13,22 @@ export const metadata: Metadata = pageMetadata({
 
 export default function Home() {
   return (
-    <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-16">
+    <section className="flex min-h-[calc(100vh-5rem)] items-center justify-center px-4 py-16">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-        <span className="rounded-full border border-border bg-card px-4 py-1.5 text-sm font-semibold text-foreground">
-          DevFest Porto Alegre
-        </span>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <span className="rounded-full border-2 border-border bg-card px-4 py-1.5 text-sm font-semibold">
+            GDG Porto Alegre &amp; GDG Caxias do Sul apresentam
+          </span>
+        </div>
 
-        <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          Nos vemos em <span className="text-gradient">2027</span>! 🧉
+        <h1 className="text-balance text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          Nos vemos em <span className="text-primary">2027</span>! 🧉
         </h1>
 
         <p className="max-w-xl text-balance text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Já estamos preparando a próxima edição. Enquanto isso, deixa seu
-          contato que você fica sabendo de tudo antes de todo mundo.
+          Já estamos preparando a próxima edição do DevFest Porto Alegre.
+          Enquanto isso, deixa seu contato que você fica sabendo de tudo
+          antes de todo mundo.
         </p>
 
         <div className="mt-2 flex flex-col items-center gap-3">
@@ -33,7 +36,7 @@ export default function Home() {
             href={FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="cta-pulse group inline-flex h-13 items-center gap-2 rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-transform duration-200 hover:-translate-y-0.5"
+            className="hard-shadow cta-pulse group inline-flex h-14 items-center gap-2 rounded-full border-2 border-border bg-primary px-8 text-base font-bold text-primary-foreground"
           >
             <Sparkles className="size-5 transition-transform duration-300 group-hover:scale-110" />
             Saiba antes de todo mundo
@@ -43,6 +46,6 @@ export default function Home() {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

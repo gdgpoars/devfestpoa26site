@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-plus-jakarta), "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -26,41 +26,22 @@
 }
 
 :root {
-  color-scheme: dark;
-  --background: #0c0d13;
-  --foreground: #f3f2f7;
-  --card: #14161f;
-  --card-foreground: #f3f2f7;
-  --border: rgba(255, 255, 255, 0.08);
-  --primary: #ff7a29;
-  --primary-foreground: #14161f;
-  --secondary: #9784ff;
-  --secondary-foreground: #14161f;
-  --muted: #1a1c27;
-  --muted-foreground: #a3a1b0;
-  --accent: #ffb37a;
-  --accent-foreground: #14161f;
-  --ring: #ff7a29;
-  --radius: 1rem;
-}
-
-/* Tema claro opcional, usado apenas na página de Programação (alternância local). */
-[data-schedule-theme="light"] {
   color-scheme: light;
-  --background: #fbf9fc;
-  --foreground: #1a1723;
+  --background: #f0f0f0;
+  --foreground: #1e1e1e;
   --card: #ffffff;
-  --card-foreground: #1a1723;
-  --border: rgba(26, 23, 35, 0.1);
-  --primary: #ef6a1a;
-  --primary-foreground: #ffffff;
-  --secondary: #7c5cff;
+  --card-foreground: #1e1e1e;
+  --border: #1e1e1e;
+  --primary: #f9ab00;
+  --primary-foreground: #1e1e1e;
+  --secondary: #4285f4;
   --secondary-foreground: #ffffff;
-  --muted: #f1eef6;
-  --muted-foreground: #5f5b70;
-  --accent: #e8590c;
-  --accent-foreground: #ffffff;
-  --ring: #ef6a1a;
+  --muted: #e8e8e8;
+  --muted-foreground: #5f5f5f;
+  --accent: #ffe7a5;
+  --accent-foreground: #1e1e1e;
+  --ring: #f9ab00;
+  --radius: 1.25rem;
 }
 
 body {
@@ -69,89 +50,22 @@ body {
 }
 
 @layer utilities {
-  .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  .hard-shadow {
+    box-shadow: 4px 4px 0 0 var(--border);
   }
-  .reveal.in-view {
-    opacity: 1;
-    transform: translateY(0);
+  .cta-pulse {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .text-gradient {
-    background: linear-gradient(90deg, #ff7a29, #ffb37a 45%, #9784ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .cta-pulse:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--border);
   }
-  .bg-grid {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-    background-size: 22px 22px;
+  .cta-pulse:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 0 var(--border);
   }
   .animate-float {
     animation: float 6s ease-in-out infinite;
-  }
-  .animate-float-soft {
-    animation: float-soft 5s ease-in-out infinite;
-  }
-  .logo-soft-glow {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.12)) drop-shadow(0 0 22px rgba(255, 122, 41, 0.14));
-    transition: filter 0.3s ease;
-  }
-  .logo-soft-glow:hover {
-    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.22)) drop-shadow(0 0 28px rgba(255, 122, 41, 0.24));
-  }
-  .animate-pulse-glow {
-    animation: pulse-glow 2.6s ease-in-out infinite;
-  }
-  .cta-pulse {
-    animation: pulse-glow 2.6s ease-in-out infinite;
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  .cta-pulse:hover {
-    transform: translateY(-2px) scale(1.05);
-    filter: brightness(1.1);
-  }
-  .cta-pulse:active {
-    transform: scale(0.95);
-  }
-  .stat-pop {
-    display: inline-block;
-    animation: stat-pop 3.2s ease-in-out infinite;
-  }
-  .animate-drift {
-    animation: drift 22s ease-in-out infinite;
-  }
-  .card-glow {
-    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  }
-  .card-glow:hover {
-    transform: translateY(-4px) rotate(0.4deg);
-    border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
-    box-shadow: 0 12px 32px -12px rgba(255, 122, 41, 0.25);
-  }
-  .spooky-card {
-    --glow: var(--primary);
-    position: relative;
-    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  }
-  .spooky-card::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    z-index: -1;
-    border-radius: inherit;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--glow) 55%, transparent), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.35s ease;
-  }
-  .spooky-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-color: color-mix(in srgb, var(--glow) 45%, var(--border));
-    box-shadow: 0 16px 36px -16px color-mix(in srgb, var(--glow) 55%, transparent);
-  }
-  .spooky-card:hover::before {
-    opacity: 1;
   }
 }
 
@@ -165,59 +79,10 @@ body {
   }
 }
 
-@keyframes float-soft {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 122, 41, 0.45);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(255, 122, 41, 0);
-  }
-}
-
-@keyframes stat-pop {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-2px) scale(1.06);
-  }
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(4%, -5%) scale(1.08);
-  }
-  66% {
-    transform: translate(-3%, 4%) scale(0.96);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
-  .animate-float-soft,
-  .stat-pop,
-  .animate-drift,
-  .animate-pulse-glow,
   .cta-pulse {
     animation: none;
-  }
-  .reveal {
     transition: none;
   }
 }

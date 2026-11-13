@@ -1,15 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
-import { HalloweenBackground } from "@/components/site/halloween-background";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/content";
 import { OG_IMAGE } from "@/lib/seo";
 
 const GTM_ID = "GTM-52JL87HH";
 
-const TITLE = "DevFestPoa26 — Tecnologia, Comunidade e Futuro em Porto Alegre";
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+});
+
+const TITLE = "Nos vemos em 2027! — DevFest Porto Alegre";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -55,15 +61,15 @@ const websiteJsonLd = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "dark",
-  themeColor: "#0c0d13",
+  colorScheme: "light",
+  themeColor: "#f0f0f0",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className="dark scroll-smooth">
+    <html lang="pt-BR" className={`${plusJakarta.variable} scroll-smooth`}>
       <body className="antialiased bg-background text-foreground font-sans">
         <script
           type="application/ld+json"
@@ -79,10 +85,7 @@ export default function RootLayout({
         </noscript>
 
         <SiteHeader />
-        <main className="relative isolate">
-          <HalloweenBackground />
-          {children}
-        </main>
+        <main className="relative isolate">{children}</main>
         <SiteFooter />
       </body>
 
