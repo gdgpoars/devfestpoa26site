@@ -1,75 +1,48 @@
 import type { Metadata } from "next";
-import { Countdown } from "@/components/site/countdown";
-import { Hero } from "@/components/site/hero";
-import { Highlights } from "@/components/site/highlights";
-import { ExploreCards } from "@/components/site/explore-cards";
-import { FinalCTA } from "@/components/site/final-cta";
+import { Sparkles } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
-import {
-  EVENT_END_ISO,
-  EVENT_TARGET_ISO,
-  GDG_COMMUNITIES,
-  SITE_NAME,
-  SITE_URL,
-  SYMPLA_URL,
-} from "@/lib/content";
+
+const FORM_URL = "https://forms.gle/56DvG7MR6ARXjSxB7";
 
 export const metadata: Metadata = pageMetadata({
-  title: "DevFestPoa26 — Tecnologia, Comunidade e Futuro em Porto Alegre",
+  title: "Já estamos preparando a próxima edição",
   description:
-    "O DevFest de Porto Alegre: um dia de conteúdo técnico, comunidade e networking, feito pelas comunidades GDG Porto Alegre e GDG Caxias do Sul. 31 de outubro de 2026, na Faculdade Dom Bosco.",
+    "Já estamos preparando a próxima edição do DevFest Porto Alegre. Deixe seu contato para saber antes de todo mundo quando ela for anunciada.",
   path: "/",
 });
 
-const eventJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: SITE_NAME,
-  description:
-    "Um dia de conteúdo técnico, comunidade e networking em Porto Alegre: inteligência artificial e agentes, cloud, desenvolvimento, segurança e carreira em tecnologia.",
-  startDate: EVENT_TARGET_ISO,
-  endDate: EVENT_END_ISO,
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  eventStatus: "https://schema.org/EventScheduled",
-  url: SITE_URL,
-  image: [`${SITE_URL}/logo%20evento.png`],
-  offers: {
-    "@type": "Offer",
-    url: SYMPLA_URL,
-    priceCurrency: "BRL",
-    availability: "https://schema.org/InStock",
-    validFrom: "2026-01-01T00:00:00-03:00",
-  },
-  location: {
-    "@type": "Place",
-    name: "Faculdade Dom Bosco",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Porto Alegre",
-      addressRegion: "RS",
-      addressCountry: "BR",
-    },
-  },
-  organizer: GDG_COMMUNITIES.map((c) => ({
-    "@type": "Organization",
-    name: c.name,
-    url: c.links.find((l) => l.icon === "globe")?.href,
-    sameAs: c.links.filter((l) => l.icon !== "globe").map((l) => l.href),
-  })),
-};
-
 export default function Home() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
-      />
-      <Countdown />
-      <Hero />
-      <Highlights />
-      <ExploreCards />
-      <FinalCTA />
-    </>
+    <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-16">
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
+        <span className="rounded-full border border-border bg-card px-4 py-1.5 text-sm font-semibold text-foreground">
+          DevFest Porto Alegre
+        </span>
+
+        <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          Nos vemos em <span className="text-gradient">2027</span>! 🧉
+        </h1>
+
+        <p className="max-w-xl text-balance text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Já estamos preparando a próxima edição. Enquanto isso, deixa seu
+          contato que você fica sabendo de tudo antes de todo mundo.
+        </p>
+
+        <div className="mt-2 flex flex-col items-center gap-3">
+          <a
+            href={FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-pulse group inline-flex h-13 items-center gap-2 rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-[0_0_0_1px_rgba(255,122,41,0.35)] transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            <Sparkles className="size-5 transition-transform duration-300 group-hover:scale-110" />
+            Saiba antes de todo mundo
+          </a>
+          <span className="text-sm text-muted-foreground">
+            Preencha o formulário rápido e a gente te avisa em primeira mão.
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }

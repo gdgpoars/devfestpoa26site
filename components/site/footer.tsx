@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CalendarDays, Globe, Instagram, Linkedin, MapPin } from "lucide-react";
+import { CalendarDays, Globe, Instagram, Linkedin, Link2, Mail, MapPin } from "lucide-react";
 import { GDG_COMMUNITIES, SYMPLA_URL } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-const SOCIAL_ICONS = { instagram: Instagram, linkedin: Linkedin, globe: Globe };
+const SOCIAL_ICONS = { instagram: Instagram, linkedin: Linkedin, globe: Globe, mail: Mail, link: Link2 };
 
 export function SiteFooter() {
   const [showSticky, setShowSticky] = useState(false);
@@ -94,8 +94,9 @@ export function SiteFooter() {
                       <li key={l.label}>
                         <a
                           href={l.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          {...(l.href.startsWith("mailto:")
+                            ? {}
+                            : { target: "_blank", rel: "noopener noreferrer" })}
                           className="inline-flex items-center gap-2 hover:text-foreground"
                         >
                           <Icon className="size-4" />

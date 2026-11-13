@@ -617,6 +617,8 @@ export const GDG_COMMUNITIES = [
     links: [
       { label: "Instagram", href: "https://www.instagram.com/gdgpoa/", icon: "instagram" as const },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gdg-porto-alegre/", icon: "linkedin" as const },
+      { label: "Email", href: "mailto:gdgpoars@gmail.com", icon: "mail" as const },
+      { label: "Linktree", href: "https://linktr.ee/gdgpoa", icon: "link" as const },
       { label: "Site", href: "https://gdgportoalegre.com.br/", icon: "globe" as const },
     ],
   },
@@ -625,6 +627,8 @@ export const GDG_COMMUNITIES = [
     links: [
       { label: "Instagram", href: "https://www.instagram.com/gdgcaxiasdosul", icon: "instagram" as const },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/gdg-caxias-do-sul/", icon: "linkedin" as const },
+      { label: "Email", href: "mailto:gdgcaxiasdosul@gmail.com", icon: "mail" as const },
+      { label: "Linktree", href: "https://linktr.ee/gdgcaxiasdosul", icon: "link" as const },
     ],
   },
 ];
